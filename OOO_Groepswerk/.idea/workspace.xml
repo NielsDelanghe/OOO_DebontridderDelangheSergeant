@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/AssesMainPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/AssesMainPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryOverviewPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryOverviewPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/MessagePane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/MessagePane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/MessagePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/MessagePane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddStatementListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddStatementListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$RemoveStatementListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$RemoveStatementListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionOverviewPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionOverviewPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" afterDir="false" />
-    </list>
+    <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +50,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-10" />
     <option name="y" value="1" />
     <option name="width" value="1940" />
@@ -110,7 +97,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542727050937" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542727246990" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -182,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542726154333</updated>
-      <workItem from="1542726155699" duration="762000" />
+      <workItem from="1542726155699" duration="1089000" />
     </task>
     <servers />
   </component>
@@ -192,7 +179,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="762000" />
+    <option name="totallyTimeSpent" value="1089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="1" width="1552" height="839" extended-state="0" />
