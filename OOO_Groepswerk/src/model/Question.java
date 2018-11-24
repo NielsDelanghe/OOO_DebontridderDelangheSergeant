@@ -1,4 +1,4 @@
-package model.domain;
+package model;
 
 public class Question {
 }
