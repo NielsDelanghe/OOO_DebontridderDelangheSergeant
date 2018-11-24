@@ -4,21 +4,24 @@ public class Category {
 
     private String name;
     private String description;
+    private int points;
+    private String feedback;
 
-    public Category(String n, String desc)
+    public Category(String name, String description, int points, String feedback)
     {
-        this.setName(n);
-        this.setDescription(desc);
+        this.setName(name);
+        this.setDescription(description);
+        this.setPoints(points);
+        this.setFeedback(feedback);
     }
 
-    private void setName(String n)
+    private void setName(String name)
     {
-        if(name==null || name.trim().isEmpty())
+        if(name == null || name.trim().isEmpty())
         {
-            throw new IllegalArgumentException("Name is empty");
+            throw new IllegalArgumentException("Name of category can't be empty");
         }
-        else
-            this.name=n;
+        this.name = name;
     }
 
     public String getName()
@@ -26,21 +29,43 @@ public class Category {
         return this.name;
     }
 
-    private void setDescription(String desc)
+    private void setDescription(String description)
     {
-        if(desc==null || desc.trim().isEmpty())
+        if(description == null || description.trim().isEmpty())
         {
-            throw new IllegalArgumentException("Description is empty");
+            throw new IllegalArgumentException("Description of category can't be empty");
         }
-
-        else
-            this.description=desc;
+        this.description = description;
 
     }
 
     public String getDescription()
     {
         return this.description;
+    }
+
+    public void setFeedback(String feedback) {
+        if(feedback == null || feedback.trim().length() == 0)
+        {
+            throw new IllegalArgumentException("Feedback of a category can't be empty");
+        }
+        this.feedback = feedback;
+    }
+
+    public void setPoints(int points) {
+        if(points < 1)
+        {
+            throw new IllegalArgumentException("The points of a category should be at least 1");
+        }
+        this.points = points;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public String getFeedback() {
+        return feedback;
     }
 
     public String toString()
