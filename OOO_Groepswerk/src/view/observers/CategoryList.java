@@ -12,6 +12,10 @@ public class CategoryList {
     public CategoryList()
     {
         categories = new ArrayList<>();
+        Category c1 = new Category("Design principles","The SOLID design principles",4,"You should know the design of a principle");
+        Category c2 = new Category("Design patterns","A design pattern",3,"Know aal patterns");
+        categories.add(c1);
+        categories.add(c2);
     }
 
     public void addCategory(Category category)
