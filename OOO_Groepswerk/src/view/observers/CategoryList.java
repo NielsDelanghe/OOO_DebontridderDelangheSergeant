@@ -23,23 +23,14 @@ public class CategoryList {
 
         else if(category == null)
         {
-            throw new IllegalArgumentException("Category may not be empty");
+            throw new IllegalArgumentException("Category can't be empty");
         }
-
-        else
-        {
-            categories.add(category);
-        }
+        categories.add(category);
     }
 
-    public String getCategotyList()
+    public List<Category> getCategotyList()
     {
-        String list="";
-        for(Category cat : categories)
-        {
-            list+=cat.toString();
-        }
-        return list;
+        return this.categories;
     }
 
 }
