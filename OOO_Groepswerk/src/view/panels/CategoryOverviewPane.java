@@ -20,8 +20,6 @@ public class CategoryOverviewPane extends GridPane{
 	private TableView table;
 	private Button btnNew;
 	private CategoryList categories = new CategoryList();
-	private Category c1 = new Category("Design principles","The SOLID design principles",4,"You should know the design of a principle");
-	private Category c2 = new Category("Design patterns","A design pattern",3,"Know aal patterns");
 	private ObservableList<Category> data = FXCollections.observableArrayList(categories.getCategotyList());
 	
 	public CategoryOverviewPane() {
@@ -29,7 +27,7 @@ public class CategoryOverviewPane extends GridPane{
         this.setVgap(5);
         this.setHgap(5);
 		this.add(new Label("Categories:"), 0, 0, 1, 1);
-		
+
 		table = new TableView<>();
 		table.setPrefWidth(REMAINING);
         TableColumn nameCol = new TableColumn<>("Name");
