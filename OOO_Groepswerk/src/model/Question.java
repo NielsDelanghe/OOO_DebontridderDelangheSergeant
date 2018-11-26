@@ -21,6 +21,8 @@ public class Question {
             throw new IllegalArgumentException("The text of a question can't be empty");
         }
         this.question = question;
+
+        //
     }
 
     public void setPossible_answers(List possible_answers) {
