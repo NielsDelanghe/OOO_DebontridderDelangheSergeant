@@ -17,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
 import model.Question;
+import view.observers.QuestionList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,16 +26,8 @@ public class QuestionOverviewPane extends GridPane {
 	private TableView table;
 	private Button btnNew;
 
-	private ObservableList<Question> data = FXCollections.observableArrayList();
-
-	private List<String> answers_q1 = new ArrayList<>();
-	private List<String> answers_q2 = new ArrayList<>();
-
-	private Category cat1 = new Category("Design principles", "The SOLID design principles", 4, "You should know the design of a principle");
-	private Category cat2 = new Category("Design patterns", "A design pattern", 3, "Know all patterns");
-
-	private Question q1;
-	private Question q2;
+	private QuestionList questions = new QuestionList();
+	private ObservableList<Question> data = FXCollections.observableArrayList(questions.getQuestions());
 
 	public QuestionOverviewPane() {
 		this.setPadding(new Insets(5, 5, 5, 5));
@@ -52,22 +45,6 @@ public class QuestionOverviewPane extends GridPane {
 		descriptionCol.setCellValueFactory(new PropertyValueFactory("category"));
 		table.getColumns().add(descriptionCol);
 		this.add(table, 0, 1, 2, 6);
-
-		answers_q1.add("Simple Factory");
-		answers_q1.add("Singleton");
-		answers_q1.add("Strategy");
-
-		answers_q2.add("S");
-		answers_q2.add("O");
-		answers_q2.add("L");
-		answers_q2.add("I");
-		answers_q2.add("D");
-
-		q1 = new Question("What pattern defines a family of algorithmes?", answers_q1, cat2.getName());
-		q2 = new Question("What design principle has the least to do with Strategys?", answers_q2, cat1.getName());
-
-		data.add(q1);
-		data.add(q2);
 
 		table.setItems(data);
 		btnNew = new Button("New");
@@ -97,9 +74,6 @@ public class QuestionOverviewPane extends GridPane {
 			root.getChildren().add(questionDetailPane);
 			newQuestionStage.setScene(questionScene);
 			newQuestionStage.show();
-
-
 		}
-
 	}
 }
