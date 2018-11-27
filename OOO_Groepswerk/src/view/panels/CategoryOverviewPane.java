@@ -75,8 +75,6 @@ public class CategoryOverviewPane extends GridPane{
 			root.getChildren().add(categoryDetailPane);
 			newCategoryStage.setScene(categoryScene);
 			newCategoryStage.show();
-
-
 		}
 	}
 
