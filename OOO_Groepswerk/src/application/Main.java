@@ -21,9 +21,9 @@ public class Main extends Application {
 
 			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane();
 			QuestionDetailPane questionDetailPane = new QuestionDetailPane();
-
+			model.Group gr = new model.Group();
 			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane();
-			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane();
+			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(gr);
 
 			TestPane testPane = new TestPane();
 			MessagePane messagePane = new MessagePane();

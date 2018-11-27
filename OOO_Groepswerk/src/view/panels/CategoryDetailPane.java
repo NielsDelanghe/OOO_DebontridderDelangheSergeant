@@ -9,13 +9,19 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import model.Category;
+import model.Group;
+import view.observers.CategoryList;
 
 public class CategoryDetailPane extends GridPane {
 	private Button btnOK, btnCancel;
 	private TextField titleField, descriptionField;
 	private ComboBox categoryField;
 
-	public CategoryDetailPane() {
+
+
+
+	public CategoryDetailPane(Group gr) {
+		g = gr;
 		this.setPrefHeight(150);
 		this.setPrefWidth(300);
 		
@@ -65,6 +71,8 @@ public class CategoryDetailPane extends GridPane {
 			String description= descriptionField.getText();
 			String catagorie = categoryField.getAccessibleText();
 			Category cat = new Category(title, description);
+			g.addcat(cat);
+
 
 
 

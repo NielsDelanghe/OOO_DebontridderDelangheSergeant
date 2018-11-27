@@ -27,8 +27,9 @@ public class CategoryOverviewPane extends GridPane implements Observer {
 
 	private TableView table;
 	private Button btnNew;
+	private model.Group gr = new model.Group();
 	private CategoryList categories = new CategoryList();
-	private ObservableList<Category> data = FXCollections.observableArrayList(categories.getCategotyList());
+
 	
 	public CategoryOverviewPane() {
 		this.setPadding(new Insets(5, 5, 5, 5));
@@ -48,7 +49,7 @@ public class CategoryOverviewPane extends GridPane implements Observer {
         table.getColumns().add(descriptionCol);
 		this.add(table, 0, 1, 2, 6);
 
-		table.setItems(data);
+		table.setItems(gr.getList());
 		
 		btnNew = new Button("New");
 		this.add(btnNew, 0, 11, 1, 1);
@@ -68,7 +69,7 @@ public class CategoryOverviewPane extends GridPane implements Observer {
 	public void update(Observable o, Object arg) {
 		if (o instanceof Category) {
 			Category cat = (Category) o;
-			data.add(cat);
+			categories.addCategory(cat);
 			}
 
 	}
