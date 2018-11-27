@@ -6,9 +6,9 @@ public class Question {
 
     private String question;
     private List<String> possible_answers;
-    private Category category;
+    private String category;
 
-    public Question(String question, List<String> possible_answers, Category category)
+    public Question(String question, List<String> possible_answers, String category)
     {
         setQuestion(question);
         setPossible_answers(possible_answers);
@@ -32,7 +32,7 @@ public class Question {
         this.possible_answers = possible_answers;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         if(category == null)
         {
             throw new IllegalArgumentException("The category of a question can't be empty");
@@ -40,7 +40,7 @@ public class Question {
         this.category = category;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
@@ -57,14 +57,12 @@ public class Question {
     {
         String result = "";
         result += "Question: " + this.getQuestion();
-        result += "\nPossible answers: ";
-                for(String answer : possible_answers)
-                {
-                    result += "\n" + answer;
-                }
         result += "Category: " + this.getCategory();
-        result += "Feedback: " + this.getCategory().getFeedback();
-        result += "Points: " + this.getCategory().getPoints();
+        result += "\nPossible answers: ";
+        for(String answer : possible_answers)
+        {
+            result += "\n" + answer;
+        }
         return result;
     }
 }

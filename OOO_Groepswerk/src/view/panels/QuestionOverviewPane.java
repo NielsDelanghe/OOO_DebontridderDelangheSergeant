@@ -63,8 +63,8 @@ public class QuestionOverviewPane extends GridPane {
 		answers_q2.add("I");
 		answers_q2.add("D");
 
-		q1 = new Question("What pattern defines a family of algorithmes?", answers_q1, cat2);
-		q2 = new Question("What design principle has the least to do with Strategys?", answers_q2, cat1);
+		q1 = new Question("What pattern defines a family of algorithmes?", answers_q1, cat2.getName());
+		q2 = new Question("What design principle has the least to do with Strategys?", answers_q2, cat1.getName());
 
 		data.add(q1);
 		data.add(q2);
