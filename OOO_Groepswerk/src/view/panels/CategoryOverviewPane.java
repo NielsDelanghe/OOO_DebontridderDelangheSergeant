@@ -18,8 +18,13 @@ import javafx.stage.Stage;
 import model.Category;
 import view.observers.CategoryList;
 
+import java.util.Observable;
+import java.util.Observer;
 
-public class CategoryOverviewPane extends GridPane{
+
+public class CategoryOverviewPane extends GridPane implements Observer {
+	Observable observable;
+
 	private TableView table;
 	private Button btnNew;
 	private CategoryList categories = new CategoryList();
@@ -57,6 +62,15 @@ public class CategoryOverviewPane extends GridPane{
 	
 	public void setEditAction(EventHandler<MouseEvent> editAction) {
 		table.setOnMouseClicked(editAction);
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		if (o instanceof Category) {
+			Category cat = (Category) o;
+			data.add(cat);
+			}
+
 	}
 
 	private class NewCategory implements EventHandler<ActionEvent>

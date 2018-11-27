@@ -1,6 +1,8 @@
 package model;
 
-public class Category {
+import java.util.Observable;
+
+public class Category extends Observable {
 
     private String name;
     private String description;
