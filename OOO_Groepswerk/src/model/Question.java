@@ -22,7 +22,6 @@ public class Question {
         }
         this.question = question;
 
-        //
     }
 
     public void setPossible_answers(List possible_answers) {
