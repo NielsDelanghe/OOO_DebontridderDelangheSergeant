@@ -1,19 +1,28 @@
 package model;
 
-import java.util.Observable;
+import db.Savable;
 
-public class Category extends Observable {
+public class Category implements Savable {
 
     private String name;
     private String description;
+    private Category mainCategory;
 
-    public Category(String name, String description)
+
+    public Category(String name, String description, Category main)
+    {
+        this.setName(name);
+        this.setDescription(description);
+        this.setMainCategory(main);
+    }
+
+    public Category(String name,String description)
     {
         this.setName(name);
         this.setDescription(description);
     }
 
-    private void setName(String name)
+    public void setName(String name)
     {
         if(name == null || name.trim().isEmpty())
         {
@@ -22,7 +31,12 @@ public class Category extends Observable {
         this.name = name;
     }
 
-    private void setDescription(String description)
+    public String getName()
+    {
+        return this.name;
+    }
+
+    public void setDescription(String description)
     {
         if(description == null || description.trim().isEmpty())
         {
@@ -37,14 +51,32 @@ public class Category extends Observable {
         return this.description;
     }
 
-    public String getName()
+    public Category getMainCategory()
     {
-        return this.name;
+        return mainCategory;
     }
+
+    public void setMainCategory(Category category)
+    {
+        mainCategory=category;
+    }
+
+
 
     public String toString()
     {
-       return this.getName() + "\t" + this.getDescription() + "\n";
+       return name + "\t" + description + "\t";
+    }
+
+    public static void main(String args[])
+    {
+        Category c1;
+        c1 = new Category("UML","uml tekening");
+        c1.setMainCategory(c1);
+        Category c2 = new Category("Test","test",c1);
+        System.out.println(c2.toString());
+        System.out.println(c1.toString());
+
     }
 
 }

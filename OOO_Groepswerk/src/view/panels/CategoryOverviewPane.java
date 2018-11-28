@@ -16,20 +16,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
-import view.observers.CategoryList;
-
-import java.util.Observable;
-import java.util.Observer;
+import controller.CategoryList;
 
 
-public class CategoryOverviewPane extends GridPane implements Observer {
-	Observable observable;
-
+public class CategoryOverviewPane extends GridPane{
 	private TableView table;
 	private Button btnNew;
-	private model.Group gr = new model.Group();
 	private CategoryList categories = new CategoryList();
-
+	private ObservableList<Category> data = FXCollections.observableArrayList(categories.getCategotyList());
 	
 	public CategoryOverviewPane() {
 		this.setPadding(new Insets(5, 5, 5, 5));
@@ -48,12 +42,12 @@ public class CategoryOverviewPane extends GridPane implements Observer {
         descriptionCol.setCellValueFactory(new PropertyValueFactory("description"));
         table.getColumns().add(descriptionCol);
 		this.add(table, 0, 1, 2, 6);
-
-		table.setItems(gr.getList());
+		table.setItems(getData());
 		
 		btnNew = new Button("New");
 		this.add(btnNew, 0, 11, 1, 1);
-		btnNew.setOnAction(new NewCategory());
+		setNewAction(new NewCategory());
+
 	}
 	
 	public void setNewAction(EventHandler<ActionEvent> newAction) {
@@ -65,14 +59,16 @@ public class CategoryOverviewPane extends GridPane implements Observer {
 		table.setOnMouseClicked(editAction);
 	}
 
-	@Override
-	public void update(Observable o, Object arg) {
-		if (o instanceof Category) {
-			Category cat = (Category) o;
-			categories.addCategory(cat);
-			}
+	public ObservableList<Category>  getData()
+    {
+        return data;
+    }
 
-	}
+    public void setData(ObservableList<Category> data)
+    {
+        this.data=data;
+        table.setItems(this.data);
+    }
 
 	private class NewCategory implements EventHandler<ActionEvent>
 	{

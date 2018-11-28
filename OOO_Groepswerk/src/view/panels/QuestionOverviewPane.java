@@ -15,12 +15,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import model.Category;
 import model.Question;
-import view.observers.QuestionList;
+import controller.QuestionList;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class QuestionOverviewPane extends GridPane {
 	private TableView table;
@@ -58,6 +55,13 @@ public class QuestionOverviewPane extends GridPane {
 
 	public void setEditAction(EventHandler<MouseEvent> editAction) {
 		table.setOnMouseClicked(editAction);
+	}
+
+	public void addQuestion(Question question)
+	{
+		this.data.add(question);
+		this.table.setItems(data);
+		System.out.println(table.getItems().toString());
 	}
 
 	private class NewQuestion implements EventHandler<ActionEvent> {

@@ -2,38 +2,39 @@ package db;
 
 import model.Category;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class CategoryDB {
 
-    private FileWriter writer;
-    private FileReader reader;
+    private PrintWriter writer;
+    private PrintWriter reader;
     private static CategoryDB uniqueInstance;
     private static File categoryFile;
     private List<Category> categoryList;
 
-    public CategoryDB()
+    public CategoryDB(ArrayList<Category> cats)
     {
-        categoryFile = new File("CategoryFile.txt");
+        categoryFile = new File("TestDatabase\\CategoryFile.txt");
         categoryList=new ArrayList<>();
         try {
-            writer = new FileWriter(categoryFile);
-            reader = new FileReader(categoryFile);
+            writer = new PrintWriter(categoryFile);
+            reader = new PrintWriter(categoryFile);
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Bestant niet gevonden");
         }
+
+        categoryList=cats;
+
     }
 
     public static CategoryDB getInstance(){
         if(uniqueInstance ==null)
         {
-            uniqueInstance = new CategoryDB();
+            uniqueInstance = new CategoryDB(new ArrayList<Category>());
         }
         return uniqueInstance;
     }
@@ -42,29 +43,23 @@ public class CategoryDB {
     {
         for(Category c : categoryList)
         {
-            try {
-                writer.write(c.toString());
-            } catch (IOException e) {
-                e.printStackTrace();
+            try{
+                System.out.println("test");
+                writer.println(c.toString());
+            }catch (Exception e)
+            {
+                System.out.println(e.getMessage());
             }
+
         }
+        writer.close();
     }
 
-    public static void main(String args[])
+    public void ReadFromFile()
     {
-        CategoryDB db;
-        db = CategoryDB.getInstance();
-
-        ArrayList<Category>categories = new ArrayList<>();
-        Category c1 = new Category("Design principles","The SOLID design principles");
-        Category c2 = new Category("Design patterns","A design pattern");
-
-        categories.add(c1);
-        categories.add(c2);
-
-        db.writeToFile();
 
     }
+
 
 }
 
