@@ -52,9 +52,9 @@ public abstract class TXTDBStrategy implements DBStrategy {
     }
 
     @Override
-    public ArrayList<Savable> getReadObjects(){
+    public List<Savable> getReadObjects(){
 
-        return (ArrayList<Savable>) savables;
+        return  savables;
     }
 
 

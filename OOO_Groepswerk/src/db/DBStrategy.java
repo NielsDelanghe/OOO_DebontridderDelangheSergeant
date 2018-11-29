@@ -1,6 +1,6 @@
 package db;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface DBStrategy {
 
@@ -8,6 +8,6 @@ public interface DBStrategy {
 
     void read();
 
-    ArrayList<Savable> getReadObjects();
+    List<Savable> getReadObjects();
 
 }

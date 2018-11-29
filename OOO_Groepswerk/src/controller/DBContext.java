@@ -8,6 +8,7 @@ import model.Category;
 import model.Question;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DBContext implements DBStrategy {
 
@@ -36,7 +37,7 @@ public class DBContext implements DBStrategy {
     }
 
     @Override
-    public ArrayList<Savable> getReadObjects() {
+    public List<Savable> getReadObjects() {
         return null;
     }
 
@@ -68,18 +69,19 @@ public class DBContext implements DBStrategy {
         answers_q2.add("I");
         answers_q2.add("D");
 
-        q1 = new Question("What pattern defines a family of algorithmes?", answers_q1, c2.getName(), "feedback", 5);
-        q2 = new Question("What design principle has the least to do with Strategys?", answers_q2, c1.getName(), "feedback", 3);
+        q1 = new Question("What pattern defines a family of algorithmes?", c2.getName(), "feedback", 5,answers_q1);
+        q2 = new Question("What design principle has the least to do with Strategys?", c1.getName(), "feedback", 3, answers_q2);
         questions.add(q1);
         questions.add(q2);
 
 
+        context.setStrategy(new CategoryTXT("CategoryFile.txt",categories));
+        context.write();
         context.setStrategy(new QuestionTXT("QuestionFile.txt",questions));
         context.write();
         context.read();
         System.out.println(context.getReadObjects());
-        context.setStrategy(new CategoryTXT("CategoryFile.txt",categories));
-        context.write();
+
 
     }
 }

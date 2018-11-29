@@ -34,21 +34,19 @@ public class QuestionTXT extends TXTDBStrategy {
 
     @Override
     public Savable convertStringToObject(String[] velden) {
-            Savable object;
+        Savable object;
+
         List<String> statements = new ArrayList<>();
 
-                object = new Question();
-                ((Question) object).setQuestion(velden[0]);
-                ((Question) object).setCategory(velden[1]);
-                ((Question) object).setFeedback(velden[2]);
-                ((Question) object).setPoints(Integer.parseInt(velden[3]));
-                for(int i=4; i < velden.length; i++)
-                {
-                    statements.add(velden[i]);
-                }
-                ((Question) object).setPossible_answers(statements);
+        for(int i=4; i < velden.length; i++)
+        {
+            statements.add(velden[i]);
+        }
 
-            return object;
+        object = new Question(velden[0],velden[1],velden[2],Integer.parseInt(velden[3]),statements);
+
+
+    return object;
     }
 
 }

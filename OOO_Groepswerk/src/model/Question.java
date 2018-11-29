@@ -12,7 +12,7 @@ public class Question implements Savable {
     private String feedback;
     private int points;
 
-    public Question(String question, List<String> possible_answers, String category, String feedback, int points)
+    public Question(String question, String category, String feedback, int points,List<String> possible_answers)
     {
         this.setQuestion(question);
         this.setPossible_answers(possible_answers);

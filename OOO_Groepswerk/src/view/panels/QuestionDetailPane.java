@@ -117,7 +117,7 @@ public class QuestionDetailPane extends GridPane {
 
 		@Override
 		public void handle(ActionEvent event) {
-			Question question = new Question(questionField.getText(),statementList,categoryField.getSelectionModel().getSelectedItem().toString(), feedbackField.getText(), 1);
+			Question question = new Question(questionField.getText(),categoryField.getSelectionModel().getSelectedItem().toString(), feedbackField.getText(), 1,statementList);
 			questions.addQuestion(question);
 			overviewPane.addQuestion(question);
 
