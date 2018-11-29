@@ -1,0 +1,11 @@
+Question: What pattern defines a family of algorithmes?Category: Design patterns
+Possible answers: 
+Simple Factory
+Singleton
+StrategyQuestion: What design principle has the least to do with Strategys?Category: Design principles
+Possible answers: 
+S
+O
+L
+I
+D

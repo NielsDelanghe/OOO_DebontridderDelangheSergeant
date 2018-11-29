@@ -18,12 +18,15 @@ import javafx.stage.Stage;
 import model.Category;
 import controller.CategoryList;
 
+import java.util.ArrayList;
+
 
 public class CategoryOverviewPane extends GridPane{
 	private TableView table;
 	private Button btnNew;
 	private CategoryList categories = new CategoryList();
 	private ObservableList<Category> data = FXCollections.observableArrayList(categories.getCategotyList());
+	private CategoryDetailPane detailPane = new CategoryDetailPane();
 	
 	public CategoryOverviewPane() {
 		this.setPadding(new Insets(5, 5, 5, 5));
@@ -42,11 +45,11 @@ public class CategoryOverviewPane extends GridPane{
         descriptionCol.setCellValueFactory(new PropertyValueFactory("description"));
         table.getColumns().add(descriptionCol);
 		this.add(table, 0, 1, 2, 6);
-		table.setItems(getData());
 		
 		btnNew = new Button("New");
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewCategory());
+		table.getItems().addAll(data);
 
 	}
 	
@@ -59,16 +62,11 @@ public class CategoryOverviewPane extends GridPane{
 		table.setOnMouseClicked(editAction);
 	}
 
-	public ObservableList<Category>  getData()
-    {
-        return data;
-    }
+	public CategoryList getCategoryList()
+	{
+		return categories;
+	}
 
-    public void setData(ObservableList<Category> data)
-    {
-        this.data=data;
-        table.setItems(this.data);
-    }
 
 	private class NewCategory implements EventHandler<ActionEvent>
 	{

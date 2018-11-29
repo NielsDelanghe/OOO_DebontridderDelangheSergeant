@@ -7,10 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
@@ -20,12 +17,13 @@ public class CategoryDetailPane extends GridPane {
 	private TextField titleField, descriptionField;
 	private ComboBox categoryField;
 	private CategoryList categories = new CategoryList();
-	private ObservableList<String> data = FXCollections.observableArrayList(categories.getCategoryNames());
-	private CategoryOverviewPane overviewPane = new CategoryOverviewPane();
-	private ObservableList<Category> cats = FXCollections.observableArrayList(overviewPane.getData());
+	private ObservableList<String> categorieTitles = FXCollections.observableArrayList(categories.getCategoryNames());
+	private Category c;
+
 
 
 	public CategoryDetailPane() {
+
 		this.setPrefHeight(150);
 		this.setPrefWidth(300);
 		
@@ -44,7 +42,7 @@ public class CategoryDetailPane extends GridPane {
 		this.add(new Label("Main Category:"), 0, 2, 1, 1);
 		categoryField = new ComboBox<>();
 		this.add(categoryField, 1, 2, 1, 1);
-		categoryField.setItems(data);
+		categoryField.setItems(categorieTitles);
 
 		btnCancel = new Button("Cancel");
 		this.add(btnCancel, 0, 3, 1, 1);
@@ -65,18 +63,26 @@ public class CategoryDetailPane extends GridPane {
 		btnCancel.setOnAction(cancelAction);
 	}
 
+
+
 	public class AddCategory implements EventHandler<ActionEvent>
 	{
 
 		@Override
 		public void handle(ActionEvent event) {
-			String title = titleField.getText();
-			String description = descriptionField.getText();
-
-			Category c = new Category(title,description);
-			data.add(c.getName());
-			cats.add(c);
-			overviewPane.setData(cats);
+			try {
+				c = new Category(titleField.getText(), descriptionField.getText());
+				categories.addCategory(c);
+				titleField.setText("");
+				descriptionField.setText("");
+				categorieTitles.add(c.getName());
+				System.out.println(categories.getCategotyList().toString());
+			}catch(Exception ex){
+				Alert alert = new Alert(Alert.AlertType.INFORMATION);
+				alert.setHeaderText("ERROR");
+				alert.setContentText(ex.getMessage());
+				alert.showAndWait();
+			}
 		}
 	}
 

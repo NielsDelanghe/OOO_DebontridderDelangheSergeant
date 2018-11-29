@@ -1,8 +1,10 @@
 package model;
 
+import db.Savable;
+
 import java.util.List;
 
-public class Question {
+public class Question implements Savable {
 
     private String question;
     private List<String> possible_answers;
