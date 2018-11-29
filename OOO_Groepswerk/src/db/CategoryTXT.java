@@ -28,4 +28,10 @@ public class CategoryTXT extends TXTDBStrategy {
     public List<Savable> getObjectsToWrite() {
         return categoryList;
     }
+
+    @Override
+    public Savable convertStringToObject(String[] velden) {
+        return null;
+    }
+
 }

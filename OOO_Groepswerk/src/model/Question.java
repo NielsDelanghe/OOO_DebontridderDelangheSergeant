@@ -21,6 +21,9 @@ public class Question implements Savable {
         this.setPoints(points);
     }
 
+    public Question()
+    {}
+
     public void setQuestion(String question) {
         if(question == null || question.trim().length() == 0)
         {
@@ -83,13 +86,15 @@ public class Question implements Savable {
     public String toString()
     {
         String result = "";
-        result += "Question: " + this.getQuestion();
-        result += "Category: " + this.getCategory();
-        result += "\nPossible answers: ";
+        result += this.getQuestion() +"\t";
+        result += this.getCategory() +"\t";
+        result += this.getFeedback() +"\t";
+        result += this.getPoints()   +"\t";
         for(String answer : possible_answers)
         {
-            result += "\n" + answer;
+            result += "\t" + answer;
         }
+        result +="\n";
         return result;
     }
 }

@@ -3,6 +3,7 @@ package db;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
 
     private File file;
     private PrintWriter writer;
+    private List<Savable>savables = new ArrayList<>();
 
     @Override
     public void write() {
@@ -41,21 +43,28 @@ public abstract class TXTDBStrategy implements DBStrategy {
 
                 String lijn = scannerFile.nextLine();
                 String [] velden = lijn.split("\t");
+                savables.add(convertStringToObject(velden));
 
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
-
     }
+
+    @Override
+    public ArrayList<Savable> getReadObjects(){
+
+        return (ArrayList<Savable>) savables;
+    }
+
+
 
     public abstract File getFile();
 
     public abstract List<Savable> getObjectsToWrite();
 
-    //public abstract
+    public abstract Savable convertStringToObject(String [] velden);
+
 
 
 
