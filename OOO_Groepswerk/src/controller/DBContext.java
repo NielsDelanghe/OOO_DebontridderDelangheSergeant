@@ -46,10 +46,10 @@ public class DBContext implements DBStrategy {
         ArrayList<Savable> categories = new ArrayList<>();
         Category c1 = new Category("Design principles","The SOLID design principles");
         Category c2 = new Category("Design patterns","A design pattern");
-        Category c3 = new Category("UML","Make an UML");
+        //Category c3 = new Category("UML","Make an UML");
         categories.add(c1);
         categories.add(c2);
-        categories.add(c3);
+        //categories.add(c3);
 
         ArrayList<Savable> questions = new ArrayList<>();
         Question q1;
@@ -74,11 +74,11 @@ public class DBContext implements DBStrategy {
         questions.add(q2);
 
 
-        context.setStrategy(new QuestionTXT("TestDatabase\\QuestionFile.txt",questions));
+        context.setStrategy(new QuestionTXT("QuestionFile.txt",questions));
         context.write();
         context.read();
         System.out.println(context.getReadObjects());
-        context.setStrategy(new CategoryTXT("TestDatabase\\CategoryFile.txt",categories));
+        context.setStrategy(new CategoryTXT("CategoryFile.txt",categories));
         context.write();
 
     }
