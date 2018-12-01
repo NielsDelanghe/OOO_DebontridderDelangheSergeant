@@ -13,7 +13,7 @@ public class CategoryList {
 
     public CategoryList()
     {
-        categories = FXCollections.observableArrayList(new ArrayList<Category>());
+        categories = FXCollections.observableArrayList(new ArrayList<>());
 
 
         Category c1 = new Category("Design principles","The SOLID design principles");

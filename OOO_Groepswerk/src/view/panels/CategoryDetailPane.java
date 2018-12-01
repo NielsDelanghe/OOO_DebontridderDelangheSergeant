@@ -68,10 +68,8 @@ public class CategoryDetailPane extends GridPane {
 			try {
 				category = new Category(titleField.getText(), descriptionField.getText());
 				categories.addCategory(category);
-				titleField.setText("");
-				descriptionField.setText("");
 				categoryTitles.add(category.getName());
-				Stage stage =(Stage) btnOK.getScene().getWindow();
+				Stage stage = (Stage) btnOK.getScene().getWindow();
 				stage.close();
 				}
 			catch(Exception ex) {
@@ -87,7 +85,7 @@ public class CategoryDetailPane extends GridPane {
 	{
 		@Override
 		public void handle(ActionEvent event) {
-			Stage stage =(Stage) btnCancel.getScene().getWindow();
+			Stage stage = (Stage) btnCancel.getScene().getWindow();
 			stage.close();
 		}
 	}

@@ -7,7 +7,6 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import model.Category;
 import view.panels.AssesMainPane;
 import view.panels.CategoryDetailPane;
 import view.panels.CategoryOverviewPane;
@@ -23,10 +22,8 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-
 		try {
-
-			categoryList=new CategoryList();
+			categoryList = new CategoryList();
 			questionList = new QuestionList();
 
 			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane(questionList);

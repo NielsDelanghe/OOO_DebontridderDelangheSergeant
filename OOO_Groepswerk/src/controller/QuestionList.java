@@ -14,7 +14,7 @@ public class QuestionList {
 
     public QuestionList()
     {
-        questions = FXCollections.observableArrayList(new ArrayList<Question>());
+        questions = FXCollections.observableArrayList(new ArrayList<>());
         List<String> answers_q1 = new ArrayList<>();
         List<String> answers_q2 = new ArrayList<>();
 

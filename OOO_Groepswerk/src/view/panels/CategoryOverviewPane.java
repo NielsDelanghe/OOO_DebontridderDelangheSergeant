@@ -54,11 +54,6 @@ public class CategoryOverviewPane extends GridPane{
 		table.setOnMouseClicked(editAction);
 	}
 
-	public CategoryList getCategoryList()
-	{
-		return categories;
-	}
-
 	private class NewCategory implements EventHandler<ActionEvent>
 	{
 		@Override
