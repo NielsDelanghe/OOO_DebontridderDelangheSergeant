@@ -1,1 +1,2 @@
-Design principles	The SOLID design principles	Design patterns	A design pattern	
+Design principles	The SOLID design principles	
+Design patterns	A design pattern	

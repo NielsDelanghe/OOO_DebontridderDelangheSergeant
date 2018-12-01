@@ -65,7 +65,7 @@ public class Category implements Savable {
 
     public String toString()
     {
-       return name + "\t" + description + "\t";
+       return name + "\t" + description + "\t" +"\n";
     }
 
     public static void main(String args[])
