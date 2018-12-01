@@ -1,5 +1,7 @@
 package db;
 
+import model.Category;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +33,9 @@ public class CategoryTXT extends TXTDBStrategy {
 
     @Override
     public Savable convertStringToObject(String[] velden) {
-        return null;
+        Savable object = new Category(velden[0],velden[1]);
+        return object;
+
     }
 
 }

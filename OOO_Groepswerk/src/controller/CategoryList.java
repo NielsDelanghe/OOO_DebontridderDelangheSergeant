@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.Category;
 
 import java.util.ArrayList;
@@ -7,11 +9,13 @@ import java.util.List;
 
 public class CategoryList {
 
-    private List<Category> categories;
+    private ObservableList<Category> categories;
 
     public CategoryList()
     {
-        categories = new ArrayList<>();
+        categories = FXCollections.observableArrayList(new ArrayList<Category>());
+
+
         Category c1 = new Category("Design principles","The SOLID design principles");
         Category c2 = new Category("Design patterns","A design pattern");
         categories.add(c1);
@@ -32,7 +36,7 @@ public class CategoryList {
         categories.add(category);
     }
 
-    public List<Category> getCategotyList()
+    public ObservableList<Category> getCategotyList()
     {
         return this.categories;
     }

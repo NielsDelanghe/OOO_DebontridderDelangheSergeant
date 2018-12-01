@@ -10,17 +10,16 @@ public class QuestionTXT extends TXTDBStrategy {
 
         File file;
         ArrayList<Savable> questionList = new ArrayList<>();
-        ArrayList<Savable> readList = new ArrayList<>();
-
-        public void setCategoryList(ArrayList<Savable> qList) {
-            this.questionList = qList;
-        }
 
         public QuestionTXT(String path, ArrayList<Savable> list)
         {
             this.file=new File(path);
             this.setCategoryList(list);
         }
+
+    public void setCategoryList(ArrayList<Savable> qList) {
+        this.questionList = qList;
+    }
 
         @Override
         public File getFile() {
@@ -32,21 +31,20 @@ public class QuestionTXT extends TXTDBStrategy {
             return questionList;
         }
 
-    @Override
-    public Savable convertStringToObject(String[] velden) {
-        Savable object;
+        @Override
+        public Savable convertStringToObject(String[] velden) {
+            Savable object;
 
-        List<String> statements = new ArrayList<>();
+            List<String> statements = new ArrayList<>();
 
-        for(int i=4; i < velden.length; i++)
-        {
-            statements.add(velden[i]);
+            for(int i=4; i < velden.length; i++)
+            {
+                statements.add(velden[i]);
+            }
+
+            object = new Question(velden[0],velden[1],velden[2],Integer.parseInt(velden[3]),statements);
+
+            return object;
         }
-
-        object = new Question(velden[0],velden[1],velden[2],Integer.parseInt(velden[3]),statements);
-
-
-    return object;
-    }
 
 }

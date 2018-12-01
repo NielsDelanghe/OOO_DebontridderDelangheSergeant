@@ -24,11 +24,12 @@ import java.util.ArrayList;
 public class CategoryOverviewPane extends GridPane{
 	private TableView table;
 	private Button btnNew;
-	private CategoryList categories = new CategoryList();
-	private ObservableList<Category> data = FXCollections.observableArrayList(categories.getCategotyList());
-	private CategoryDetailPane detailPane = new CategoryDetailPane();
+	private CategoryList categories;
+	private ObservableList<Category> data;
 	
-	public CategoryOverviewPane() {
+	public CategoryOverviewPane(CategoryList cats) {
+		categories=cats;
+		data = cats.getCategotyList();
 		this.setPadding(new Insets(5, 5, 5, 5));
         this.setVgap(5);
         this.setHgap(5);
@@ -49,7 +50,7 @@ public class CategoryOverviewPane extends GridPane{
 		btnNew = new Button("New");
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewCategory());
-		table.getItems().addAll(data);
+		table.setItems(categories.getCategotyList());
 
 	}
 	
@@ -74,7 +75,7 @@ public class CategoryOverviewPane extends GridPane{
 		@Override
 		public void handle(ActionEvent event) {
 
-			CategoryDetailPane categoryDetailPane = new CategoryDetailPane();
+			CategoryDetailPane categoryDetailPane = new CategoryDetailPane(categories);
 			Stage newCategoryStage = new Stage();
 
 			Group root = new Group();

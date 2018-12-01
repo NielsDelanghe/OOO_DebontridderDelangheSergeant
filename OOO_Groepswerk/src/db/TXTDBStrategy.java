@@ -46,6 +46,9 @@ public abstract class TXTDBStrategy implements DBStrategy {
                 savables.add(convertStringToObject(velden));
 
             }
+
+            scannerFile.close();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -54,10 +57,8 @@ public abstract class TXTDBStrategy implements DBStrategy {
     @Override
     public List<Savable> getReadObjects(){
 
-        return  savables;
+        return savables;
     }
-
-
 
     public abstract File getFile();
 

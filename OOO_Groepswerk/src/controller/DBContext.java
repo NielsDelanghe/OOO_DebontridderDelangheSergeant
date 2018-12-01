@@ -38,7 +38,7 @@ public class DBContext implements DBStrategy {
 
     @Override
     public List<Savable> getReadObjects() {
-        return null;
+        return strategy.getReadObjects();
     }
 
     public static void main(String args[])
@@ -77,6 +77,8 @@ public class DBContext implements DBStrategy {
 
         context.setStrategy(new CategoryTXT("CategoryFile.txt",categories));
         context.write();
+        context.read();
+        System.out.println(context.getReadObjects());
         context.setStrategy(new QuestionTXT("QuestionFile.txt",questions));
         context.write();
         context.read();

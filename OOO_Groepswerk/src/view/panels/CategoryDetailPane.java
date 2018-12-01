@@ -16,13 +16,16 @@ public class CategoryDetailPane extends GridPane {
 	private Button btnOK, btnCancel;
 	private TextField titleField, descriptionField;
 	private ComboBox categoryField;
-	private CategoryList categories = new CategoryList();
-	private ObservableList<String> categorieTitles = FXCollections.observableArrayList(categories.getCategoryNames());
+	private CategoryList categories;
+	private ObservableList<String> categorieTitles;
 	private Category c;
 
 
 
-	public CategoryDetailPane() {
+	public CategoryDetailPane(CategoryList categoryList) {
+
+		categories=categoryList;
+		categorieTitles = FXCollections.observableArrayList(categories.getCategoryNames());
 
 		this.setPrefHeight(150);
 		this.setPrefWidth(300);
@@ -73,6 +76,7 @@ public class CategoryDetailPane extends GridPane {
 			try {
 				c = new Category(titleField.getText(), descriptionField.getText());
 				categories.addCategory(c);
+
 				titleField.setText("");
 				descriptionField.setText("");
 				categorieTitles.add(c.getName());
