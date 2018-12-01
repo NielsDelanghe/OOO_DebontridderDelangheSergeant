@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98fd5d2-b0d4-40ff-bc9b-e7ddaf0d585b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CategoryFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CategoryFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/db/DBStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/db/DBStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionDetailPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +14,7 @@
     <session id="1142312117">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -36,24 +30,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="108" />
+          <entry key="java" value="110" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="108" />
+          <entry key="JAVA" value="110" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5247" />
+          <entry key="java" value="5947" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5247" />
+          <entry key="JAVA" value="5947" />
         </counts>
       </usages-collector>
     </session>
@@ -125,11 +119,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionDetailPane.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="37" column="129" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="37" selection-end-column="129" />
             </state>
           </provider>
         </entry>
@@ -168,7 +189,6 @@
       <list>
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/CategoryList.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/observers/CategoryList.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryDB.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/DBContext.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Question.java" />
@@ -185,6 +205,7 @@
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionDetailPane.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" />
       </list>
     </option>
   </component>
@@ -268,7 +289,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543686531595" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543695885485" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -288,7 +309,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="CategoryDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="db.CategoryDB" />
       <module name="OOO_DebontridderDelangheSergeant" />
@@ -328,13 +349,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.Test" />
+      <module name="OOO_DebontridderDelangheSergeant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.CategoryDB" />
       <item itemvalue="Application.DBContext" />
+      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.DBContext" />
         <item itemvalue="Application.CategoryDB" />
@@ -364,16 +400,15 @@
       <workItem from="1543490941204" duration="163000" />
       <workItem from="1543497232551" duration="11012000" />
       <workItem from="1543513537158" duration="1078000" />
-      <workItem from="1543663770121" duration="13811000" />
+      <workItem from="1543663770121" duration="16763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45896000" />
+    <option name="totallyTimeSpent" value="48848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -384,7 +419,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,13 +451,6 @@
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/domain/Question.java" />
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/domain/test2.java" />
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/CategoryList.java" />
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Group.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -469,13 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -607,6 +628,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="129" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="37" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
