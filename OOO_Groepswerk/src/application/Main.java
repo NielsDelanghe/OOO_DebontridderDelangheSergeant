@@ -1,6 +1,7 @@
 package application;
 
 import controller.CategoryList;
+import controller.QuestionList;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -17,20 +18,22 @@ import view.panels.TestPane;
 
 public class Main extends Application {
 
-	private CategoryList list;
+	private CategoryList categoryList;
+	private QuestionList questionList;
 
 	@Override
 	public void start(Stage primaryStage) {
 
 		try {
 
-			list=new CategoryList();
+			categoryList=new CategoryList();
+			questionList = new QuestionList();
 
-			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane();
-			QuestionDetailPane questionDetailPane = new QuestionDetailPane();
+			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane(questionList);
+			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questionList);
 
-			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane(list);
-			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(list);
+			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane(categoryList);
+			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(categoryList);
 
 			TestPane testPane = new TestPane();
 			MessagePane messagePane = new MessagePane();

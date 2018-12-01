@@ -23,10 +23,10 @@ public class QuestionOverviewPane extends GridPane {
 	private TableView table;
 	private Button btnNew;
 
-	private QuestionList questions = new QuestionList();
-	private ObservableList<Question> data = FXCollections.observableArrayList(questions.getQuestions());
+	private QuestionList questionList;
 
-	public QuestionOverviewPane() {
+	public QuestionOverviewPane(QuestionList list) {
+		questionList=list;
 		this.setPadding(new Insets(5, 5, 5, 5));
 		this.setVgap(5);
 		this.setHgap(5);
@@ -43,10 +43,11 @@ public class QuestionOverviewPane extends GridPane {
 		table.getColumns().add(descriptionCol);
 		this.add(table, 0, 1, 2, 6);
 
-		table.setItems(data);
 		btnNew = new Button("New");
 		this.add(btnNew, 0, 11, 1, 1);
 		btnNew.setOnAction(new NewQuestion());
+		table.setItems(questionList.getQuestions());
+
 	}
 
 	public void setNewAction(EventHandler<ActionEvent> newAction) {
@@ -57,19 +58,12 @@ public class QuestionOverviewPane extends GridPane {
 		table.setOnMouseClicked(editAction);
 	}
 
-	public void addQuestion(Question question)
-	{
-		this.data.add(question);
-		this.table.setItems(data);
-		System.out.println(table.getItems().toString());
-	}
-
 	private class NewQuestion implements EventHandler<ActionEvent> {
 
 		@Override
 		public void handle(ActionEvent event) {
 
-			QuestionDetailPane questionDetailPane = new QuestionDetailPane();
+			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questionList);
 			Stage newQuestionStage = new Stage();
 
 			Group root = new Group();

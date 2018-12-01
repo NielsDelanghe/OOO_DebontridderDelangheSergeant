@@ -28,13 +28,13 @@ public class QuestionDetailPane extends GridPane {
 	private TextField questionField, statementField, feedbackField;
 	private Button btnAdd, btnRemove;
 	private ComboBox categoryField;
-	private QuestionList questions = new QuestionList();
 	private CategoryList categories = new CategoryList();
 	private List<String> statementList = new ArrayList<>();
-	private QuestionOverviewPane overviewPane = new QuestionOverviewPane();
-	private Scene scene;
+	private QuestionList questionList;
 
-	public QuestionDetailPane() {
+
+	public QuestionDetailPane(QuestionList list) {
+		questionList=list;
 		this.setPrefHeight(300);
 		this.setPrefWidth(320);
 
@@ -118,8 +118,7 @@ public class QuestionDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			Question question = new Question(questionField.getText(),categoryField.getSelectionModel().getSelectedItem().toString(), feedbackField.getText(), 1,statementList);
-			questions.addQuestion(question);
-			overviewPane.addQuestion(question);
+			questionList.addQuestion(question);
 
 
 

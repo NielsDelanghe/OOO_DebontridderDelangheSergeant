@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.Category;
 import model.Question;
 
@@ -8,11 +10,11 @@ import java.util.List;
 
 public class QuestionList {
 
-    private List<Question> questions;
+    private ObservableList<Question> questions;
 
     public QuestionList()
     {
-        questions = new ArrayList<>();
+        questions = FXCollections.observableArrayList(new ArrayList<Question>());
         List<String> answers_q1 = new ArrayList<>();
         List<String> answers_q2 = new ArrayList<>();
 
@@ -52,7 +54,7 @@ public class QuestionList {
         questions.add(question);
     }
 
-    public List<Question> getQuestions()
+    public ObservableList<Question> getQuestions()
     {
         return questions;
     }
