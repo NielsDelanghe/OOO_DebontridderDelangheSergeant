@@ -119,6 +119,9 @@ public class QuestionDetailPane extends GridPane {
 		public void handle(ActionEvent event) {
 			Question question = new Question(questionField.getText(),categoryField.getSelectionModel().getSelectedItem().toString(), feedbackField.getText(), 1,statementList);
 			questionList.addQuestion(question);
+			Stage stage =(Stage) btnAdd.getScene().getWindow();
+			stage.close();
+
 
 
 

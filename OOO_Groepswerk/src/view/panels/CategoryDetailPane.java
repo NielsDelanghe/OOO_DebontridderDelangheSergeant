@@ -71,7 +71,9 @@ public class CategoryDetailPane extends GridPane {
 				titleField.setText("");
 				descriptionField.setText("");
 				categoryTitles.add(category.getName());
-			}
+				Stage stage =(Stage) btnOK.getScene().getWindow();
+				stage.close();
+				}
 			catch(Exception ex) {
 				Alert alert = new Alert(Alert.AlertType.INFORMATION);
 				alert.setHeaderText("ERROR");
