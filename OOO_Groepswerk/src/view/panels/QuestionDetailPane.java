@@ -35,7 +35,9 @@ public class QuestionDetailPane extends GridPane {
 	private QuestionList questions;
 
 	private DBContext context;
+	private DBContext categoryContext;
 	private ObservableList<Savable> savables;
+	private ObservableList<String> categoryTitles;
 
 	public QuestionDetailPane(QuestionList questions, ObservableList<Savable> fileobjects) {
 		this.questions = questions;
@@ -78,6 +80,11 @@ public class QuestionDetailPane extends GridPane {
 		add(new Label("Category: "), 0, 9, 1, 1);
 		categoryField = new ComboBox();
 		add(categoryField, 1, 9, 2, 1);
+		categoryContext = new DBContext();
+		categoryContext.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
+		categoryContext.read();
+		this.categoryTitles = FXCollections.observableArrayList(categoryContext.getCategoryTitles());
+		categoryField.setItems(categoryTitles);
 		//----------------------------------------------------------------------
 		add(new Label("Feedback: "), 0, 10, 1, 1);
 		feedbackField = new TextField();
@@ -92,8 +99,7 @@ public class QuestionDetailPane extends GridPane {
 		btnOK.setText("Save");
 		add(btnOK, 1, 11, 2, 1);
 		//----------------------------------------------------------------------
-		categoryField.getItems().addAll(categories.getCategoryNames());
-		//----------------------------------------------------------------------
+
 		setCancelAction(new Close());
 		setSaveAction(new AddQuestion());
 		setAddStatementAction(new AddStatement());

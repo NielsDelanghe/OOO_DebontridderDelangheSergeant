@@ -40,6 +40,11 @@ public class DBContext implements DBStrategy {
         return strategy.getReadObjects();
     }
 
+    @Override
+    public ArrayList<String> getCategoryTitles() {
+        return strategy.getCategoryTitles();
+    }
+
     public static void main(String args[])
     {
         DBContext context = new DBContext();

@@ -2,6 +2,7 @@ package db;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import model.Category;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -68,6 +69,24 @@ public abstract class TXTDBStrategy implements DBStrategy {
     public abstract List<Savable> getObjectsToWrite();
 
     public abstract Savable convertStringToObject(String [] velden);
+
+    @Override
+    public ArrayList<String> getCategoryTitles()
+    {
+        ArrayList<String> titles = new ArrayList<>();
+
+        String out="";
+
+        for (Savable savable : savables)
+        {
+            if(savable instanceof Category)
+            {
+                out=((Category) savable).getName()+"\n";
+                titles.add(out);
+            }
+        }
+        return titles;
+    }
 
 
 

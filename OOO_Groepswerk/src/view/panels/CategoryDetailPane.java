@@ -30,10 +30,10 @@ public class CategoryDetailPane extends GridPane {
 		this.categories = categories;
 
 		savables=fileobjects;
-		this.categoryTitles = FXCollections.observableArrayList(categories.getCategoryNames());
 		context = new DBContext();
 		context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
 		context.read();
+		this.categoryTitles = FXCollections.observableArrayList(context.getCategoryTitles());
 
 		this.setPrefHeight(150);
 		this.setPrefWidth(300);
