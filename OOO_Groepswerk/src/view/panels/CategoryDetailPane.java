@@ -1,6 +1,9 @@
 package view.panels;
 
 import controller.CategoryList;
+import controller.DBContext;
+import db.CategoryTXT;
+import db.Savable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,6 +14,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
 
+import java.util.ArrayList;
+
 public class CategoryDetailPane extends GridPane {
 	private Button btnOK, btnCancel;
 	private TextField titleField, descriptionField;
@@ -18,10 +23,17 @@ public class CategoryDetailPane extends GridPane {
 	private CategoryList categories;
 	private ObservableList<String> categoryTitles;
 	private Category category;
+	private DBContext context;
+	private ObservableList<Savable> savables;
 
-	public CategoryDetailPane(CategoryList categories) {
+	public CategoryDetailPane(CategoryList categories,ObservableList<Savable> fileobjects) {
 		this.categories = categories;
+
+		savables=fileobjects;
 		this.categoryTitles = FXCollections.observableArrayList(categories.getCategoryNames());
+		context = new DBContext();
+		context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
+		context.read();
 
 		this.setPrefHeight(150);
 		this.setPrefWidth(300);
@@ -69,6 +81,8 @@ public class CategoryDetailPane extends GridPane {
 				category = new Category(titleField.getText(), descriptionField.getText());
 				categories.addCategory(category);
 				categoryTitles.add(category.getName());
+				savables.add(category);
+				context.write();
 				Stage stage = (Stage) btnOK.getScene().getWindow();
 				stage.close();
 				}

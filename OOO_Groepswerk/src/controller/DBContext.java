@@ -4,11 +4,12 @@ import db.CategoryTXT;
 import db.DBStrategy;
 import db.QuestionTXT;
 import db.Savable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.Category;
 import model.Question;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DBContext implements DBStrategy {
 
@@ -19,12 +20,10 @@ public class DBContext implements DBStrategy {
 
     }
 
-
     public void setStrategy(DBStrategy strat)
     {
         this.strategy=strat;
     }
-
 
     @Override
     public void write() {
@@ -37,22 +36,22 @@ public class DBContext implements DBStrategy {
     }
 
     @Override
-    public List<Savable> getReadObjects() {
+    public ObservableList<Savable> getReadObjects() {
         return strategy.getReadObjects();
     }
 
     public static void main(String args[])
     {
         DBContext context = new DBContext();
-        ArrayList<Savable> categories = new ArrayList<>();
+       ObservableList<Savable> categories = FXCollections.observableArrayList(new ArrayList<>());
         Category c1 = new Category("Design principles","The SOLID design principles");
         Category c2 = new Category("Design patterns","A design pattern");
-        //Category c3 = new Category("UML","Make an UML");
+        Category c3 = new Category("UML","Make an UML");
         categories.add(c1);
         categories.add(c2);
-        //categories.add(c3);
+        categories.add(c3);
 
-        ArrayList<Savable> questions = new ArrayList<>();
+        ObservableList<Savable> questions = FXCollections.observableArrayList( new ArrayList<>());
         Question q1;
         Question q2;
 

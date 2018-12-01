@@ -1,5 +1,10 @@
 package view.panels;
 
+import controller.DBContext;
+import db.CategoryTXT;
+import db.QuestionTXT;
+import db.Savable;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -21,8 +26,17 @@ public class QuestionOverviewPane extends GridPane {
 
 	private QuestionList questions;
 
-	public QuestionOverviewPane(QuestionList questions) {
+	private DBContext context;
+	private ObservableList<Savable> savables;
+
+	public QuestionOverviewPane(QuestionList questions,ObservableList<Savable> fileobjects) {
 		this.questions = questions;
+
+		savables = fileobjects;
+		context = new DBContext();
+		context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
+		context.read();
+		savables = context.getReadObjects();
 
 		this.setPadding(new Insets(5, 5, 5, 5));
 		this.setVgap(5);
@@ -45,7 +59,7 @@ public class QuestionOverviewPane extends GridPane {
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewQuestion());
 		//----------------------------------------------------------------------
-		table.setItems(questions.getQuestions());
+		table.setItems(savables);
 	}
 
 	public void setNewAction(EventHandler<ActionEvent> newAction) {
@@ -60,7 +74,7 @@ public class QuestionOverviewPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 
-			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questions);
+			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questions,savables);
 			Stage newQuestionStage = new Stage();
 			Group root = new Group();
 			Scene questionScene = new Scene(root, 350, 300);

@@ -1,5 +1,8 @@
 package db;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -11,7 +14,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
 
     private File file;
     private PrintWriter writer;
-    private List<Savable>savables = new ArrayList<>();
+    private ObservableList<Savable>savables = FXCollections.observableArrayList(new ArrayList<>());
 
     @Override
     public void write() {
@@ -55,7 +58,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
     }
 
     @Override
-    public List<Savable> getReadObjects(){
+    public ObservableList<Savable> getReadObjects(){
 
         return savables;
     }

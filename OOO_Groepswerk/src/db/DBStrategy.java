@@ -1,6 +1,6 @@
 package db;
 
-import java.util.List;
+import javafx.collections.ObservableList;
 
 public interface DBStrategy {
 
@@ -8,6 +8,6 @@ public interface DBStrategy {
 
     void read();
 
-    List<Savable> getReadObjects();
+   ObservableList<Savable> getReadObjects();
 
 }

@@ -2,7 +2,10 @@ package application;
 
 import controller.CategoryList;
 import controller.QuestionList;
+import db.Savable;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -15,22 +18,28 @@ import view.panels.QuestionDetailPane;
 import view.panels.QuestionOverviewPane;
 import view.panels.TestPane;
 
+import java.util.ArrayList;
+
 public class Main extends Application {
 
 	private CategoryList categoryList;
 	private QuestionList questionList;
+	private ObservableList<Savable> categories;
+	private ObservableList<Savable> questions;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			categoryList = new CategoryList();
 			questionList = new QuestionList();
+			categories = FXCollections.observableArrayList(new ArrayList<>());
+			questions = FXCollections.observableArrayList(new ArrayList<>());
 
-			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane(questionList);
-			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questionList);
+			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane(questionList,questions);
+			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questionList,questions);
 
-			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane(categoryList);
-			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(categoryList);
+			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane(categoryList,categories);
+			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(categoryList,categories);
 
 			TestPane testPane = new TestPane();
 			MessagePane messagePane = new MessagePane();

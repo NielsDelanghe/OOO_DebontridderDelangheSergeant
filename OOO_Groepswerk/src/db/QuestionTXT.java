@@ -1,5 +1,7 @@
 package db;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.Question;
 
 import java.io.File;
@@ -9,15 +11,15 @@ import java.util.List;
 public class QuestionTXT extends TXTDBStrategy {
 
         File file;
-        ArrayList<Savable> questionList = new ArrayList<>();
+        ObservableList<Savable> questionList = FXCollections.observableArrayList(new ArrayList<>());
 
-        public QuestionTXT(String path, ArrayList<Savable> list)
+        public QuestionTXT(String path, ObservableList<Savable> list)
         {
             this.file=new File(path);
             this.setCategoryList(list);
         }
 
-    public void setCategoryList(ArrayList<Savable> qList) {
+    public void setCategoryList(ObservableList<Savable> qList) {
         this.questionList = qList;
     }
 

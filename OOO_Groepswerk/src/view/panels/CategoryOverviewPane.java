@@ -1,5 +1,10 @@
 package view.panels;
 
+import controller.DBContext;
+import db.CategoryTXT;
+import db.Savable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -15,13 +20,22 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import controller.CategoryList;
 
+import java.util.ArrayList;
+
 public class CategoryOverviewPane extends GridPane{
 	private TableView table;
 	private Button btnNew;
 	private CategoryList categories;
+	private DBContext context;
+	private ObservableList<Savable> savables;
 	
-	public CategoryOverviewPane(CategoryList categories) {
+	public CategoryOverviewPane(CategoryList categories,ObservableList<Savable> fileobjects) {
 		this.categories = categories;
+		savables = fileobjects;
+		context = new DBContext();
+		context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
+		context.read();
+		savables = context.getReadObjects();
 
 		this.setPadding(new Insets(5, 5, 5, 5));
         this.setVgap(5);
@@ -45,7 +59,7 @@ public class CategoryOverviewPane extends GridPane{
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewCategory());
 		//----------------------------------------------------------------------
-		table.setItems(categories.getCategotyList());
+		table.setItems(savables);
 	}
 	
 	public void setNewAction(EventHandler<ActionEvent> newAction) { btnNew.setOnAction(newAction); }
@@ -58,7 +72,7 @@ public class CategoryOverviewPane extends GridPane{
 	{
 		@Override
 		public void handle(ActionEvent event) {
-			CategoryDetailPane categoryDetailPane = new CategoryDetailPane(categories);
+			CategoryDetailPane categoryDetailPane = new CategoryDetailPane(categories,savables);
 			Stage newCategoryStage = new Stage();
 			Group root = new Group();
 			Scene categoryScene = new Scene(root,250,150);

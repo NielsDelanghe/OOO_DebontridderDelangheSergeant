@@ -1,5 +1,7 @@
 package db;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import model.Category;
 
 import java.io.File;
@@ -9,13 +11,13 @@ import java.util.List;
 public class CategoryTXT extends TXTDBStrategy {
 
     File file;
-    ArrayList<Savable> categoryList = new ArrayList<>();
+    ObservableList<Savable> categoryList = FXCollections.observableArrayList(new ArrayList<>());
 
-    public void setCategoryList(ArrayList<Savable> categoryList) {
+    public void setCategoryList(ObservableList<Savable> categoryList) {
         this.categoryList = categoryList;
     }
 
-    public CategoryTXT(String path, ArrayList<Savable> list)
+    public CategoryTXT(String path, ObservableList<Savable> list)
     {
         this.file=new File(path);
         this.setCategoryList(list);
@@ -27,7 +29,7 @@ public class CategoryTXT extends TXTDBStrategy {
     }
 
     @Override
-    public List<Savable> getObjectsToWrite() {
+    public ObservableList<Savable> getObjectsToWrite() {
         return categoryList;
     }
 

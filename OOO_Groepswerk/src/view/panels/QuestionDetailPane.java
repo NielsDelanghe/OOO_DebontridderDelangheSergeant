@@ -1,6 +1,12 @@
 package view.panels;
 
+import controller.DBContext;
 import controller.QuestionList;
+import db.CategoryTXT;
+import db.QuestionTXT;
+import db.Savable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -28,8 +34,16 @@ public class QuestionDetailPane extends GridPane {
 	private List<String> statementList = new ArrayList<>();
 	private QuestionList questions;
 
-	public QuestionDetailPane(QuestionList questions) {
+	private DBContext context;
+	private ObservableList<Savable> savables;
+
+	public QuestionDetailPane(QuestionList questions, ObservableList<Savable> fileobjects) {
 		this.questions = questions;
+
+		savables=fileobjects;
+		context = new DBContext();
+		context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
+		context.read();
 
 		this.setPrefHeight(300);
 		this.setPrefWidth(320);
@@ -111,6 +125,8 @@ public class QuestionDetailPane extends GridPane {
 		public void handle(ActionEvent event) {
 			Question question = new Question(questionField.getText(),categoryField.getSelectionModel().getSelectedItem().toString(), feedbackField.getText(), 1,statementList);
 			questions.addQuestion(question);
+			savables.add(question);
+			context.write();
 			Stage stage = (Stage) btnAdd.getScene().getWindow();
 			stage.close();
 		}
