@@ -85,11 +85,7 @@ public class Question implements Savable {
     @Override
     public String toString()
     {
-        String result = "";
-        result += this.getQuestion() +"\t";
-        result += this.getCategory() +"\t";
-        result += this.getFeedback() +"\t";
-        result += this.getPoints()   +"\t";
+        String result = question + "\t" + category +"\t" + feedback +"\t" + points +"\t";
         for(String answer : possible_answers)
         {
             result += "\t" + answer;

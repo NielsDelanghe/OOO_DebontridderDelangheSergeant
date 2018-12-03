@@ -73,6 +73,8 @@ public class Test {
         q1 = new Question("What pattern defines a family of algorithmes?", cat2.getName(), "feedback", 5,answers_q1);
         q2 = new Question("What design principle has the least to do with Strategys?", cat1.getName(), "feedback", 3,answers_q2);
 
+        System.out.println(q1.toString());
+
         Test test = new Test();
         ObservableList<Savable> questions = FXCollections.observableArrayList(new ArrayList<>());
         questions.addAll(q1,q2);
