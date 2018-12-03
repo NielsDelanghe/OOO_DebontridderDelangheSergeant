@@ -48,7 +48,7 @@ public class DBContext implements DBStrategy {
     public static void main(String args[])
     {
         DBContext context = new DBContext();
-       ObservableList<Savable> categories = FXCollections.observableArrayList(new ArrayList<>());
+        ObservableList<Savable> categories = FXCollections.observableArrayList(new ArrayList<>());
         Category c1 = new Category("Design principles","The SOLID design principles");
         Category c2 = new Category("Design patterns","A design pattern");
         Category c3 = new Category("UML","Make an UML");
@@ -73,8 +73,8 @@ public class DBContext implements DBStrategy {
         answers_q2.add("I");
         answers_q2.add("D");
 
-        q1 = new Question("What pattern defines a family of algorithmes?", c2.getName(), "feedback", 5,answers_q1);
-        q2 = new Question("What design principle has the least to do with Strategys?", c1.getName(), "feedback", 3, answers_q2);
+        q1 = new Question("What pattern defines a family of algorithms?", c2.getName(), "feedback", 5,answers_q1);
+        q2 = new Question("What design principle has the least to do with Strategies?", c1.getName(), "feedback", 3, answers_q2);
         questions.add(q1);
         questions.add(q2);
 
