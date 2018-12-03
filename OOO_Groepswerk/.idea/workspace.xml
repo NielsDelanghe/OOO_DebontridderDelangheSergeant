@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/QuestionList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/QuestionList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane$AddCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane$AddCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane$Cancel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane$Cancel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryOverviewPane$NewCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryOverviewPane$NewCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryOverviewPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryOverviewPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddStatementListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddStatementListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$Close.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$Close.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$RemoveStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$RemoveStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$RemoveStatementListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$RemoveStatementListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionOverviewPane$NewQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionOverviewPane$NewQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionOverviewPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionOverviewPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CategoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CategoryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/QuestionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/QuestionList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/CategoryDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/CategoryDetailPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/CategoryOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/CategoryOverviewPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/QuestionDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/QuestionDetailPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/QuestionOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/QuestionOverviewPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CategoryFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CategoryFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QuestionFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../QuestionFile.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,14 +62,23 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="2090274643">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="833">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,6 +132,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,7 +186,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,6 +267,7 @@
       <workItem from="1542801229860" duration="52000" />
       <workItem from="1543072032961" duration="2802000" />
       <workItem from="1543319214401" duration="359000" />
+      <workItem from="1543863039324" duration="10000" />
     </task>
     <servers />
   </component>
@@ -288,13 +277,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8517000" />
+    <option name="totallyTimeSpent" value="8527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="1" width="1940" height="1049" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2606383" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2632979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -358,13 +346,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/CategoryDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/CategoryDB.java" />
     <entry file="file://$PROJECT_DIR$/src/view/observers/QuestionList.java" />
     <entry file="file://$PROJECT_DIR$/src/db/Savable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -466,8 +448,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="833">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
