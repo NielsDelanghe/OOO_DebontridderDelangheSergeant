@@ -10,9 +10,9 @@ import java.util.*;
 public class Test {
 
     private HashMap<Category,Integer> map;
-    private Queue<Question> queue;
+    private Queue<Savable> queue;
 
-    private Test()
+    public Test()
     {
         map = new HashMap<>();
         queue = new LinkedList<>();
@@ -28,14 +28,16 @@ public class Test {
         map.put(category,map.get(category)+1);
     }
 
-    public void addAllQuestions(ObservableList<Question> questions)
+    public void addAllQuestions(ObservableList<Savable> questions)
     {
         queue.addAll(questions);
     }
 
     public Question getFirstQuestion()
     {
-        Question q = queue.peek();
+        Savable savable = queue.peek();
+
+        Question q = (Question) savable;
 
         return q;
     }
@@ -72,7 +74,7 @@ public class Test {
         q2 = new Question("What design principle has the least to do with Strategys?", cat1.getName(), "feedback", 3,answers_q2);
 
         Test test = new Test();
-        ObservableList<Question> questions = FXCollections.observableArrayList(new ArrayList<>());
+        ObservableList<Savable> questions = FXCollections.observableArrayList(new ArrayList<>());
         questions.addAll(q1,q2);
         test.addAllQuestions(questions);
 
