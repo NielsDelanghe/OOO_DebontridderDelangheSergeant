@@ -10,13 +10,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import view.panels.AssesMainPane;
-import view.panels.CategoryDetailPane;
-import view.panels.CategoryOverviewPane;
-import view.panels.MessagePane;
-import view.panels.QuestionDetailPane;
-import view.panels.QuestionOverviewPane;
-import view.panels.TestPane;
+import view.panels.*;
 
 import java.util.ArrayList;
 
@@ -41,13 +35,15 @@ public class Main extends Application {
 			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane(categoryList,categories);
 			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(categoryList,categories);
 
+			PropertiePane propertiePanel = new PropertiePane();
+
 			TestPane testPane = new TestPane();
 			MessagePane messagePane = new MessagePane();
 
 			Group root = new Group();
 			Scene scene = new Scene(root, 750, 400);
 
-			BorderPane borderPane = new AssesMainPane(messagePane, categoryOverviewPanel, questionOverviewPane);
+			BorderPane borderPane = new AssesMainPane(messagePane, categoryOverviewPanel, questionOverviewPane, propertiePanel);
 			borderPane.prefHeightProperty().bind(scene.heightProperty());
 			borderPane.prefWidthProperty().bind(scene.widthProperty());
 
