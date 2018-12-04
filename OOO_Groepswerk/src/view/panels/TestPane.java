@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import model.Question;
 import model.Test;
 
 public class TestPane extends GridPane {
@@ -21,8 +22,9 @@ public class TestPane extends GridPane {
 	private ObservableList<Savable> questionList;
 	private DBContext context;
 	private Test test;
-	private RadioButton answer;
-	private ArrayList<RadioButton> answers = new ArrayList<>();
+	private ArrayList<String> answers = new ArrayList<>();
+	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
+	private ArrayList<Question> questions = new ArrayList<>();
 
 	public TestPane (){
 		test = new Test();
@@ -42,16 +44,18 @@ public class TestPane extends GridPane {
 		add(questionField, 0, 0, 1, 1);
 		//----------------------------------------------------------------------
 		statementGroup = new ToggleGroup();
-		for(int i = 1; i < test.getFirstQuestion().getPossible_answers().size(); i++)
+		answers.addAll(test.getFirstQuestion().getPossible_answers());
+		for(int i = 0; i < answers.size(); i++)
 		{
-			answer = new RadioButton(test.getFirstQuestion().getPossible_answers().get(i));
-			answer.setToggleGroup(statementGroup);
-			answers.add(answer);
-			add(answer,0,i,1,1);
+			System.out.println(i + " " + answers.get(i));
+			RadioButton button = new RadioButton(answers.get(i));
+			radioButtons.add(button);
+			button.setToggleGroup(statementGroup);
+			add(button,0,i+1);
 		}
 		//----------------------------------------------------------------------
 		submitButton = new Button("Submit");
-		add(submitButton,0,6,1,1);
+		add(submitButton,0,10,1,1);
 		setProcessAnswerAction(new ProcessAnswerAction());
 	}
 
@@ -71,27 +75,36 @@ public class TestPane extends GridPane {
 	{
 		@Override
 		public void handle(ActionEvent event) {
-			//reset radiobuttons
-			for(RadioButton answer : answers)
+			if(!test.getMap().containsKey(test.getFirstQuestion().getCategory()))
 			{
-				answer.setText("");
+				test.addKey(test.getFirstQuestion().getCategory());
 			}
 
-			//statementGroup.getToggles().removeAll();
-
+			test.addPointsToCategory(test.getFirstQuestion().getCategory());
+			getChildren().clear();
+			answers.clear();
+			statementGroup = new ToggleGroup();
 			if(test.hasNext()) {
 				//change question
 				questionField.setText("Question: " + test.ChangeQuestionAndGetNext().getQuestion());
+				add(questionField,0,0);
+
 				//update radiobuttons for new question
-				for (int i = 1; i < test.getFirstQuestion().getPossible_answers().size(); i++) {
-					RadioButton answer = new RadioButton(test.getFirstQuestion().getPossible_answers().get(i));
-					answer.setToggleGroup(statementGroup);
-					add(answer, 0, i, 1, 1);
+				answers.addAll(test.getFirstQuestion().getPossible_answers());
+				for(int i = 0; i < answers.size(); i++)
+				{
+					RadioButton button = new RadioButton(answers.get(i));
+					radioButtons.add(button);
+					button.setToggleGroup(statementGroup);
+					add(button,0,i+1);
+					setProcessAnswerAction(new ProcessAnswerAction());
 				}
+				add(submitButton,0,10,1,1);
 			}
 			else
 			{
-				questionField.setText("Klaar");
+				questionField.setText("Klaar" + test.getMap());
+				add(questionField,0,0);
 			}
 		}
 	}

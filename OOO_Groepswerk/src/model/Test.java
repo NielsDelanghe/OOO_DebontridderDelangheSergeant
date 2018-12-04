@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Test {
 
-    private HashMap<Category,Integer> map;
+    private HashMap<String,Integer> map;
     private Queue<Savable> queue;
 
     public Test()
@@ -18,14 +18,19 @@ public class Test {
         queue = new LinkedList<>();
     }
 
-    public void addKey(Category category)
+    public void addKey(String category)
     {
         map.put(category,0);
     }
 
-    public void addPointsToCategory(Category category)
+    public void addPointsToCategory(String category)
     {
         map.put(category,map.get(category)+1);
+    }
+
+    public HashMap<String,Integer> getMap()
+    {
+        return map;
     }
 
     public void addAllQuestions(ObservableList<Savable> questions)
