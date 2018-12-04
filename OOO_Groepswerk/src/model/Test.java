@@ -37,9 +37,9 @@ public class Test {
     {
         Savable savable = queue.peek();
 
-        Question q = (Question) savable;
+        Question question = (Question) savable;
 
-        return q;
+        return question;
     }
 
     public Question ChangeQuestionAndGetNext()
@@ -47,6 +47,11 @@ public class Test {
         queue.poll();
         Question question = getFirstQuestion();
         return question;
+    }
+
+    public boolean hasNext()
+    {
+        return queue.size() > 1;
     }
 
     public static void main(String args[])
