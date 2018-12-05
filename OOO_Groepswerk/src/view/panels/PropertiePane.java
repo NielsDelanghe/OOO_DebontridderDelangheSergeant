@@ -22,6 +22,7 @@ public class PropertiePane extends GridPane {
     private Properties properties;
     private ToggleGroup statementGroup;
     private RadioButton answer;
+    private Label questionField;
 
 
     public PropertiePane() throws IOException {
@@ -30,6 +31,9 @@ public class PropertiePane extends GridPane {
         lijst= new ArrayList<String>();
         lijst.add("score");
         lijst.add("geen score");
+        questionField= new Label();
+        questionField.setText("");
+        add(questionField,0,10);
 
 
 
@@ -62,6 +66,7 @@ public class PropertiePane extends GridPane {
             try {
                 Object x = statementGroup.getSelectedToggle().getUserData();
                 woord= (String) x;
+                questionField.setText("De evaluatie is veranderd naar " +woord);
             } catch (NullPointerException e){
                 woord = "geen";
             }
@@ -69,7 +74,7 @@ public class PropertiePane extends GridPane {
             Properties properties = new Properties();
             InputStream is;
             try {
-                is = new FileInputStream("evaluation.properties");
+                is = new FileInputStream("Setup.properties");
                 properties.load(is);
                 is.close();
             } catch (FileNotFoundException e) {
