@@ -34,8 +34,8 @@ public class QuestionList {
         answers_q2.add("I");
         answers_q2.add("D");
 
-        q1 = new Question("What pattern defines a family of algorithmes?", cat2.getName(), "feedback", 5,answers_q1);
-        q2 = new Question("What design principle has the least to do with Strategys?", cat1.getName(), "feedback", 3,answers_q2);
+        q1 = new Question("What pattern defines a family of algorithmes?", cat2.getName(), "feedback", 5,false,answers_q1);
+        q2 = new Question("What design principle has the least to do with Strategys?", cat1.getName(), "feedback", 3,false,answers_q2);
 
         questions.add(q1);
         questions.add(q2);

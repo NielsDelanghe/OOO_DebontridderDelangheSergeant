@@ -73,8 +73,8 @@ public class DBContext implements DBStrategy {
         answers_q2.add("I");
         answers_q2.add("D");
 
-        q1 = new Question("What pattern defines a family of algorithms?", c2.getName(), "feedback", 5,answers_q1);
-        q2 = new Question("What design principle has the least to do with Strategies?", c1.getName(), "feedback", 3, answers_q2);
+        q1 = new Question("What pattern defines a family of algorithms?", c2.getName(), "feedback", 1,false,answers_q1);
+        q2 = new Question("What design principle has the least to do with Strategies?", c1.getName(), "feedback", 1,false, answers_q2);
         questions.add(q1);
         questions.add(q2);
 

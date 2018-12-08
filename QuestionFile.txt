@@ -1,2 +1,3 @@
-What pattern defines a family of algorithms?	Design patterns	feedback	5	Simple Factory	Singleton	Strategy
-What design principle has the least to do with Strategies?	Design principles	feedback	3	S	O	L	I	D
+What pattern defines a family of algorithms?	Design patterns	feedback	1	false	Simple Factory	Singleton	Strategy
+What design principle has the least to do with Strategies?	Design principles	feedback	1	false	S	O	L	I	D
+What arrow indicates extends?	UML	Try to draw more UML's	1	false	full line with closed arrowhead	full line with open arrowhead	dotted line with closed arrowhead	dotted line with open arrowhead

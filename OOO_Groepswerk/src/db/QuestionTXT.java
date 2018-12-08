@@ -39,12 +39,12 @@ public class QuestionTXT extends TXTDBStrategy {
 
             List<String> statements = new ArrayList<>();
 
-            for(int i=4; i < velden.length; i++)
+            for(int i=5; i < velden.length; i++)
             {
                 statements.add(velden[i]);
             }
 
-            object = new Question(velden[0],velden[1],velden[2],Integer.parseInt(velden[3]),statements);
+            object = new Question(velden[0],velden[1],velden[2],Integer.parseInt(velden[3]),Boolean.getBoolean(velden[4]),statements);
 
             return object;
         }

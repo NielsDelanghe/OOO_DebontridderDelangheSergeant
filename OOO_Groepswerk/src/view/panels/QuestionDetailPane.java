@@ -129,7 +129,7 @@ public class QuestionDetailPane extends GridPane {
 	class AddQuestion implements EventHandler<ActionEvent> {
 		@Override
 		public void handle(ActionEvent event) {
-			Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,statementList);
+			Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
 			System.out.println(question);
 			questions.addQuestion(question);
 			savables.add(question);

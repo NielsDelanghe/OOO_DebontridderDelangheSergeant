@@ -11,14 +11,16 @@ public class Question implements Savable {
     private String category;
     private String feedback;
     private int points;
+    private boolean correct;
 
-    public Question(String question, String category, String feedback, int points,List<String> possible_answers)
+    public Question(String question, String category, String feedback, int points,boolean correct,List<String> possible_answers)
     {
         this.setQuestion(question);
         this.setPossible_answers(possible_answers);
         this.setCategory(category);
         this.setFeedback(feedback);
         this.setPoints(points);
+        this.setCorrect(correct);
     }
 
     public Question()
@@ -64,6 +66,11 @@ public class Question implements Savable {
         this.points = points;
     }
 
+    public void setCorrect(boolean correct)
+    {
+        this.correct = correct;
+    }
+
     public String getCategory() {
         return category;
     }
@@ -82,10 +89,15 @@ public class Question implements Savable {
         return points;
     }
 
+    public boolean getCorrect()
+    {
+        return this.correct;
+    }
+
     @Override
     public String toString()
     {
-        String result = question + "\t" + category +"\t" + feedback +"\t" + points;
+        String result = question + "\t" + category +"\t" + feedback +"\t" + points +"\t" + correct;
         for(String answer : possible_answers)
         {
             result += "\t" + answer;

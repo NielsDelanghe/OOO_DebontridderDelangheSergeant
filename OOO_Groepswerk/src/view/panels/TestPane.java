@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import model.Question;
 import model.Test;
 
@@ -24,7 +25,6 @@ public class TestPane extends GridPane {
 	private Test test;
 	private ArrayList<String> answers = new ArrayList<>();
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
-	private ArrayList<Question> questions = new ArrayList<>();
 
 	public TestPane (){
 		test = new Test();
@@ -32,7 +32,7 @@ public class TestPane extends GridPane {
 		context = new DBContext();
 		context.setStrategy(new QuestionTXT("QuestionFile.TXT", questionList));
 		context.read();
-		test.addAllQuestions(context.getReadObjects());
+		test.addAllQuestionsToQueue(context.getReadObjects());
 
 		this.setPrefHeight(300);
 		this.setPrefWidth(750);
@@ -49,6 +49,7 @@ public class TestPane extends GridPane {
 		{
 			System.out.println(i + " " + answers.get(i));
 			RadioButton button = new RadioButton(answers.get(i));
+			button.setUserData(answers.get(i));
 			radioButtons.add(button);
 			button.setToggleGroup(statementGroup);
 			add(button,0,i+1);
@@ -71,16 +72,75 @@ public class TestPane extends GridPane {
 		return selected;
 	}
 
+	public void setFeedbackAction(EventHandler<ActionEvent> feedbackAction)
+	{
+		submitButton.setOnAction(feedbackAction);
+	}
+
+	class FeedbackAction implements EventHandler<ActionEvent>
+	{
+
+		@Override
+		public void handle(ActionEvent event) {
+
+			getChildren().clear();
+
+			String feedback="";
+
+			for(Question question : test.getQuestions())
+			{
+				if(question.getCorrect()==false)
+				{
+					feedback+=question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
+				}
+			}
+
+			if(feedback.equals(""))
+			{
+				feedback="Proficiat u hebt alles juist";
+			}
+
+			questionField.setText(feedback);
+			add(questionField,0,0);
+			submitButton = new Button("Close");
+			add(submitButton,0,10,1,1);
+			setCloseAction(new Close());
+
+
+		}
+	}
+
+	public void setCloseAction(EventHandler<ActionEvent> closeAction) {
+		submitButton.setOnAction(closeAction);
+	}
+
+	public class Close implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event) {
+			Stage stage = (Stage) submitButton.getScene().getWindow();
+			stage.close();
+		}
+	}
+
 	class ProcessAnswerAction implements EventHandler<ActionEvent>
 	{
 		@Override
 		public void handle(ActionEvent event) {
+
 			if(!test.getMap().containsKey(test.getFirstQuestion().getCategory()))
 			{
 				test.addKey(test.getFirstQuestion().getCategory());
 			}
 
-			test.addPointsToCategory(test.getFirstQuestion().getCategory());
+			if(statementGroup.getSelectedToggle().getUserData().equals(test.getFirstQuestion().getPossible_answers().get(0)))
+			{
+				test.getFirstQuestion().setCorrect(true);
+				test.addPointsToCategory(test.getFirstQuestion().getCategory());
+			}
+
+			test.addQuestionToList(test.getFirstQuestion());
+
 			getChildren().clear();
 			answers.clear();
 			statementGroup = new ToggleGroup();
@@ -94,6 +154,7 @@ public class TestPane extends GridPane {
 				for(int i = 0; i < answers.size(); i++)
 				{
 					RadioButton button = new RadioButton(answers.get(i));
+					button.setUserData(answers.get(i));
 					radioButtons.add(button);
 					button.setToggleGroup(statementGroup);
 					add(button,0,i+1);
@@ -103,8 +164,21 @@ public class TestPane extends GridPane {
 			}
 			else
 			{
-				questionField.setText("Klaar" + test.getMap());
+				int score =0;
+				for(Question question : test.getQuestions())
+				{
+					if(question.getCorrect()==true)
+					{
+						score++;
+					}
+				}
+
+				questionField.setText("Youre score is: " + score +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
 				add(questionField,0,0);
+				submitButton = new Button("Get feedback");
+				add(submitButton,0,10,1,1);
+				setFeedbackAction(new FeedbackAction());
+
 			}
 		}
 	}
