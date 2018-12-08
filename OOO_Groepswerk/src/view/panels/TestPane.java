@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 import model.Question;
 import model.Test;
 
+import javax.swing.text.html.HTML;
+
 public class TestPane extends GridPane {
 	private Label questionField;
 	private Button submitButton;
@@ -94,7 +96,7 @@ public class TestPane extends GridPane {
 					feedback+=question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
 				}
 			}
-
+			
 			if(feedback.equals(""))
 			{
 				feedback="Proficiat u hebt alles juist";
