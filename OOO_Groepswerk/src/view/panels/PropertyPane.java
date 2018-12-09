@@ -14,10 +14,10 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class PropertiePane extends GridPane {
+public class PropertyPane extends GridPane {
     private TableView table;
     private Button submitButton;
-    private ComboBox propertieField;
+    private ComboBox propertyField;
     private ArrayList<String> lijst;
     private Properties properties;
     private ToggleGroup statementGroup;
@@ -25,17 +25,13 @@ public class PropertiePane extends GridPane {
     private Label questionField;
 
 
-    public PropertiePane() throws IOException {
-
-
-        lijst= new ArrayList<String>();
-        lijst.add("score");
-        lijst.add("geen score");
+    public PropertyPane() throws IOException {
+        lijst = new ArrayList<String>();
+        lijst.add("Score");
+        lijst.add("No evaluation method");
         questionField= new Label();
         questionField.setText("");
         add(questionField,0,10);
-
-
 
         statementGroup = new ToggleGroup();
         for(int i = 0; i < lijst.size(); i++)
@@ -45,13 +41,9 @@ public class PropertiePane extends GridPane {
             answer.setToggleGroup(statementGroup);
             add(answer,0,i,1,1);
         }
-
         submitButton = new Button("Submit");
         add(submitButton,0,6,1,1);
         setSaveAction(new saveEvaluation());
-
-
-
     }
 
     public void setSaveAction(EventHandler<ActionEvent> saveAction) {
@@ -59,18 +51,16 @@ public class PropertiePane extends GridPane {
     }
 
     private class saveEvaluation implements EventHandler<ActionEvent> {
-
         @Override
         public void handle(ActionEvent event) {
-            String woord = null;
+            String choice = null;
             try {
-                Object x = statementGroup.getSelectedToggle().getUserData();
-                woord= (String) x;
-                questionField.setText("De evaluatie is veranderd naar " +woord);
+                Object selectedRadioButton = statementGroup.getSelectedToggle().getUserData();
+                choice = (String) selectedRadioButton;
+                questionField.setText("Evaluation methode changed to: " + choice);
             } catch (NullPointerException e){
-                woord = "geen";
+                choice = "None";
             }
-
             Properties properties = new Properties();
             InputStream is;
             try {
@@ -83,16 +73,10 @@ public class PropertiePane extends GridPane {
                 e.printStackTrace();
             }
 
-
-
-            if(woord != null && woord != "geen"){
-                properties.setProperty("evaluation.mode", woord);
+            if(choice != null && choice != "No evaluation method"){
+                properties.setProperty("evaluation.mode", choice);
 
             }
-
-
-
-
         }
     }
 }

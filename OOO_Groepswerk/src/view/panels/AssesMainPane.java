@@ -10,19 +10,19 @@ import javafx.scene.layout.Pane;
 
 public class AssesMainPane extends BorderPane {
 
-	public AssesMainPane(Pane messagePane, Pane categoryOverviewPanel, Pane questionOverviewPanel, Pane propertiePanel){
+	public AssesMainPane(Pane messagePane, Pane categoryOverviewPanel, Pane questionOverviewPanel, Pane propertyPanel){
 	    TabPane tabPane = new TabPane();
 	    
 	    FlowPane messageBox = new FlowPane(messagePane);
-        	messageBox.setAlignment(Pos.CENTER);
+	    messageBox.setAlignment(Pos.CENTER);
         Tab testTab = new Tab("Test", messageBox);
         Tab categoriesTab = new Tab("Categories", categoryOverviewPanel);
         Tab questionsTab = new Tab("Questions", questionOverviewPanel);
-        Tab propertieTab = new Tab("propertie", propertiePanel);
+        Tab propertyTab = new Tab("Property", propertyPanel);
         tabPane.getTabs().add(testTab);
         tabPane.getTabs().add(categoriesTab);
         tabPane.getTabs().add(questionsTab);
-        tabPane.getTabs().add(propertieTab);
+        tabPane.getTabs().add(propertyTab);
 
 	    this.setCenter(tabPane);
 	}

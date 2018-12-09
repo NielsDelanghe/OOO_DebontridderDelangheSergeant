@@ -1,4 +1,2 @@
 What pattern defines a family of algorithms?	Design patterns	feedback	5	Simple Factory	Singleton	Strategy
 What design principle has the least to do with Strategies?	Design principles	feedback	3	S	O	L	I	D
-test	UML	gezefzfzfzf	1	test
-4	Design principles	njb	1	4

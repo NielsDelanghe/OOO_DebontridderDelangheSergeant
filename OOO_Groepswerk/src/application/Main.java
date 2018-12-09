@@ -35,7 +35,7 @@ public class Main extends Application {
 			CategoryOverviewPane categoryOverviewPanel = new CategoryOverviewPane(categoryList,categories);
 			CategoryDetailPane categoryDetailPanel = new CategoryDetailPane(categoryList,categories);
 
-			PropertiePane propertiePanel = new PropertiePane();
+			PropertyPane propertyPanel = new PropertyPane();
 
 			TestPane testPane = new TestPane();
 			MessagePane messagePane = new MessagePane();
@@ -43,7 +43,7 @@ public class Main extends Application {
 			Group root = new Group();
 			Scene scene = new Scene(root, 750, 400);
 
-			BorderPane borderPane = new AssesMainPane(messagePane, categoryOverviewPanel, questionOverviewPane, propertiePanel);
+			BorderPane borderPane = new AssesMainPane(messagePane, categoryOverviewPanel, questionOverviewPane, propertyPanel);
 			borderPane.prefHeightProperty().bind(scene.heightProperty());
 			borderPane.prefWidthProperty().bind(scene.widthProperty());
 
