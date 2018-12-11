@@ -12,6 +12,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderStrokeStyle;
@@ -26,6 +27,7 @@ public class MessagePane extends GridPane {
 	private Button testButton;
 	private ObservableList<Savable> savables;
 	private DBContext context;
+	private Label tekst;
 
 	public MessagePane (ObservableList<Savable> fileobjects){
 		setBorder(new Border(new BorderStroke(Color.BLACK,
@@ -41,20 +43,26 @@ public class MessagePane extends GridPane {
 		setHalignment(testButton, HPos.CENTER);
 
 		savables=fileobjects;
-		Test test = new Test();
-		test.setScore(2);
-		test.setMaxPossibleScore(6);
-		Test test2 = new Test();
-		test2.setScore(8);
-		test2.setMaxPossibleScore(8);
-		savables.add(test);
-		savables.add(test2);
 		context = new DBContext();
 		context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
-		context.write();
 		context.read();
 		savables = context.getReadObjects();
-		System.out.println(savables);
+
+		tekst = new Label();
+
+		if(savables == null)
+		{
+			tekst.setText("You haven't completed this test");
+		}
+
+		else
+		{
+			Savable savable = savables.get(savables.size()-1);
+			Test t = (Test) savable;
+			tekst.setText("Youre previous score was: " );
+		}
+
+		add(tekst,0,0);
 	}
 
 	public void setStartTestAction(EventHandler<ActionEvent> startTestAction) { testButton.setOnAction(startTestAction); }
