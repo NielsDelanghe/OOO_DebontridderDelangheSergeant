@@ -96,7 +96,7 @@ public class TestPane extends GridPane {
 					feedback+=question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
 				}
 			}
-			
+
 			if(feedback.equals(""))
 			{
 				feedback="Proficiat u hebt alles juist";
