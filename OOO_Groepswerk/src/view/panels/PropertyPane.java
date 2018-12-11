@@ -54,7 +54,7 @@ public class PropertyPane extends GridPane {
             Object selectedRadioButton = statementGroup.getSelectedToggle().getUserData();
             selection = (String) selectedRadioButton;
             questionField.setText("Evaluation method changed to: " + selection);
-            write(selection);
+            write(selection.toLowerCase());
             }
         }
 

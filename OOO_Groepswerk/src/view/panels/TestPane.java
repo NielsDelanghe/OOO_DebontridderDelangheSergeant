@@ -1,7 +1,11 @@
 package view.panels;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import controller.DBContext;
 import db.QuestionTXT;
 import db.Savable;
@@ -15,8 +19,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Question;
 import model.Test;
-
-import javax.swing.text.html.HTML;
 
 public class TestPane extends GridPane {
 	private Label questionField;
@@ -72,44 +74,6 @@ public class TestPane extends GridPane {
 			selected.add(statementGroup.getSelectedToggle().getUserData().toString());
 		}
 		return selected;
-	}
-
-	public void setFeedbackAction(EventHandler<ActionEvent> feedbackAction)
-	{
-		submitButton.setOnAction(feedbackAction);
-	}
-
-	class FeedbackAction implements EventHandler<ActionEvent>
-	{
-
-		@Override
-		public void handle(ActionEvent event) {
-
-			getChildren().clear();
-
-			String feedback="";
-
-			for(Question question : test.getQuestions())
-			{
-				if(question.getCorrect()==false)
-				{
-					feedback+=question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
-				}
-			}
-
-			if(feedback.equals(""))
-			{
-				feedback="Proficiat u hebt alles juist";
-			}
-
-			questionField.setText(feedback);
-			add(questionField,0,0);
-			submitButton = new Button("Close");
-			add(submitButton,0,10,1,1);
-			setCloseAction(new Close());
-
-
-		}
 	}
 
 	public void setCloseAction(EventHandler<ActionEvent> closeAction) {
@@ -174,14 +138,51 @@ public class TestPane extends GridPane {
 						score++;
 					}
 				}
-
-				questionField.setText("Youre score is: " + score +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
+				//Load property file
+				Properties properties = new Properties();
+				InputStream is = null;
+				try {
+					File file = new File("evaluation.properties");
+					is = new FileInputStream(file);
+				}
+				catch ( Exception e ) { is = null; }
+				try {
+					if ( is == null ) {
+						is = getClass().getResourceAsStream("evaluation.properties");
+					}
+					properties.load( is );
+				}
+				catch ( Exception e ) { }
+				//--------------------------------------------------
+				String evaluationMode = properties.getProperty("evaluation.mode", "score");
+				switch (evaluationMode)
+				{
+					case "score": showScore(score); break;
+					case "feedback": showFeedback(); break;
+					default: showScore(score); break;
+				}
 				add(questionField,0,0);
-				submitButton = new Button("Get feedback");
-				add(submitButton,0,10,1,1);
-				setFeedbackAction(new FeedbackAction());
-
 			}
+		}
+		private void showFeedback()
+		{
+			String feedback = "";
+			for(Question question : test.getQuestions())
+			{
+				if(question.getCorrect()==false)
+				{
+					feedback += question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
+				}
+			}
+			if(feedback.equals(""))
+			{
+				feedback = "Congratulations, all answers are correct!";
+			}
+			questionField.setText(feedback);
+		}
+		private void showScore(int score)
+		{
+			questionField.setText("Your score is: " + score +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
 		}
 	}
 }
