@@ -1,3 +1,0 @@
-Design principles	The SOLID design principles	
-Design patterns	A design pattern	
-UML	Make an UML	
