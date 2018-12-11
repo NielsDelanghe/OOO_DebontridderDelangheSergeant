@@ -4,13 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import jdk.nashorn.internal.objects.annotations.Property;
 
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -24,11 +22,10 @@ public class PropertyPane extends GridPane {
     private RadioButton answer;
     private Label questionField;
 
-
     public PropertyPane() throws IOException {
         lijst = new ArrayList<String>();
         lijst.add("Score");
-        lijst.add("No evaluation method");
+        lijst.add("Feedback");
         questionField= new Label();
         questionField.setText("");
         add(questionField,0,10);
@@ -53,30 +50,26 @@ public class PropertyPane extends GridPane {
     private class saveEvaluation implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
-            String choice = null;
-            try {
-                Object selectedRadioButton = statementGroup.getSelectedToggle().getUserData();
-                choice = (String) selectedRadioButton;
-                questionField.setText("Evaluation methode changed to: " + choice);
-            } catch (NullPointerException e){
-                choice = "None";
+            String selection = null;
+            Object selectedRadioButton = statementGroup.getSelectedToggle().getUserData();
+            selection = (String) selectedRadioButton;
+            questionField.setText("Evaluation method changed to: " + selection);
+            write(selection);
             }
-            Properties properties = new Properties();
-            InputStream is;
-            try {
-                is = new FileInputStream("Setup.properties");
-                properties.load(is);
-                is.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
+        }
+
+        private void write(String selection)
+        {
+            try
+            {
+                properties = new Properties();
+                properties.setProperty("evaluation.mode", selection);
+                File file = new File("evaluation.properties");
+                OutputStream out = new FileOutputStream(file);
+                properties.store(out,"Properties");
             }
-
-            if(choice != null && choice != "No evaluation method"){
-                properties.setProperty("evaluation.mode", choice);
-
+            catch (Exception e ) {
+                e.printStackTrace();
             }
         }
     }
-}
