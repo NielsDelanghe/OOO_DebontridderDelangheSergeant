@@ -20,6 +20,7 @@ public class Main extends Application {
 	private QuestionList questionList;
 	private ObservableList<Savable> categories;
 	private ObservableList<Savable> questions;
+	private ObservableList<Savable> scores;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -28,6 +29,7 @@ public class Main extends Application {
 			questionList = new QuestionList();
 			categories = FXCollections.observableArrayList(new ArrayList<>());
 			questions = FXCollections.observableArrayList(new ArrayList<>());
+			scores = FXCollections.observableArrayList(new ArrayList<>());
 
 			QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane(questionList,questions);
 			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questionList,questions);
@@ -38,7 +40,7 @@ public class Main extends Application {
 			PropertyPane propertyPanel = new PropertyPane();
 
 			TestPane testPane = new TestPane();
-			MessagePane messagePane = new MessagePane();
+			MessagePane messagePane = new MessagePane(scores);
 
 			Group root = new Group();
 			Scene scene = new Scene(root, 750, 400);

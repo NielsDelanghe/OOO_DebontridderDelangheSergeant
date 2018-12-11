@@ -1,17 +1,27 @@
 package model;
 
 import db.Savable;
+import evaluationStates.Completed;
+import evaluationStates.EvaluationState;
+import evaluationStates.NeverCompleted;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import javax.swing.*;
 import java.util.*;
 
-public class Test {
+public class Test implements Savable{
 
     private HashMap<String,Integer> map;
     private Queue<Savable> queue;
     private List<Question> questions;
+
+    private int score;
+    private int maxPossibleScore;
+
+    private EvaluationState state;
+    private NeverCompleted neverCompletedState;
+    private Completed completedState;
 
 
     public Test()
@@ -19,6 +29,20 @@ public class Test {
         map = new HashMap<>();
         queue = new LinkedList<>();
         questions = new ArrayList<>();
+        neverCompletedState = new NeverCompleted(this);
+        completedState = new Completed(this);
+        score=0;
+        maxPossibleScore=0;
+    }
+
+    public void setScore(int score)
+    {
+        this.score=score;
+    }
+
+    public void setMaxPossibleScore(int max)
+    {
+        this.maxPossibleScore=max;
     }
 
     public void addKey(String category)
@@ -95,6 +119,24 @@ public class Test {
     public boolean hasNext()
     {
         return queue.size() > 1;
+    }
+
+    public void changeState(EvaluationState evaluationState)
+    {
+        this.state=evaluationState;
+    }
+
+    public void neverCompleted(){ state.neverCompleted();}
+
+    public void completed(){state.completed();}
+
+    public NeverCompleted getNeverCompletedState(){return neverCompletedState;}
+
+    public Completed getCompletedState(){return completedState;}
+
+    public String toString()
+    {
+        return score + "\t" + maxPossibleScore + "\n";
     }
 
     public static void main(String args[])
