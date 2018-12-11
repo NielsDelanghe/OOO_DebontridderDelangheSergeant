@@ -15,10 +15,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import controller.CategoryList;
+import model.Category;
 
 import java.util.ArrayList;
 
@@ -55,6 +57,7 @@ public class CategoryOverviewPane extends GridPane{
         table.getColumns().add(descriptionCol);
 		//----------------------------------------------------------------------
 		this.add(table, 0, 1, 2, 6);
+		setEditAction(new EditCategory());
 		btnNew = new Button("New");
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewCategory());
@@ -81,4 +84,29 @@ public class CategoryOverviewPane extends GridPane{
 			newCategoryStage.show();
 		}
 	}
+
+	private class EditCategory implements EventHandler<MouseEvent> {
+		@Override
+		public void handle(MouseEvent mouseEvent) {
+			if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
+				if(mouseEvent.getClickCount() == 2){
+					TableView.TableViewSelectionModel<Category> tsm = table.getSelectionModel();
+					int index = tsm.getSelectedIndex();
+					String infoTekst = "geselecteerde rij: "+index;
+					Category category = tsm.getSelectedItem();
+
+
+					CategoryUpdatePane categoryUpdatePane = new CategoryUpdatePane(categories,savables, category);
+					Stage newCategoryStage = new Stage();
+					Group root = new Group();
+					Scene categoryScene = new Scene(root,250,150);
+					root.getChildren().add(categoryUpdatePane);
+					newCategoryStage.setScene(categoryScene);
+					newCategoryStage.show();
+
+
+				}
+			}
+		}
+	};
 }

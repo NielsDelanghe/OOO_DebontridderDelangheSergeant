@@ -18,8 +18,10 @@ public class CategoryList {
 
         Category c1 = new Category("Design principles","The SOLID design principles");
         Category c2 = new Category("Design patterns","A design pattern");
+        Category c3 = new Category("UML","Make an UML");
         categories.add(c1);
         categories.add(c2);
+        categories.add(c3);
     }
 
     public void addCategory(Category category)
@@ -50,6 +52,22 @@ public class CategoryList {
         }
         return names;
     }
+
+    public void removeCategory(Category category)
+    {
+        if(categories.contains(category))
+        {
+            throw new IllegalArgumentException("Given category doesn't exists");
+        }
+
+        else if(category == null)
+        {
+            throw new IllegalArgumentException("Category can't be empty");
+        }
+        categories.remove(category);
+    }
+
+
 
 }
 
