@@ -15,10 +15,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import controller.QuestionList;
+import model.Category;
+import model.Question;
 
 public class QuestionOverviewPane extends GridPane {
 	private TableView table;
@@ -83,4 +86,29 @@ public class QuestionOverviewPane extends GridPane {
 			newQuestionStage.show();
 		}
 	}
+
+	private class EditCategory implements EventHandler<MouseEvent> {
+		@Override
+		public void handle(MouseEvent mouseEvent) {
+			if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
+				if(mouseEvent.getClickCount() == 2){
+					TableView.TableViewSelectionModel<Question> tsm = table.getSelectionModel();
+					int index = tsm.getSelectedIndex();
+					String infoTekst = "geselecteerde rij: "+index;
+					Question question = tsm.getSelectedItem();
+
+
+					QuestionUpdatePane questionUpdatePane = new QuestionUpdatePane(questions ,savables, question);
+					Stage newQuestionStage = new Stage();
+					Group root = new Group();
+					Scene QuestionScene = new Scene(root,250,150);
+					root.getChildren().add(questionUpdatePane);
+					newQuestionStage.setScene(QuestionScene);
+					newQuestionStage.show();
+
+
+				}
+			}
+		}
+	};
 }
