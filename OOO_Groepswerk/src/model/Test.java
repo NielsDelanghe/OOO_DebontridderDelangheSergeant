@@ -1,5 +1,6 @@
 package model;
 
+import controller.DBContext;
 import db.Savable;
 import evaluationStates.Completed;
 import evaluationStates.EvaluationState;
@@ -133,6 +134,8 @@ public class Test implements Savable{
     public NeverCompleted getNeverCompletedState(){return neverCompletedState;}
 
     public Completed getCompletedState(){return completedState;}
+
+    public String getScore(){return score +"/"+ maxPossibleScore;}
 
     public String toString()
     {

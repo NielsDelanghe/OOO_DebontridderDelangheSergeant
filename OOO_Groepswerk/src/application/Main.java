@@ -39,7 +39,7 @@ public class Main extends Application {
 
 			PropertyPane propertyPanel = new PropertyPane();
 
-			TestPane testPane = new TestPane();
+			TestPane testPane = new TestPane(scores);
 			MessagePane messagePane = new MessagePane(scores);
 
 			Group root = new Group();

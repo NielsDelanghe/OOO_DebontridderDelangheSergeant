@@ -35,10 +35,17 @@ public class EvaluationTXT extends TXTDBStrategy{
 
     @Override
     public Savable convertStringToObject(String[] velden) {
-        Savable object = new Test();
-        ((Test) object).setScore(Integer.parseInt(velden[0]));
-        ((Test) object).setMaxPossibleScore(Integer.parseInt(velden[1]));
-        return object;
+        if(velden.length==0)
+        {
+            return null;
+        }
+        else
+        {
+            Savable object = new Test();
+            ((Test) object).setScore(Integer.parseInt(velden[0]));
+            ((Test) object).setMaxPossibleScore(Integer.parseInt(velden[1]));
+            return object;
+        }
 
     }
 

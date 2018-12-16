@@ -4,6 +4,9 @@ import controller.DBContext;
 import db.CategoryTXT;
 import db.EvaluationTXT;
 import db.Savable;
+import evaluationStates.Completed;
+import evaluationStates.EvaluationState;
+import evaluationStates.NeverCompleted;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -28,8 +31,12 @@ public class MessagePane extends GridPane {
 	private ObservableList<Savable> savables;
 	private DBContext context;
 	private Label tekst;
+	private Test evaluation;
+	private EvaluationState state;
 
 	public MessagePane (ObservableList<Savable> fileobjects){
+		evaluation = new Test();
+		state = new NeverCompleted(evaluation);
 		setBorder(new Border(new BorderStroke(Color.BLACK,
 				BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 
@@ -50,17 +57,19 @@ public class MessagePane extends GridPane {
 
 		tekst = new Label();
 
-		if(savables == null)
+		if(savables.size()==0)
 		{
-			tekst.setText("You haven't completed this test");
+			tekst.setText(state.toString());
 		}
 
 		else
 		{
-			Savable savable = savables.get(savables.size()-1);
-			Test t = (Test) savable;
-			tekst.setText("Youre previous score was: " );
+			state = new Completed(evaluation);
+			evaluation = (Test) context.getReadObjects().get(context.getReadObjects().size()-1);
+
+			tekst.setText(state.toString() +", youre score was: "+ evaluation.getScore());
 		}
+
 
 		add(tekst,0,0);
 	}
@@ -71,7 +80,7 @@ public class MessagePane extends GridPane {
 	{
 		@Override
 		public void handle(ActionEvent event) {
-			TestPane testPane = new TestPane();
+			TestPane testPane = new TestPane(savables);
 			Stage newTestStage = new Stage();
 			Group root = new Group();
 			Scene testScene = new Scene(root, 750, 300);

@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
 import controller.DBContext;
+import db.EvaluationTXT;
 import db.QuestionTXT;
 import db.Savable;
 import javafx.collections.FXCollections;
@@ -24,12 +25,14 @@ public class TestPane extends GridPane {
 	private Button submitButton;
 	private ToggleGroup statementGroup;
 	private ObservableList<Savable> questionList;
+	private ObservableList<Savable> savables;
 	private DBContext context;
 	private Test test;
 	private ArrayList<String> answers = new ArrayList<>();
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
 
-	public TestPane (){
+	public TestPane (ObservableList<Savable> fileobjects){
+		savables=fileobjects;
 		test = new Test();
 		questionList = FXCollections.observableArrayList(new ArrayList<>());
 		context = new DBContext();
@@ -110,6 +113,7 @@ public class TestPane extends GridPane {
 		}
 		private void showFeedback()
 		{
+			int score=0;
 			String feedback = "";
 			for(Question question : test.getQuestions())
 			{
@@ -117,16 +121,35 @@ public class TestPane extends GridPane {
 				{
 					feedback += question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
 				}
+
+				else
+				{
+					score++;
+				}
 			}
 			if(feedback.equals(""))
 			{
 				feedback = "Congratulations, all answers are correct!";
 			}
 			questionField.setText(feedback);
+			test.setScore(score);
+			test.setMaxPossibleScore(test.getQuestions().size());
+			savables.add(test);
+			context = new DBContext();
+			context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
+			context.write();
+
 		}
 		private void showScore(int score)
 		{
 			questionField.setText("Your score is: " + score +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
+			test.setScore(score);
+			test.setMaxPossibleScore(test.getQuestions().size());
+			savables.add(test);
+			context = new DBContext();
+			context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
+			context.write();
+
 		}
 
 		private void loadNextQuestion()

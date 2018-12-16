@@ -19,4 +19,9 @@ public class NeverCompleted implements EvaluationState {
         test.changeState(test.getCompletedState());
 
     }
+
+    @Override
+    public String toString() {
+        return "You have never done this test before";
+    }
 }

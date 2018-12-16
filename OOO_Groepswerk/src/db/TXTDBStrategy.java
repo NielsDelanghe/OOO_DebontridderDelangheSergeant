@@ -34,7 +34,6 @@ public abstract class TXTDBStrategy implements DBStrategy {
         }
         writer.close();
 
-
     }
 
     @Override
@@ -44,10 +43,11 @@ public abstract class TXTDBStrategy implements DBStrategy {
         try {
             scannerFile = new Scanner(file);
             while (scannerFile.hasNextLine()) {
-
                 String lijn = scannerFile.nextLine();
-                String [] velden = lijn.split("\t");
-                savables.add(convertStringToObject(velden));
+                if(!lijn.isEmpty()) {
+                    String[] velden = lijn.split("\t");
+                    savables.add(convertStringToObject(velden));
+                }
 
             }
 
