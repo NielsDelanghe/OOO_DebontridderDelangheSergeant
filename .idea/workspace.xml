@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98fd5d2-b0d4-40ff-bc9b-e7ddaf0d585b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CategoryFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CategoryFile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Evaluation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/db/EvaluationTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/db/EvaluationTXT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/Completed.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/Completed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/NeverCompleted.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/NeverCompleted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/CategoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/CategoryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryTXT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/model/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/MessagePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/MessagePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/TestPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/TestPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryUpdatePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryUpdatePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionOverviewPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionUpdatePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionUpdatePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuestionFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +30,9 @@
     <session id="1142312117">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="29" />
+          <entry key="project.closed" value="32" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -34,40 +40,40 @@
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="2" />
-          <entry key="project.open.time.29" value="6" />
+          <entry key="project.open.time.29" value="7" />
           <entry key="project.open.time.30" value="3" />
           <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Evaluation" value="1" />
           <entry key="fxbuild" value="1" />
-          <entry key="java" value="195" />
-          <entry key="properties" value="4" />
-          <entry key="txt" value="37" />
+          <entry key="java" value="209" />
+          <entry key="properties" value="5" />
+          <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="195" />
-          <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Properties" value="4" />
+          <entry key="JAVA" value="209" />
+          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="Properties" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="9857" />
+          <entry key="java" value="11302" />
           <entry key="properties" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9857" />
+          <entry key="JAVA" value="11302" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="21" />
         </counts>
@@ -77,28 +83,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/MessagePane.java">
+        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+            <state relative-caret-position="37">
+              <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/TestPane.java">
+        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionUpdatePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="142" column="38" selection-start-line="142" selection-start-column="38" selection-end-line="142" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+            <state relative-caret-position="407">
+              <caret line="124" column="41" lean-forward="true" selection-start-line="124" selection-start-column="41" selection-end-line="124" selection-end-column="41" />
+              <folding>
+                <element signature="e#4918#4919#0" expanded="true" />
+                <element signature="e#4970#4971#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,21 +133,13 @@
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/observers/CategoryList.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryDB.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/DBContext.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Category.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/CategoryList.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionOverviewPane.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryTXT.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/DBStrategy.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/QuestionFile.txt" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java" />
         <option value="$PROJECT_DIR$/Setup.properties" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/PropertiePane.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Question.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionDetailPane.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/QuestionTXT.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Evaluation.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/EvaluationStateInterface.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/NeverCompeted.java" />
@@ -155,10 +148,20 @@
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/NeverCompleted.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/Completed.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java" />
-        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/MessagePane.java" />
-        <option value="$PROJECT_DIR$/Evaluation.txt" />
         <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/TestPane.java" />
+        <option value="$PROJECT_DIR$/Evaluation.txt" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Category.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryTXT.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/CategoryList.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryUpdatePane.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionOverviewPane.java" />
+        <option value="$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionUpdatePane.java" />
       </list>
     </option>
   </component>
@@ -238,28 +241,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panels" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OOO_DebontridderDelangheSergeant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544964366339" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545473905976" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Herhaling-OOO/Labo-States" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -280,6 +279,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="Category" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.Category" />
+      <module name="OOO_DebontridderDelangheSergeant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CategoryDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="db.CategoryDB" />
       <module name="OOO_DebontridderDelangheSergeant" />
@@ -337,11 +349,13 @@
       <item itemvalue="Application.CategoryDB" />
       <item itemvalue="Application.DBContext" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="Application.Category" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.DBContext" />
+        <item itemvalue="Application.Category" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.CategoryDB" />
       </list>
@@ -387,18 +401,21 @@
       <workItem from="1544445190902" duration="630000" />
       <workItem from="1544465197677" duration="807000" />
       <workItem from="1544530747159" duration="10470000" />
-      <workItem from="1544959826545" duration="4441000" />
+      <workItem from="1544959826545" duration="4576000" />
+      <workItem from="1544964704966" duration="146000" />
+      <workItem from="1545124062793" duration="29000" />
+      <workItem from="1545467774263" duration="6063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87492000" />
+    <option name="totallyTimeSpent" value="93865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13859275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -407,7 +424,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,51 +482,21 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/observers/CategoryList.java" />
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/observers/QuestionList.java" />
     <entry file="file://$PROJECT_DIR$/TestDatabase/CategoryFile.txt" />
     <entry file="file://$PROJECT_DIR$/TestDatabase/QuestionFile.txt" />
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/TestDatabase/QuestionFile.txt" />
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/TestDatabase/CategoryFile.txt" />
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/CategoryFile.txt" />
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryDB.java" />
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/CategoryList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/build.fxbuild">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/PropertiePane.java" />
     <entry file="file://$PROJECT_DIR$/Setup.properties" />
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionOverviewPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionDetailPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="131" column="164" selection-start-line="131" selection-start-column="164" selection-end-line="131" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="37" column="122" selection-start-line="37" selection-start-column="122" selection-end-line="37" selection-end-column="122" />
         </state>
       </provider>
     </entry>
@@ -532,38 +519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/EvaluationState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryTXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -578,16 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10557">
           <caret line="661" selection-start-line="661" selection-end-line="661" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#615#616#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,16 +578,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/evaluation.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/evaluationStates/NeverCompleted.java">
@@ -690,51 +633,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="137" column="65" selection-start-line="137" selection-start-column="65" selection-end-line="137" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Evaluation.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/MessagePane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="765">
           <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/TestPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="2108">
           <caret line="142" column="38" selection-start-line="142" selection-start-column="38" selection-end-line="142" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Evaluation.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/db/TXTDBStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/db/CategoryTXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="69" lean-forward="true" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/model/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="150" column="91" selection-start-line="150" selection-start-column="91" selection-end-line="150" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/CategoryList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/QuestionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/controller/DBContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+          <folding>
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryDetailPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="90" column="54" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryUpdatePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="115" column="16" lean-forward="true" selection-start-line="109" selection-start-column="14" selection-end-line="115" selection-end-column="16" />
+          <folding>
+            <element signature="e#2865#2866#0" expanded="true" />
+            <element signature="e#2910#2911#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
+            <element signature="e#3036#3037#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/CategoryOverviewPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionOverviewPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="103" column="64" selection-start-line="103" selection-start-column="64" selection-end-line="103" selection-end-column="64" />
+          <folding>
+            <element signature="e#2411#2412#0" expanded="true" />
+            <element signature="e#2453#2454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOO_Groepswerk/src/view/panels/QuestionUpdatePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="124" column="41" lean-forward="true" selection-start-line="124" selection-start-column="41" selection-end-line="124" selection-end-column="41" />
+          <folding>
+            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="e#4970#4971#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -778,7 +813,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

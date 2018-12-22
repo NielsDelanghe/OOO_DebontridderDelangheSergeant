@@ -35,7 +35,7 @@ public class CategoryTXT extends TXTDBStrategy {
 
     @Override
     public Savable convertStringToObject(String[] velden) {
-        Savable object = new Category(velden[0],velden[1]);
+        Savable object = new Category(velden[0],velden[1],velden[2]);
         return object;
 
     }

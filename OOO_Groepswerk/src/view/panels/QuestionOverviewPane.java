@@ -63,6 +63,7 @@ public class QuestionOverviewPane extends GridPane {
 		setNewAction(new NewQuestion());
 		//----------------------------------------------------------------------
 		table.setItems(savables);
+		setEditAction(new EditCategory());
 	}
 
 	public void setNewAction(EventHandler<ActionEvent> newAction) {
@@ -92,23 +93,25 @@ public class QuestionOverviewPane extends GridPane {
 		public void handle(MouseEvent mouseEvent) {
 			if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
 				if(mouseEvent.getClickCount() == 2){
-					TableView.TableViewSelectionModel<Question> tsm = table.getSelectionModel();
-					int index = tsm.getSelectedIndex();
-					String infoTekst = "geselecteerde rij: "+index;
-					Question question = tsm.getSelectedItem();
+					TableView.TableViewSelectionModel<Question> tableView = table.getSelectionModel();
+					int index = tableView.getSelectedIndex();
+					Question question = tableView.getSelectedItem();
 
 
-					QuestionUpdatePane questionUpdatePane = new QuestionUpdatePane(questions ,savables, question);
+					QuestionUpdatePane questionUpdatePane = new QuestionUpdatePane(questions,savables, question);
 					Stage newQuestionStage = new Stage();
 					Group root = new Group();
-					Scene QuestionScene = new Scene(root,250,150);
+					Scene questionScene = new Scene(root,350,300);
 					root.getChildren().add(questionUpdatePane);
-					newQuestionStage.setScene(QuestionScene);
+					newQuestionStage.setScene(questionScene);
+					questionUpdatePane.setQuestionField(question.getQuestion());
+					questionUpdatePane.setStatementList(question.getPossible_answers());
+					questionUpdatePane.setFeedbackField(question.getFeedback());
 					newQuestionStage.show();
 
 
 				}
 			}
 		}
-	};
+	}
 }

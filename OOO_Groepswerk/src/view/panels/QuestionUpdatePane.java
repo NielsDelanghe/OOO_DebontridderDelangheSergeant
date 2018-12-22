@@ -108,6 +108,29 @@ public class QuestionUpdatePane extends GridPane {
         setRemoveStatementAction(new RemoveStatement());
     }
 
+    public void setQuestionField(String question)
+    {
+        this.questionField.setText(question);
+    }
+
+    public void setStatementList(List<String> statements)
+    {
+        String statment="";
+        this.statementList.addAll(statements);
+        for(String text : statementList)
+        {
+            statment+=text+"\n";
+        }
+
+        statementsArea.setText(statment);
+
+    }
+
+    public void setFeedbackField(String feedback)
+    {
+        this.feedbackField.setText(feedback);
+    }
+
     public void setSaveAction(EventHandler<ActionEvent> saveAction) { btnOK.setOnAction(saveAction); }
 
     public void setCancelAction(EventHandler<ActionEvent> cancelAction) { btnCancel.setOnAction(cancelAction); }
@@ -133,13 +156,16 @@ public class QuestionUpdatePane extends GridPane {
         public void handle(ActionEvent event) {
             Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
             System.out.println(question);
+            int index=0;
+            for(int i=0; i< savables.size();i++)
+            {
+                if(previus.equals(savables.get(i)))
+                {
+                    index =i;
+                }
+            }
 
-            questions.removeQuestion(previus);
-
-            savables.remove(previus);
-
-            questions.addQuestion(question);
-            savables.add(question);
+            savables.set(index,question);
             context.write();
             Stage stage = (Stage) btnAdd.getScene().getWindow();
             stage.close();

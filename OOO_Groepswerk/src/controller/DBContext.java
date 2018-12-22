@@ -49,9 +49,9 @@ public class DBContext implements DBStrategy {
     {
         DBContext context = new DBContext();
         ObservableList<Savable> categories = FXCollections.observableArrayList(new ArrayList<>());
-        Category c1 = new Category("Design principles","The SOLID design principles");
-        Category c2 = new Category("Design patterns","A design pattern");
-        Category c3 = new Category("UML","Make an UML");
+        Category c1 = new Category("Design principles","The SOLID design principles","Design principles");
+        Category c2 = new Category("Design patterns","A design pattern","Design patterns");
+        Category c3 = new Category("UML","Make an UML","UML");
         categories.add(c1);
         categories.add(c2);
         categories.add(c3);

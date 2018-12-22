@@ -90,10 +90,9 @@ public class CategoryOverviewPane extends GridPane{
 		public void handle(MouseEvent mouseEvent) {
 			if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
 				if(mouseEvent.getClickCount() == 2){
-					TableView.TableViewSelectionModel<Category> tsm = table.getSelectionModel();
-					int index = tsm.getSelectedIndex();
-					String infoTekst = "geselecteerde rij: "+index;
-					Category category = tsm.getSelectedItem();
+					TableView.TableViewSelectionModel<Category> tableView = table.getSelectionModel();
+					int index = tableView.getSelectedIndex();
+					Category category = tableView.getSelectedItem();
 
 
 					CategoryUpdatePane categoryUpdatePane = new CategoryUpdatePane(categories,savables, category);
@@ -102,11 +101,14 @@ public class CategoryOverviewPane extends GridPane{
 					Scene categoryScene = new Scene(root,250,150);
 					root.getChildren().add(categoryUpdatePane);
 					newCategoryStage.setScene(categoryScene);
+					categoryUpdatePane.setTitleField(category.getName());
+					categoryUpdatePane.setDescriptionField(category.getDescription());
 					newCategoryStage.show();
+
 
 
 				}
 			}
 		}
-	};
+	}
 }

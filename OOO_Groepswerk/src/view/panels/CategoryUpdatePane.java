@@ -65,6 +65,7 @@ public class CategoryUpdatePane extends GridPane {
         //----------------------------------------------------------------------
         setSaveAction(new AddCategory());
         setCancelAction(new Cancel());
+
     }
 
     public void setSaveAction(EventHandler<ActionEvent> saveAction) {
@@ -75,29 +76,50 @@ public class CategoryUpdatePane extends GridPane {
         btnCancel.setOnAction(cancelAction);
     }
 
+    public void setTitleField(String text)
+    {
+        if(text.trim().isEmpty())
+            throw new IllegalArgumentException("Text may not be empty");
+        this.titleField.setText(text);
+    }
+
+
+    public void setDescriptionField(String text){
+        if(text.trim().isEmpty())
+            throw new IllegalArgumentException("Text may not be empty");
+        this.descriptionField.setText(text);
+    }
+
     public class AddCategory implements EventHandler<ActionEvent>
     {
         @Override
         public void handle(ActionEvent event) {
             try {
-                category = new Category(titleField.getText(), descriptionField.getText());
-                System.out.println(categories.getCategotyList());
-                System.out.println(previus);
-                categories.removeCategory(previus);
-                categoryTitles.remove(previus.getName());
-                savables.remove(previus);
+                String mainCategory="";
+                int index=0;
+                if(categoryField.getValue()==null)
+                {
+                    mainCategory = titleField.getText();
+                }
+                else
+                {
+                    mainCategory = categoryField.getValue().toString();
+                }
+                category = new Category(titleField.getText(), descriptionField.getText(),mainCategory);
 
+               for(int i=0; i< savables.size();i++)
+               {
+                   if(previus.equals(savables.get(i)))
+                   {
+                       index =i;
+                   }
+               }
 
-
-
-
-                categories.addCategory(category);
-
-
-                categoryTitles.add(category.getName());
-
-                savables.add(category);
+                categoryTitles.set(index,category.getName());
+                savables.set(index,category);
                 context.write();
+                System.out.println(savables);
+
                 Stage stage = (Stage) btnOK.getScene().getWindow();
                 stage.close();
             }

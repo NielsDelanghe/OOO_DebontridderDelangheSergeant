@@ -6,21 +6,16 @@ public class Category implements Savable {
 
     private String name;
     private String description;
-    private Category mainCategory;
+    private String mainCategory;
 
 
-    public Category(String name, String description, Category main)
+    public Category(String name, String description, String main)
     {
         this.setName(name);
         this.setDescription(description);
         this.setMainCategory(main);
     }
 
-    public Category(String name,String description)
-    {
-        this.setName(name);
-        this.setDescription(description);
-    }
 
     public void setName(String name)
     {
@@ -51,12 +46,12 @@ public class Category implements Savable {
         return this.description;
     }
 
-    public Category getMainCategory()
+    public String getMainCategory()
     {
         return mainCategory;
     }
 
-    public void setMainCategory(Category category)
+    public void setMainCategory(String category)
     {
         mainCategory=category;
     }
@@ -65,17 +60,15 @@ public class Category implements Savable {
 
     public String toString()
     {
-       return name + "\t" + description + "\t" +"\n";
+       return name + "\t" + description + "\t" + mainCategory +"\n";
     }
 
     public static void main(String args[])
     {
-        Category c1;
-        c1 = new Category("UML","uml tekening");
-        c1.setMainCategory(c1);
-        Category c2 = new Category("Test","test",c1);
+
+        Category c2 = new Category("Test","test","Test");
         System.out.println(c2.toString());
-        System.out.println(c1.toString());
+
 
     }
 

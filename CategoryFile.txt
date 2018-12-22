@@ -1,4 +1,5 @@
-Design principles	The SOLID design principles	
-Design patterns	A design pattern	
-UML	Make an UML	
-test	test	
+Design principles	The SOLID design principles	Design principles
+Design patterns	A design pattern	Design patterns
+UML	Make an UML	UML
+test3	test	test3
+

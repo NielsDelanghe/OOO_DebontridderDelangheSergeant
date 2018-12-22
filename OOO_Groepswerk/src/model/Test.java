@@ -147,8 +147,8 @@ public class Test implements Savable{
         List<String> answers_q1 = new ArrayList<>();
         List<String> answers_q2 = new ArrayList<>();
 
-        Category cat1 = new Category("Design principles", "The SOLID design principles");
-        Category cat2 = new Category("Design patterns", "A design pattern");
+        Category cat1 = new Category("Design principles", "The SOLID design principles","Design principles");
+        Category cat2 = new Category("Design patterns", "A design pattern","Design patterns");
 
         Question q1;
         Question q2;

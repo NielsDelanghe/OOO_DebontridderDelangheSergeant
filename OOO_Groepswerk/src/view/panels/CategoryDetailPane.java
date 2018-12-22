@@ -78,7 +78,17 @@ public class CategoryDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			try {
-				category = new Category(titleField.getText(), descriptionField.getText());
+				String mainCategory="";
+				if(categoryField.getValue()==null)
+				{
+					mainCategory = titleField.getText();
+				}
+				else
+				{
+					mainCategory = categoryField.getValue().toString();
+				}
+				category = new Category(titleField.getText(), descriptionField.getText(),mainCategory);
+				System.out.println(category.toString());
 				categories.addCategory(category);
 				categoryTitles.add(category.getName());
 				savables.add(category);
