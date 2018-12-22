@@ -32,7 +32,7 @@ public class TestPane extends GridPane {
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
 
 	public TestPane (ObservableList<Savable> fileobjects){
-		savables=fileobjects;
+		savables = fileobjects;
 		test = new Test();
 		questionList = FXCollections.observableArrayList(new ArrayList<>());
 		context = new DBContext();
@@ -113,7 +113,7 @@ public class TestPane extends GridPane {
 		}
 		private void showFeedback()
 		{
-			int score=0;
+			int score = 0;
 			String feedback = "";
 			for(Question question : test.getQuestions())
 			{
@@ -121,7 +121,6 @@ public class TestPane extends GridPane {
 				{
 					feedback += question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
 				}
-
 				else
 				{
 					score++;
@@ -184,7 +183,7 @@ public class TestPane extends GridPane {
 			}
 			//Load property file
 			Properties properties = new Properties();
-			InputStream is = null;
+			InputStream is;
 			try {
 				File file = new File("evaluation.properties");
 				is = new FileInputStream(file);

@@ -1,8 +1,4 @@
-
 package db;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 
 import controller.DBContext;
 import javafx.collections.FXCollections;
@@ -16,6 +12,9 @@ import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 import model.Category;
 import model.Question;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ExcelPlugin {
     private WritableWorkbook workbook;
@@ -33,13 +32,12 @@ public class ExcelPlugin {
 
         ArrayList<ArrayList<String>> list = new ArrayList();
 
-        for(int i=0; i<categories.size();i++)
+        for(int i = 0; i <categories.size(); i++)
         {
             ArrayList <String> rij = new ArrayList();
             rij.add(((Category) categories.get(i)).getName()); rij.add(((Category) categories.get(i)).getDescription()); rij.add(((Category) categories.get(i)).getMainCategory());
             list.add(rij);
         }
-
 
         try{
             this.addSheet(list, 0, "categories");
@@ -68,8 +66,6 @@ public class ExcelPlugin {
 
             list.add(rij);
         }
-
-
         try{
             this.addSheet(list,1,"questions");
         }
@@ -80,9 +76,6 @@ public class ExcelPlugin {
             this.writeExcel();
         }
         catch (Exception e){System.out.println("creatie excel " + e.getMessage());	}
-
-
-
     }
 
     public ObservableList<Savable> readCategoriesFromExcel(File file,int sheetNr)throws BiffException, IOException {

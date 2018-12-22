@@ -1,2 +1,2 @@
 What pattern defines a family of algorithms?	Design patterns	feedback	1	false	Simple Factory	Singleton	Strategy
-What design principle has the least to do with Strategies?	Design principles	feedback	1	false	S	O	L	I	D
+qzezef	null	feedback	1	false	S	O	L	I	D

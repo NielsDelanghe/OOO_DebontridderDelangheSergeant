@@ -14,8 +14,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
 
-import java.util.ArrayList;
-
 public class CategoryDetailPane extends GridPane {
 	private Button btnOK, btnCancel;
 	private TextField titleField, descriptionField;
@@ -29,7 +27,7 @@ public class CategoryDetailPane extends GridPane {
 	public CategoryDetailPane(CategoryList categories,ObservableList<Savable> fileobjects) {
 		this.categories = categories;
 
-		savables=fileobjects;
+		savables = fileobjects;
 		context = new DBContext();
 		context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
 		context.read();
@@ -78,8 +76,8 @@ public class CategoryDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			try {
-				String mainCategory="";
-				if(categoryField.getValue()==null)
+				String mainCategory = "";
+				if(categoryField.getValue() == null)
 				{
 					mainCategory = titleField.getText();
 				}
@@ -88,7 +86,6 @@ public class CategoryDetailPane extends GridPane {
 					mainCategory = categoryField.getValue().toString();
 				}
 				category = new Category(titleField.getText(), descriptionField.getText(),mainCategory);
-				System.out.println(category.toString());
 				categories.addCategory(category);
 				categoryTitles.add(category.getName());
 				savables.add(category);

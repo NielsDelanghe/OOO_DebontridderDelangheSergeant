@@ -3,13 +3,11 @@ package db;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Question;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionTXT extends TXTDBStrategy {
-
         File file;
         ObservableList<Savable> questionList = FXCollections.observableArrayList(new ArrayList<>());
 

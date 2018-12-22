@@ -1,7 +1,6 @@
 package view.panels;
 
 import controller.DBContext;
-import db.CategoryTXT;
 import db.QuestionTXT;
 import db.Savable;
 import javafx.collections.ObservableList;
@@ -20,21 +19,17 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import controller.QuestionList;
-import model.Category;
 import model.Question;
 
 public class QuestionOverviewPane extends GridPane {
 	private TableView table;
 	private Button btnNew;
-
 	private QuestionList questions;
-
 	private DBContext context;
 	private ObservableList<Savable> savables;
 
 	public QuestionOverviewPane(QuestionList questions,ObservableList<Savable> fileobjects) {
 		this.questions = questions;
-
 		savables = fileobjects;
 		context = new DBContext();
 		context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
@@ -94,10 +89,7 @@ public class QuestionOverviewPane extends GridPane {
 			if(mouseEvent.getButton().equals(MouseButton.PRIMARY)){
 				if(mouseEvent.getClickCount() == 2){
 					TableView.TableViewSelectionModel<Question> tableView = table.getSelectionModel();
-					int index = tableView.getSelectedIndex();
 					Question question = tableView.getSelectedItem();
-
-
 					QuestionUpdatePane questionUpdatePane = new QuestionUpdatePane(questions,savables, question);
 					Stage newQuestionStage = new Stage();
 					Group root = new Group();
@@ -108,8 +100,6 @@ public class QuestionOverviewPane extends GridPane {
 					questionUpdatePane.setStatementList(question.getPossible_answers());
 					questionUpdatePane.setFeedbackField(question.getFeedback());
 					newQuestionStage.show();
-
-
 				}
 			}
 		}

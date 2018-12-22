@@ -14,8 +14,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
 
-import java.util.ArrayList;
-
 public class CategoryUpdatePane extends GridPane {
     private Button btnOK, btnCancel;
     private TextField titleField, descriptionField;
@@ -25,13 +23,13 @@ public class CategoryUpdatePane extends GridPane {
     private Category category;
     private DBContext context;
     private ObservableList<Savable> savables;
-    private Category previus;
+    private Category originalCategory;
 
     public CategoryUpdatePane(CategoryList categories,ObservableList<Savable> fileobjects, Category category) {
-        this.previus=category;
+        this.originalCategory = category;
         this.categories = categories;
 
-        savables=fileobjects;
+        savables = fileobjects;
         context = new DBContext();
         context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
         context.read();
@@ -63,7 +61,7 @@ public class CategoryUpdatePane extends GridPane {
         btnOK.isDefaultButton();
         this.add(btnOK, 1, 3, 1, 1);
         //----------------------------------------------------------------------
-        setSaveAction(new AddCategory());
+        setSaveAction(new UpdateCategory());
         setCancelAction(new Cancel());
 
     }
@@ -83,21 +81,20 @@ public class CategoryUpdatePane extends GridPane {
         this.titleField.setText(text);
     }
 
-
     public void setDescriptionField(String text){
         if(text.trim().isEmpty())
             throw new IllegalArgumentException("Text may not be empty");
         this.descriptionField.setText(text);
     }
 
-    public class AddCategory implements EventHandler<ActionEvent>
+    public class UpdateCategory implements EventHandler<ActionEvent>
     {
         @Override
         public void handle(ActionEvent event) {
             try {
-                String mainCategory="";
-                int index=0;
-                if(categoryField.getValue()==null)
+                String mainCategory = "";
+                int index = 0;
+                if(categoryField.getValue() == null)
                 {
                     mainCategory = titleField.getText();
                 }
@@ -109,7 +106,7 @@ public class CategoryUpdatePane extends GridPane {
 
                for(int i=0; i< savables.size();i++)
                {
-                   if(previus.equals(savables.get(i)))
+                   if(originalCategory.equals(savables.get(i)))
                    {
                        index =i;
                    }

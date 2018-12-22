@@ -3,7 +3,6 @@ package view.panels;
 import controller.DBContext;
 import db.CategoryTXT;
 import db.Savable;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,8 +20,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import controller.CategoryList;
 import model.Category;
-
-import java.util.ArrayList;
 
 public class CategoryOverviewPane extends GridPane{
 	private TableView table;
@@ -93,8 +90,6 @@ public class CategoryOverviewPane extends GridPane{
 					TableView.TableViewSelectionModel<Category> tableView = table.getSelectionModel();
 					int index = tableView.getSelectedIndex();
 					Category category = tableView.getSelectedItem();
-
-
 					CategoryUpdatePane categoryUpdatePane = new CategoryUpdatePane(categories,savables, category);
 					Stage newCategoryStage = new Stage();
 					Group root = new Group();

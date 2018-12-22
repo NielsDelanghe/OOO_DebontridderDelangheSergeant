@@ -7,12 +7,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 
-
 public class AssesMainPane extends BorderPane {
 
 	public AssesMainPane(Pane messagePane, Pane categoryOverviewPanel, Pane questionOverviewPanel, Pane propertyPanel){
 	    TabPane tabPane = new TabPane();
-	    
 	    FlowPane messageBox = new FlowPane(messagePane);
 	    messageBox.setAlignment(Pos.CENTER);
         Tab testTab = new Tab("Test", messageBox);
@@ -23,7 +21,6 @@ public class AssesMainPane extends BorderPane {
         tabPane.getTabs().add(categoriesTab);
         tabPane.getTabs().add(questionsTab);
         tabPane.getTabs().add(propertyTab);
-
 	    this.setCenter(tabPane);
 	}
 }

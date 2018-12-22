@@ -20,18 +20,16 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.Question;
-import controller.CategoryList;
 import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionUpdatePane extends GridPane {
-    private Question previus;
+    private Question originalQuestion;
     private Button btnOK, btnCancel;
     private TextArea statementsArea;
     private TextField questionField, statementField, feedbackField;
     private Button btnAdd, btnRemove;
     private ComboBox categoryField;
-    private CategoryList categories = new CategoryList();
     private List<String> statementList = new ArrayList<>();
     private QuestionList questions;
 
@@ -41,7 +39,7 @@ public class QuestionUpdatePane extends GridPane {
     private ObservableList<String> categoryTitles;
 
     public QuestionUpdatePane(QuestionList questions, ObservableList<Savable> fileobjects, Question question) {
-        this.previus=question;
+        this.originalQuestion = question;
         this.questions = questions;
 
         savables=fileobjects;
@@ -71,11 +69,9 @@ public class QuestionUpdatePane extends GridPane {
         //----------------------------------------------------------------------
         Pane addRemove = new HBox();
         btnAdd = new Button("add");
-        btnAdd.setOnAction(new AddStatementListener());
         addRemove.getChildren().add(btnAdd);
         //----------------------------------------------------------------------
         btnRemove = new Button("remove");
-        btnRemove.setOnAction(new RemoveStatementListener());
         addRemove.getChildren().add(btnRemove);
         add(addRemove, 1, 8, 2, 1);
         //----------------------------------------------------------------------
@@ -115,15 +111,13 @@ public class QuestionUpdatePane extends GridPane {
 
     public void setStatementList(List<String> statements)
     {
-        String statment="";
+        String statment = "";
         this.statementList.addAll(statements);
         for(String text : statementList)
         {
-            statment+=text+"\n";
+            statment += text + "\n";
         }
-
         statementsArea.setText(statment);
-
     }
 
     public void setFeedbackField(String feedback)
@@ -139,18 +133,6 @@ public class QuestionUpdatePane extends GridPane {
 
     public void setRemoveStatementAction(EventHandler<ActionEvent> removeStatementAction) { btnRemove.setOnAction(removeStatementAction); }
 
-    class AddStatementListener implements EventHandler<ActionEvent> {
-        @Override
-        public void handle(ActionEvent e) {
-        }
-    }
-
-    class RemoveStatementListener implements EventHandler<ActionEvent> {
-        @Override
-        public void handle(ActionEvent e) {
-        }
-    }
-
     class AddQuestion implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
@@ -159,12 +141,11 @@ public class QuestionUpdatePane extends GridPane {
             int index=0;
             for(int i=0; i< savables.size();i++)
             {
-                if(previus.equals(savables.get(i)))
+                if(originalQuestion.equals(savables.get(i)))
                 {
-                    index =i;
+                    index = i;
                 }
             }
-
             savables.set(index,question);
             context.write();
             Stage stage = (Stage) btnAdd.getScene().getWindow();

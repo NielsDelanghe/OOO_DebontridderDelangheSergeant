@@ -30,10 +30,8 @@ public class QuestionDetailPane extends GridPane {
 	private TextField questionField, statementField, feedbackField;
 	private Button btnAdd, btnRemove;
 	private ComboBox categoryField;
-	private CategoryList categories = new CategoryList();
 	private List<String> statementList = new ArrayList<>();
 	private QuestionList questions;
-
 	private DBContext context;
 	private DBContext categoryContext;
 	private ObservableList<Savable> savables;
@@ -41,9 +39,8 @@ public class QuestionDetailPane extends GridPane {
 
 	public QuestionDetailPane(QuestionList questions, ObservableList<Savable> fileobjects) {
 		this.questions = questions;
-
-		savables=fileobjects;
-		context = new DBContext();
+		this.savables = fileobjects;
+		this.context = new DBContext();
 		context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
 		context.read();
 
@@ -69,11 +66,11 @@ public class QuestionDetailPane extends GridPane {
 		//----------------------------------------------------------------------
 		Pane addRemove = new HBox();
 		btnAdd = new Button("add");
-		btnAdd.setOnAction(new AddStatementListener());
+		btnAdd.setOnAction(new AddStatement());
 		addRemove.getChildren().add(btnAdd);
 		//----------------------------------------------------------------------
 		btnRemove = new Button("remove");
-		btnRemove.setOnAction(new RemoveStatementListener());
+		btnRemove.setOnAction(new RemoveStatement());
 		addRemove.getChildren().add(btnRemove);
 		add(addRemove, 1, 8, 2, 1);
 		//----------------------------------------------------------------------
@@ -114,18 +111,6 @@ public class QuestionDetailPane extends GridPane {
 
 	public void setRemoveStatementAction(EventHandler<ActionEvent> removeStatementAction) { btnRemove.setOnAction(removeStatementAction); }
 
-	class AddStatementListener implements EventHandler<ActionEvent> {
-		@Override
-		public void handle(ActionEvent e) {
-		}
-	}
-
-	class RemoveStatementListener implements EventHandler<ActionEvent> {
-		@Override
-		public void handle(ActionEvent e) {
-		}
-	}
-
 	class AddQuestion implements EventHandler<ActionEvent> {
 		@Override
 		public void handle(ActionEvent event) {
@@ -158,14 +143,21 @@ public class QuestionDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			String toDelete = statementField.getText();
-			for(String statement : statementList) {
-				if (statement.equals(toDelete)) {
-					statementList.remove(statement);
-				}
-				for(String s : statementList)
+			System.out.println("To delete: " + toDelete);
+			for(int i = 0; i < statementList.size(); i++)
+			{
+				if(statementList.get(i).equals(toDelete))
 				{
-					statementsArea.setText(s + "\n");
+					statementList.remove(statementList.get(i));
 				}
+			}
+
+			statementsArea.setText("");
+			String current = statementsArea.getText();
+			for(String statement : statementList)
+			{
+				statementField.setText("");
+				statementsArea.setText(current + statement + "\n");
 			}
 		}
 	}

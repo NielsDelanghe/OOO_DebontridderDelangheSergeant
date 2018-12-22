@@ -1,7 +1,6 @@
 package view.panels;
 
 import controller.DBContext;
-import db.CategoryTXT;
 import db.EvaluationTXT;
 import db.Savable;
 import evaluationStates.Completed;
@@ -30,16 +29,14 @@ public class MessagePane extends GridPane {
 	private Button testButton;
 	private ObservableList<Savable> savables;
 	private DBContext context;
-	private Label tekst;
+	private Label text;
 	private Test evaluation;
 	private EvaluationState state;
 
 	public MessagePane (ObservableList<Savable> fileobjects){
 		evaluation = new Test();
 		state = new NeverCompleted(evaluation);
-		setBorder(new Border(new BorderStroke(Color.BLACK,
-				BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
-
+		setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 		this.setPadding(new Insets(5, 5, 5, 5));
 		this.setVgap(5);
 		this.setHgap(5);
@@ -49,17 +46,17 @@ public class MessagePane extends GridPane {
 		add(testButton, 0,1,1,1);
 		setHalignment(testButton, HPos.CENTER);
 
-		savables=fileobjects;
+		savables = fileobjects;
 		context = new DBContext();
 		context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
 		context.read();
 		savables = context.getReadObjects();
 
-		tekst = new Label();
+		this.text = new Label();
 
 		if(savables.size()==0)
 		{
-			tekst.setText(state.toString());
+			text.setText(state.toString());
 		}
 
 		else
@@ -67,11 +64,9 @@ public class MessagePane extends GridPane {
 			state = new Completed(evaluation);
 			evaluation = (Test) context.getReadObjects().get(context.getReadObjects().size()-1);
 
-			tekst.setText(state.toString() +", youre score was: "+ evaluation.getScore());
+			text.setText(state.toString() +", your score was: "+ evaluation.getScore());
 		}
-
-
-		add(tekst,0,0);
+		add(text,0,0);
 	}
 
 	public void setStartTestAction(EventHandler<ActionEvent> startTestAction) { testButton.setOnAction(startTestAction); }
