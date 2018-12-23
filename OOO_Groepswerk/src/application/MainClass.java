@@ -1,5 +1,7 @@
-package controller;
+package application;
 
+import controller.CategoryAndQuestionController;
+import controller.DBContext;
 import db.CategoryTXT;
 import db.QuestionTXT;
 import db.Savable;
@@ -11,7 +13,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import view.panels.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 

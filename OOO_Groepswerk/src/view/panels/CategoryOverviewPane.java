@@ -1,7 +1,5 @@
 package view.panels;
 
-import controller.DBContext;
-import db.CategoryTXT;
 import db.Savable;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,7 +16,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import controller.CategoryList;
 import model.Category;
 
 public class CategoryOverviewPane extends GridPane{

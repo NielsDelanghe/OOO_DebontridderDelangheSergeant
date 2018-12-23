@@ -1,8 +1,6 @@
 package view.panels;
 
-import controller.CategoryList;
 import controller.DBContext;
-import db.CategoryTXT;
 import db.QuestionTXT;
 import db.Savable;
 import javafx.collections.FXCollections;
