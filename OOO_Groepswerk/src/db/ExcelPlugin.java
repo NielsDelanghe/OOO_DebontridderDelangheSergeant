@@ -192,7 +192,7 @@ public class ExcelPlugin {
 
         ObservableList<Savable> categoryArrayList = context.getReadObjects();
 
-        ExcelPlugin plugin = new ExcelPlugin(new File("D:\\UCLL2018-2019\\OOO\\test.xls"));
+        ExcelPlugin plugin = new ExcelPlugin(new File("test.xls"));
         plugin.writeCategoriesAndQuestionsToExcel(categoryArrayList,questionArrayList);
 
 

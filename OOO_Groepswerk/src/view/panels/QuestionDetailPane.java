@@ -20,7 +20,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.Question;
-import controller.CategoryList;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -115,7 +114,6 @@ public class QuestionDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
-			System.out.println(question);
 			questions.addQuestion(question);
 			savables.add(question);
 			context.write();
@@ -143,7 +141,6 @@ public class QuestionDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			String toDelete = statementField.getText();
-			System.out.println("To delete: " + toDelete);
 			for(int i = 0; i < statementList.size(); i++)
 			{
 				if(statementList.get(i).equals(toDelete))
