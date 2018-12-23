@@ -158,6 +158,7 @@ public class QuestionDetailPane extends GridPane {
 			{
 				statementField.setText("");
 				statementsArea.setText(current + statement + "\n");
+				current = statementsArea.getText();
 			}
 		}
 	}
