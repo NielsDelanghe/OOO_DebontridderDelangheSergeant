@@ -28,9 +28,7 @@ public class CategoryOverviewPane extends GridPane{
 		this.setPadding(new Insets(5, 5, 5, 5));
         this.setVgap(5);
         this.setHgap(5);
-
 		this.add(new Label("Categories:"), 0, 0, 1, 1);
-
 		table = new TableView<>();
 		table.setPrefWidth(REMAINING);
 		//----------------------------------------------------------------------
@@ -88,9 +86,6 @@ public class CategoryOverviewPane extends GridPane{
 					categoryUpdatePane.setTitleField(category.getName());
 					categoryUpdatePane.setDescriptionField(category.getDescription());
 					newCategoryStage.show();
-
-
-
 				}
 			}
 		}

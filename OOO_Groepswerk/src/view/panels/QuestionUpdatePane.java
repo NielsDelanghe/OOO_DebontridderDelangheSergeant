@@ -106,13 +106,13 @@ public class QuestionUpdatePane extends GridPane {
 
     public void setStatementList(List<String> statements)
     {
-        String statment = "";
+        String statement = "";
         this.statementList.addAll(statements);
         for(String text : statementList)
         {
-            statment += text + "\n";
+            statement += text + "\n";
         }
-        statementsArea.setText(statment);
+        statementsArea.setText(statement);
     }
 
     public void setFeedbackField(String feedback)
@@ -132,9 +132,8 @@ public class QuestionUpdatePane extends GridPane {
         @Override
         public void handle(ActionEvent event) {
             Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
-            System.out.println(question);
-            int index=0;
-            for(int i=0; i< questionList.size();i++)
+            int index = 0;
+            for(int i = 0; i < questionList.size(); i++)
             {
                 if(originalQuestion.equals(questionList.get(i)))
                 {

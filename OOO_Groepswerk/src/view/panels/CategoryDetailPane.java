@@ -12,7 +12,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
-
 import java.util.ArrayList;
 
 public class CategoryDetailPane extends GridPane {

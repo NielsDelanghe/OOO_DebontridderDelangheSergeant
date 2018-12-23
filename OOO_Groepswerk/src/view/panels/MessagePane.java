@@ -27,34 +27,29 @@ import model.Test;
 
 public class MessagePane extends GridPane {
 	private Button testButton;
-	private ObservableList<Savable> savables;
+	private ObservableList<Savable> scoreList;
 	private DBContext context;
 	private Label text;
 	private Test evaluation;
 	private EvaluationState state;
 
-	public MessagePane (ObservableList<Savable> fileobjects){
-		evaluation = new Test();
+	public MessagePane (){
+		this.evaluation = new Test();
 		state = new NeverCompleted(evaluation);
+		context = new DBContext();
+		context.setStrategy(new EvaluationTXT("Evaluation.txt",scoreList));
+		context.read();
+		scoreList = context.getReadObjects();
 		setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 		this.setPadding(new Insets(5, 5, 5, 5));
 		this.setVgap(5);
 		this.setHgap(5);
-
 		testButton = new Button("Evaluate");
 		setStartTestAction(new StartTest());
 		add(testButton, 0,1,1,1);
 		setHalignment(testButton, HPos.CENTER);
-
-		savables = fileobjects;
-		context = new DBContext();
-		context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
-		context.read();
-		savables = context.getReadObjects();
-
 		this.text = new Label();
-
-		if(savables.size()==0)
+		if(scoreList.size() == 0)
 		{
 			text.setText(state.toString());
 		}
@@ -63,7 +58,6 @@ public class MessagePane extends GridPane {
 		{
 			state = new Completed(evaluation);
 			evaluation = (Test) context.getReadObjects().get(context.getReadObjects().size()-1);
-
 			text.setText(state.toString() +", your score was: "+ evaluation.getScore());
 		}
 		add(text,0,0);
@@ -75,7 +69,7 @@ public class MessagePane extends GridPane {
 	{
 		@Override
 		public void handle(ActionEvent event) {
-			TestPane testPane = new TestPane(savables);
+			TestPane testPane = new TestPane(scoreList);
 			Stage newTestStage = new Stage();
 			Group root = new Group();
 			Scene testScene = new Scene(root, 750, 300);

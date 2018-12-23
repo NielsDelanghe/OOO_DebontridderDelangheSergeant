@@ -20,6 +20,8 @@ public class PropertyPane extends GridPane {
         list = new ArrayList<>();
         list.add("Score");
         list.add("Feedback");
+        list.add("TXT");
+        list.add("Excel");
         questionField= new Label();
         questionField.setText("");
         add(questionField,0,10);
@@ -47,7 +49,14 @@ public class PropertyPane extends GridPane {
             String selection;
             Object selectedRadioButton = statementGroup.getSelectedToggle().getUserData();
             selection = (String) selectedRadioButton;
-            questionField.setText("Evaluation method changed to: " + selection);
+            if(selection.equals("Score") || selection.equals("Feedback"))
+            {
+                questionField.setText("Evaluation method changed to: " + selection);
+            }
+            else
+            {
+                questionField.setText("You will now save to: " + selection);
+            }
             write(selection.toLowerCase());
             }
         }
@@ -56,9 +65,18 @@ public class PropertyPane extends GridPane {
         {
             try
             {
+                File file;
                 properties = new Properties();
-                properties.setProperty("evaluation.mode", selection);
-                File file = new File("evaluation.properties");
+                if(selection.equals("score") || selection.equals("feedback"))
+                {
+                    properties.setProperty("evaluation.mode", selection);
+                    file = new File("evaluation.properties");
+                }
+                else
+                {
+                    properties.setProperty("save.mode", selection);
+                    file = new File("save.properties");
+                }
                 OutputStream out = new FileOutputStream(file);
                 properties.store(out,"Properties");
             }

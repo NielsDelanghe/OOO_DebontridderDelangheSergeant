@@ -1,6 +1,5 @@
 package view.panels;
 
-import controller.CategoryAndQuestionController;
 import db.Savable;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

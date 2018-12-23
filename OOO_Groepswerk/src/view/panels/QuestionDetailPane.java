@@ -67,17 +67,12 @@ public class QuestionDetailPane extends GridPane {
 		add(new Label("Category: "), 0, 9, 1, 1);
 		categoryField = new ComboBox();
 		add(categoryField, 1, 9, 2, 1);
-
-
 		ObservableList<String> categoryTitles = FXCollections.observableArrayList(new ArrayList<>());
 		for(Savable category : categoryList)
 		{
 			categoryTitles.add(((Category)category).getName());
 		}
 		categoryField.setItems(categoryTitles);
-
-
-
 		//----------------------------------------------------------------------
 		add(new Label("Feedback: "), 0, 10, 1, 1);
 		feedbackField = new TextField();
@@ -146,7 +141,6 @@ public class QuestionDetailPane extends GridPane {
 					statementList.remove(statementList.get(i));
 				}
 			}
-
 			statementsArea.setText("");
 			String current = statementsArea.getText();
 			for(String statement : statementList)

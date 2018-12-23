@@ -25,16 +25,15 @@ public class TestPane extends GridPane {
 	private Button submitButton;
 	private ToggleGroup statementGroup;
 	private ObservableList<Savable> questionList;
-	private ObservableList<Savable> savables;
+	private ObservableList<Savable> scoreList;
 	private DBContext context;
 	private Test test;
 	private ArrayList<String> answers = new ArrayList<>();
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
 
-	public TestPane (ObservableList<Savable> fileobjects){
-		savables = fileobjects;
+	public TestPane (ObservableList<Savable> scores){
+		scoreList = scores;
 		test = new Test();
-		questionList = FXCollections.observableArrayList(new ArrayList<>());
 		context = new DBContext();
 		context.setStrategy(new QuestionTXT("QuestionFile.TXT", questionList));
 		context.read();
@@ -53,7 +52,6 @@ public class TestPane extends GridPane {
 		answers.addAll(test.getFirstQuestion().getPossible_answers());
 		for(int i = 0; i < answers.size(); i++)
 		{
-			System.out.println(i + " " + answers.get(i));
 			RadioButton button = new RadioButton(answers.get(i));
 			button.setUserData(answers.get(i));
 			radioButtons.add(button);
@@ -101,7 +99,6 @@ public class TestPane extends GridPane {
 			answers.clear();
 			statementGroup = new ToggleGroup();
 			//----------------------------------
-
 			if(test.hasNext())
 			{
 				loadNextQuestion();
@@ -133,9 +130,9 @@ public class TestPane extends GridPane {
 			questionField.setText(feedback);
 			test.setScore(score);
 			test.setMaxPossibleScore(test.getQuestions().size());
-			savables.add(test);
+			scoreList.add(test);
 			context = new DBContext();
-			context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
+			context.setStrategy(new EvaluationTXT("Evaluation.txt",scoreList));
 			context.write();
 
 		}
@@ -144,9 +141,9 @@ public class TestPane extends GridPane {
 			questionField.setText("Your score is: " + score +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
 			test.setScore(score);
 			test.setMaxPossibleScore(test.getQuestions().size());
-			savables.add(test);
+			scoreList.add(test);
 			context = new DBContext();
-			context.setStrategy(new EvaluationTXT("Evaluation.txt",savables));
+			context.setStrategy(new EvaluationTXT("Evaluation.txt",scoreList));
 			context.write();
 
 		}

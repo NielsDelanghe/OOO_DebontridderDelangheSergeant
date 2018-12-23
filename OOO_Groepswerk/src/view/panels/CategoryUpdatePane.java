@@ -19,9 +19,8 @@ public class CategoryUpdatePane extends GridPane {
     private Button btnOK, btnCancel;
     private TextField titleField, descriptionField;
     private ComboBox categoryField;
-    private Category newCategory;
+    private Category newCategory, originalCategory;
     private ObservableList<Savable> categoryList;
-    private Category originalCategory;
     private ObservableList<String> categoryTitles = FXCollections.observableArrayList(new ArrayList<>());
 
     public CategoryUpdatePane(ObservableList<Savable> categories, Category originalCategory) {
@@ -59,7 +58,6 @@ public class CategoryUpdatePane extends GridPane {
         //----------------------------------------------------------------------
         setSaveAction(new UpdateCategory());
         setCancelAction(new Cancel());
-
     }
 
     public void setSaveAction(EventHandler<ActionEvent> saveAction) {
@@ -107,7 +105,6 @@ public class CategoryUpdatePane extends GridPane {
                        index =i;
                    }
                }
-
                 categoryTitles.set(index,newCategory.getName());
                 categoryList.set(index,newCategory);
                 DBContext context = new DBContext();

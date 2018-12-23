@@ -51,7 +51,7 @@ public class MainClass extends Application{
         }
 
         TestPane testPane = new TestPane(scores);
-        MessagePane messagePane = new MessagePane(scores);
+        MessagePane messagePane = new MessagePane();
 
         Group root = new Group();
         Scene scene = new Scene(root, 750, 400);
