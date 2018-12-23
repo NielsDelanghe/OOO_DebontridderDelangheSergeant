@@ -1,7 +1,6 @@
 package view.panels;
 
-import controller.DBContext;
-import db.QuestionTXT;
+import controller.CategoryAndQuestionController;
 import db.Savable;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,24 +17,16 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import controller.QuestionList;
 import model.Question;
 
 public class QuestionOverviewPane extends GridPane {
 	private TableView table;
 	private Button btnNew;
-	private QuestionList questions;
-	private DBContext context;
-	private ObservableList<Savable> savables;
+	private ObservableList<Savable> questionList, categoryList;
 
-	public QuestionOverviewPane(QuestionList questions,ObservableList<Savable> fileobjects) {
-		this.questions = questions;
-		savables = fileobjects;
-		context = new DBContext();
-		context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
-		context.read();
-		savables = context.getReadObjects();
-
+	public QuestionOverviewPane(ObservableList<Savable> questions, ObservableList<Savable> categories) {
+		this.questionList = questions;
+		this.categoryList = categories;
 		this.setPadding(new Insets(5, 5, 5, 5));
 		this.setVgap(5);
 		this.setHgap(5);
@@ -57,7 +48,7 @@ public class QuestionOverviewPane extends GridPane {
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewQuestion());
 		//----------------------------------------------------------------------
-		table.setItems(savables);
+		table.setItems(questions);
 		setEditAction(new EditCategory());
 	}
 
@@ -69,11 +60,11 @@ public class QuestionOverviewPane extends GridPane {
 		table.setOnMouseClicked(editAction);
 	}
 
+
 	private class NewQuestion implements EventHandler<ActionEvent> {
 		@Override
 		public void handle(ActionEvent event) {
-
-			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questions,savables);
+			QuestionDetailPane questionDetailPane = new QuestionDetailPane(questionList, categoryList);
 			Stage newQuestionStage = new Stage();
 			Group root = new Group();
 			Scene questionScene = new Scene(root, 350, 300);
@@ -90,7 +81,7 @@ public class QuestionOverviewPane extends GridPane {
 				if(mouseEvent.getClickCount() == 2){
 					TableView.TableViewSelectionModel<Question> tableView = table.getSelectionModel();
 					Question question = tableView.getSelectedItem();
-					QuestionUpdatePane questionUpdatePane = new QuestionUpdatePane(questions,savables, question);
+					QuestionUpdatePane questionUpdatePane = new QuestionUpdatePane(questionList, question, categoryList);
 					Stage newQuestionStage = new Stage();
 					Group root = new Group();
 					Scene questionScene = new Scene(root,350,300);

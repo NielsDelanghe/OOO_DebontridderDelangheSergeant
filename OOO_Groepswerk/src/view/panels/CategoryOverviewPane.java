@@ -24,18 +24,10 @@ import model.Category;
 public class CategoryOverviewPane extends GridPane{
 	private TableView table;
 	private Button btnNew;
-	private CategoryList categories;
-	private DBContext context;
-	private ObservableList<Savable> savables;
+	private ObservableList<Savable> categoyList;
 	
-	public CategoryOverviewPane(CategoryList categories,ObservableList<Savable> fileobjects) {
-		this.categories = categories;
-		savables = fileobjects;
-		context = new DBContext();
-		context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
-		context.read();
-		savables = context.getReadObjects();
-
+	public CategoryOverviewPane(ObservableList<Savable> categories) {
+		this.categoyList = categories;
 		this.setPadding(new Insets(5, 5, 5, 5));
         this.setVgap(5);
         this.setHgap(5);
@@ -59,7 +51,7 @@ public class CategoryOverviewPane extends GridPane{
 		this.add(btnNew, 0, 11, 1, 1);
 		setNewAction(new NewCategory());
 		//----------------------------------------------------------------------
-		table.setItems(savables);
+		table.setItems(categories);
 	}
 	
 	public void setNewAction(EventHandler<ActionEvent> newAction) { btnNew.setOnAction(newAction); }
@@ -72,7 +64,7 @@ public class CategoryOverviewPane extends GridPane{
 	{
 		@Override
 		public void handle(ActionEvent event) {
-			CategoryDetailPane categoryDetailPane = new CategoryDetailPane(categories,savables);
+			CategoryDetailPane categoryDetailPane = new CategoryDetailPane(categoyList);
 			Stage newCategoryStage = new Stage();
 			Group root = new Group();
 			Scene categoryScene = new Scene(root,250,150);
@@ -90,7 +82,7 @@ public class CategoryOverviewPane extends GridPane{
 					TableView.TableViewSelectionModel<Category> tableView = table.getSelectionModel();
 					int index = tableView.getSelectedIndex();
 					Category category = tableView.getSelectedItem();
-					CategoryUpdatePane categoryUpdatePane = new CategoryUpdatePane(categories,savables, category);
+					CategoryUpdatePane categoryUpdatePane = new CategoryUpdatePane(categoyList, category);
 					Stage newCategoryStage = new Stage();
 					Group root = new Group();
 					Scene categoryScene = new Scene(root,250,150);

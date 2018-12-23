@@ -1,8 +1,6 @@
 package view.panels;
 
 import controller.DBContext;
-import controller.QuestionList;
-import db.CategoryTXT;
 import db.QuestionTXT;
 import db.Savable;
 import javafx.collections.FXCollections;
@@ -19,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import model.Category;
 import model.Question;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,19 +29,11 @@ public class QuestionDetailPane extends GridPane {
 	private Button btnAdd, btnRemove;
 	private ComboBox categoryField;
 	private List<String> statementList = new ArrayList<>();
-	private QuestionList questions;
-	private DBContext context;
-	private DBContext categoryContext;
-	private ObservableList<Savable> savables;
-	private ObservableList<String> categoryTitles;
+	private ObservableList<Savable> questionList, categoryList;
 
-	public QuestionDetailPane(QuestionList questions, ObservableList<Savable> fileobjects) {
-		this.questions = questions;
-		this.savables = fileobjects;
-		this.context = new DBContext();
-		context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
-		context.read();
-
+	public QuestionDetailPane(ObservableList<Savable> questions, ObservableList<Savable> categories) {
+		this.questionList = questions;
+		this.categoryList = categories;
 		this.setPrefHeight(300);
 		this.setPrefWidth(320);
 		this.setPadding(new Insets(5, 5, 5, 5));
@@ -76,11 +67,17 @@ public class QuestionDetailPane extends GridPane {
 		add(new Label("Category: "), 0, 9, 1, 1);
 		categoryField = new ComboBox();
 		add(categoryField, 1, 9, 2, 1);
-		categoryContext = new DBContext();
-		categoryContext.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
-		categoryContext.read();
-		this.categoryTitles = FXCollections.observableArrayList(categoryContext.getCategoryTitles());
+
+
+		ObservableList<String> categoryTitles = FXCollections.observableArrayList(new ArrayList<>());
+		for(Savable category : categoryList)
+		{
+			categoryTitles.add(((Category)category).getName());
+		}
 		categoryField.setItems(categoryTitles);
+
+
+
 		//----------------------------------------------------------------------
 		add(new Label("Feedback: "), 0, 10, 1, 1);
 		feedbackField = new TextField();
@@ -114,8 +111,9 @@ public class QuestionDetailPane extends GridPane {
 		@Override
 		public void handle(ActionEvent event) {
 			Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
-			questions.addQuestion(question);
-			savables.add(question);
+			questionList.add(question);
+			DBContext context = new DBContext();
+			context.setStrategy(new QuestionTXT("QuestionFile.txt", questionList));
 			context.write();
 			Stage stage = (Stage) btnAdd.getScene().getWindow();
 			stage.close();

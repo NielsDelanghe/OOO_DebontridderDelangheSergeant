@@ -1,3 +1,4 @@
+/*
 package application;
 
 import controller.CategoryList;
@@ -63,3 +64,4 @@ public class Main extends Application {
 		launch(args);
 	}
 }
+*/

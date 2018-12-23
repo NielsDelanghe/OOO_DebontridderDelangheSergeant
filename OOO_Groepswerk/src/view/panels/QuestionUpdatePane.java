@@ -1,7 +1,6 @@
 package view.panels;
 
 import controller.DBContext;
-import controller.QuestionList;
 import db.CategoryTXT;
 import db.QuestionTXT;
 import db.Savable;
@@ -19,6 +18,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import model.Category;
 import model.Question;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,21 +31,14 @@ public class QuestionUpdatePane extends GridPane {
     private Button btnAdd, btnRemove;
     private ComboBox categoryField;
     private List<String> statementList = new ArrayList<>();
-    private QuestionList questions;
-
-    private DBContext context;
     private DBContext categoryContext;
-    private ObservableList<Savable> savables;
-    private ObservableList<String> categoryTitles;
+    private ObservableList<Savable> questionList, categoryList;
+    private ObservableList<String> categoryTitles = FXCollections.observableArrayList(new ArrayList<>());
 
-    public QuestionUpdatePane(QuestionList questions, ObservableList<Savable> fileobjects, Question question) {
+    public QuestionUpdatePane(ObservableList<Savable> questions, Question question, ObservableList<Savable> categories) {
         this.originalQuestion = question;
-        this.questions = questions;
-
-        savables=fileobjects;
-        context = new DBContext();
-        context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
-        context.read();
+        this.questionList = questions;
+        this.categoryList = categories;
 
         this.setPrefHeight(300);
         this.setPrefWidth(320);
@@ -79,9 +72,12 @@ public class QuestionUpdatePane extends GridPane {
         categoryField = new ComboBox();
         add(categoryField, 1, 9, 2, 1);
         categoryContext = new DBContext();
-        categoryContext.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
+        categoryContext.setStrategy(new CategoryTXT("CategoryFile.txt",questionList));
         categoryContext.read();
-        this.categoryTitles = FXCollections.observableArrayList(categoryContext.getCategoryTitles());
+        for(Savable category : categoryList)
+        {
+            categoryTitles.add(((Category)category).getName());
+        }
         categoryField.setItems(categoryTitles);
         //----------------------------------------------------------------------
         add(new Label("Feedback: "), 0, 10, 1, 1);
@@ -139,14 +135,16 @@ public class QuestionUpdatePane extends GridPane {
             Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
             System.out.println(question);
             int index=0;
-            for(int i=0; i< savables.size();i++)
+            for(int i=0; i< questionList.size();i++)
             {
-                if(originalQuestion.equals(savables.get(i)))
+                if(originalQuestion.equals(questionList.get(i)))
                 {
                     index = i;
                 }
             }
-            savables.set(index,question);
+            questionList.set(index,question);
+            DBContext context = new DBContext();
+            context.setStrategy(new QuestionTXT("QuestionFile.txt", questionList));
             context.write();
             Stage stage = (Stage) btnAdd.getScene().getWindow();
             stage.close();
@@ -172,14 +170,21 @@ public class QuestionUpdatePane extends GridPane {
         @Override
         public void handle(ActionEvent event) {
             String toDelete = statementField.getText();
-            for(String statement : statementList) {
-                if (statement.equals(toDelete)) {
-                    statementList.remove(statement);
-                }
-                for(String s : statementList)
+            for(int i = 0; i < statementList.size(); i++)
+            {
+                if(statementList.get(i).equals(toDelete))
                 {
-                    statementsArea.setText(s + "\n");
+                    statementList.remove(statementList.get(i));
                 }
+            }
+
+            statementsArea.setText("");
+            String current = statementsArea.getText();
+            for(String statement : statementList)
+            {
+                statementField.setText("");
+                statementsArea.setText(current + statement + "\n");
+                current = statementsArea.getText();
             }
         }
     }

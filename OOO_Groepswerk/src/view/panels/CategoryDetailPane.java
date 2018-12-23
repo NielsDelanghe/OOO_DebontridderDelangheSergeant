@@ -3,6 +3,7 @@ package view.panels;
 import controller.CategoryList;
 import controller.DBContext;
 import db.CategoryTXT;
+import db.QuestionTXT;
 import db.Savable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,25 +15,18 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.Category;
 
+import java.util.ArrayList;
+
 public class CategoryDetailPane extends GridPane {
 	private Button btnOK, btnCancel;
 	private TextField titleField, descriptionField;
 	private ComboBox categoryField;
-	private CategoryList categories;
-	private ObservableList<String> categoryTitles;
 	private Category category;
-	private DBContext context;
-	private ObservableList<Savable> savables;
+	private ObservableList<Savable> categoryList;
+	private ObservableList<String> categoryTitles = FXCollections.observableArrayList(new ArrayList<>());
 
-	public CategoryDetailPane(CategoryList categories,ObservableList<Savable> fileobjects) {
-		this.categories = categories;
-
-		savables = fileobjects;
-		context = new DBContext();
-		context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
-		context.read();
-		this.categoryTitles = FXCollections.observableArrayList(context.getCategoryTitles());
-
+	public CategoryDetailPane(ObservableList<Savable> categories) {
+		this.categoryList = categories;
 		this.setPrefHeight(150);
 		this.setPrefWidth(300);
 		this.setPadding(new Insets(5, 5, 5, 5));
@@ -50,6 +44,10 @@ public class CategoryDetailPane extends GridPane {
 		this.add(new Label("Main Category:"), 0, 2, 1, 1);
 		categoryField = new ComboBox<>();
 		this.add(categoryField, 1, 2, 1, 1);
+		for(Savable category : categoryList)
+		{
+			categoryTitles.add(((Category)category).getName());
+		}
 		categoryField.setItems(categoryTitles);
 		//----------------------------------------------------------------------
 		btnCancel = new Button("Cancel");
@@ -86,9 +84,11 @@ public class CategoryDetailPane extends GridPane {
 					mainCategory = categoryField.getValue().toString();
 				}
 				category = new Category(titleField.getText(), descriptionField.getText(),mainCategory);
-				categories.addCategory(category);
+				System.out.println(category.toString());
 				categoryTitles.add(category.getName());
-				savables.add(category);
+				categoryList.add(category);
+				DBContext context = new DBContext();
+				context.setStrategy(new QuestionTXT("CategoryFile.txt", categoryList));
 				context.write();
 				Stage stage = (Stage) btnOK.getScene().getWindow();
 				stage.close();
