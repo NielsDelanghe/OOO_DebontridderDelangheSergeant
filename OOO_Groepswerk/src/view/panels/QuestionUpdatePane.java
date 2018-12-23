@@ -93,7 +93,6 @@ public class QuestionUpdatePane extends GridPane {
         btnOK.setText("Save");
         add(btnOK, 1, 11, 2, 1);
         //----------------------------------------------------------------------
-
         setCancelAction(new Close());
         setSaveAction(new AddQuestion());
         setAddStatementAction(new AddStatement());
