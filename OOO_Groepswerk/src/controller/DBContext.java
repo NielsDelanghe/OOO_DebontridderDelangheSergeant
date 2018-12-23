@@ -73,22 +73,16 @@ public class DBContext implements DBStrategy {
         answers_q2.add("I");
         answers_q2.add("D");
 
-        q1 = new Question("What pattern defines a family of algorithms?", c2.getName(), "feedback", 1,false,answers_q1);
-        q2 = new Question("What design principle has the least to do with Strategies?", c1.getName(), "feedback", 1,false, answers_q2);
+        q1 = new Question("What pattern defines a family of algorithms?", c2.getName(), "feedback for design patterns", 1,false,answers_q1);
+        q2 = new Question("What design principle has the least to do with Strategies?", c1.getName(), "feedback for design principles", 1,false, answers_q2);
         questions.add(q1);
         questions.add(q2);
-
-
         context.setStrategy(new CategoryTXT("CategoryFile.txt",categories));
         context.write();
         context.read();
-        System.out.println(context.getReadObjects());
         context.setStrategy(new QuestionTXT("QuestionFile.txt",questions));
         context.write();
         context.read();
-        System.out.println(context.getReadObjects());
-
-
     }
 }
 

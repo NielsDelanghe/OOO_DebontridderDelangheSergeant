@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Category;
 import model.Question;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,13 +58,11 @@ public class QuestionList {
         return questions;
     }
 
-
     public void removeQuestion(Question previus) {
         if(questions.contains(previus))
         {
             throw new IllegalArgumentException("Given question doesn't exists");
         }
-
         else if(previus == null)
         {
             throw new IllegalArgumentException("question can't be empty");

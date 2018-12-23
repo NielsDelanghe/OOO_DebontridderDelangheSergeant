@@ -14,8 +14,6 @@ public class CategoryList {
     public CategoryList()
     {
         categories = FXCollections.observableArrayList(new ArrayList<>());
-
-
         Category c1 = new Category("Design principles","The SOLID design principles","Design principles");
         Category c2 = new Category("Design patterns","A design pattern","Design patterns");
         Category c3 = new Category("UML","Make an UML","UML");
@@ -66,8 +64,5 @@ public class CategoryList {
         }
         categories.remove(category);
     }
-
-
-
 }
 
