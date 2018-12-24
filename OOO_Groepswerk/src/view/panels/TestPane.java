@@ -21,6 +21,7 @@ public class TestPane extends GridPane {
 	private ToggleGroup statementGroup;
 	private ObservableList<Savable> questionList;
 	private ObservableList<Savable> scoreList;
+	private ObservableList<Savable> randomList;
 	private DBContext context;
 	private ArrayList<String> answers = new ArrayList<>();
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
@@ -32,8 +33,10 @@ public class TestPane extends GridPane {
 		context = new DBContext();
 		context.setStrategy(new QuestionTXT(questionList));
 		context.read();
-		Collections.shuffle(context.getReadObjects());
-		testController = new TestController(context.getReadObjects());
+
+		randomList = context.getReadObjects();
+		Collections.shuffle(randomList);
+		testController = new TestController(randomList);
 		testController.prepareQuestions();
 		this.setPrefHeight(300);
 		this.setPrefWidth(750);

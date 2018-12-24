@@ -6,12 +6,10 @@ import db.Savable;
 import javafx.collections.ObservableList;
 import model.Question;
 import model.Test;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -32,7 +30,7 @@ public class TestController {
 
     public void prepareQuestions()
     {
-        test.addAllQuestionsToQueue(context.getReadObjects());
+        test.addAllQuestionsToQueue(questionList);
     }
 
     public String getFirstQuestion()

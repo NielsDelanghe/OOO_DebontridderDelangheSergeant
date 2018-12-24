@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="93.0" y="0.0">model.Test</node>
+    <node x="13.5" y="202.0">view.panels.TestPane</node>
+    <node x="0.0" y="101.0">controller.TestController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="view.panels.TestPane" target="controller.TestController">
+      <point x="65.25" y="-25.5" />
+      <point x="209.25" y="177.0" />
+      <point x="216.0" y="177.0" />
+      <point x="72.0" y="25.5" />
+    </edge>
+    <edge source="controller.TestController" target="model.Test">
+      <point x="72.0" y="-25.5" />
+      <point x="216.0" y="76.0" />
+      <point x="169.5" y="76.0" />
+      <point x="25.5" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.5" x="652.5022477522468" y="468.448051948052" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
