@@ -3,8 +3,10 @@ package view.panels;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Properties;
 import controller.DBContext;
+import controller.TestController;
 import db.EvaluationTXT;
 import db.QuestionTXT;
 import db.Savable;
@@ -25,10 +27,12 @@ public class TestPane extends GridPane {
 	private ToggleGroup statementGroup;
 	private ObservableList<Savable> questionList;
 	private ObservableList<Savable> scoreList;
+	private ObservableList<Savable>randomList;
 	private DBContext context;
 	private Test test;
 	private ArrayList<String> answers = new ArrayList<>();
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
+	private TestController testController;
 
 	public TestPane (ObservableList<Savable> scores){
 		questionList = FXCollections.observableArrayList(new ArrayList<>());
@@ -37,7 +41,11 @@ public class TestPane extends GridPane {
 		context = new DBContext();
 		context.setStrategy(new QuestionTXT(questionList));
 		context.read();
-		test.addAllQuestionsToQueue(context.getReadObjects());
+		randomList = context.getReadObjects();
+		Collections.shuffle(randomList);
+		test.addAllQuestionsToQueue(randomList);
+		testController = new TestController(randomList);
+
 
 		this.setPrefHeight(300);
 		this.setPrefWidth(750);
@@ -46,7 +54,6 @@ public class TestPane extends GridPane {
 		this.setHgap(5);
 		//----------------------------------------------------------------------
 		questionField = new Label("Question: " + test.getFirstQuestion().getQuestion());
-		questionField = new Label("Question: ");
 		add(questionField, 0, 0, 1, 1);
 		//----------------------------------------------------------------------
 		statementGroup = new ToggleGroup();
@@ -111,26 +118,9 @@ public class TestPane extends GridPane {
 		}
 		private void showFeedback()
 		{
-			int score = 0;
-			String feedback = "";
-			for(Question question : test.getQuestions())
-			{
-				if(question.getCorrect() == false)
-				{
-					feedback += question.getQuestion() + "\n\t" + question.getFeedback()+"\n\n";
-				}
-				else
-				{
-					score++;
-				}
-			}
-			if(feedback.equals(""))
-			{
-				feedback = "Congratulations, all answers are correct!";
-			}
-			questionField.setText(feedback);
-			test.setScore(score);
-			test.setMaxPossibleScore(test.getQuestions().size());
+			questionField.setText(testController.getFeedback());
+			test.setScore(testController.getScore());
+			test.setMaxPossibleScore(testController.getMaxScore());
 			scoreList.add(test);
 			context = new DBContext();
 			context.setStrategy(new EvaluationTXT(scoreList));
@@ -171,36 +161,11 @@ public class TestPane extends GridPane {
 
 		private void showCorrectEvaluation()
 		{
-			int score = 0;
-			for(Question question : test.getQuestions())
+			switch (testController.getProperty())
 			{
-				if(question.getCorrect()==true)
-				{
-					score++;
-				}
-			}
-			//Load property file
-			Properties properties = new Properties();
-			InputStream is;
-			try {
-				File file = new File("resources/db/evaluation.properties");
-				is = this.getClass().getClassLoader().getResourceAsStream("resource/db/evaluation.properties");
-			}
-			catch ( Exception e ) { is = null; }
-			try {
-				if ( is == null ) {
-					is = getClass().getClassLoader().getResourceAsStream("resources/db/evaluation.properties");
-				}
-				properties.load( is );
-			}
-			catch ( Exception e ) { }
-			//--------------------------------------------------
-			String evaluationMode = properties.getProperty("evaluation.mode", "score");
-			switch (evaluationMode)
-			{
-				case "score": showScore(score); break;
+				case "score": showScore(testController.getScore()); break;
 				case "feedback": showFeedback(); break;
-				default: showScore(score); break;
+				default: showScore(testController.getScore()); break;
 			}
 			add(questionField,0,0);
 			submitButton = new Button("Close");
