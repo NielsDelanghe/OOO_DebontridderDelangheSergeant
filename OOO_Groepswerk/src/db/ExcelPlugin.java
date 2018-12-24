@@ -182,17 +182,17 @@ public class ExcelPlugin {
         DBContext context;
         context = new DBContext();
 
-        context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
+        context.setStrategy(new QuestionTXT("resources/db/QuestionFile.txt",savables));
         context.read();
 
         ObservableList<Savable> questionArrayList = context.getReadObjects();
 
-        context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
+        context.setStrategy(new CategoryTXT("resources/db/CategoryFile.txt",savables));
         context.read();
 
         ObservableList<Savable> categoryArrayList = context.getReadObjects();
 
-        ExcelPlugin plugin = new ExcelPlugin(new File("test.xls"));
+        ExcelPlugin plugin = new ExcelPlugin(new File("resources/db/test.xls"));
         plugin.writeCategoriesAndQuestionsToExcel(categoryArrayList,questionArrayList);
 
 

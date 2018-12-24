@@ -4,9 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Category;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -69,6 +67,8 @@ public abstract class TXTDBStrategy implements DBStrategy {
     public abstract List<Savable> getObjectsToWrite();
 
     public abstract Savable convertStringToObject(String [] velden);
+
+    public abstract String getPath();
 
     @Override
     public ArrayList<String> getCategoryTitles()

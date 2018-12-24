@@ -72,7 +72,7 @@ public class QuestionUpdatePane extends GridPane {
         categoryField = new ComboBox();
         add(categoryField, 1, 9, 2, 1);
         categoryContext = new DBContext();
-        categoryContext.setStrategy(new CategoryTXT("CategoryFile.txt",questionList));
+        categoryContext.setStrategy(new CategoryTXT("resources/db/CategoryFile.txt",questionList));
         categoryContext.read();
         for(Savable category : categoryList)
         {
@@ -142,7 +142,7 @@ public class QuestionUpdatePane extends GridPane {
             }
             questionList.set(index,question);
             DBContext context = new DBContext();
-            context.setStrategy(new QuestionTXT("QuestionFile.txt", questionList));
+            context.setStrategy(new QuestionTXT("resources/db/QuestionFile.txt", questionList));
             context.write();
             Stage stage = (Stage) btnAdd.getScene().getWindow();
             stage.close();

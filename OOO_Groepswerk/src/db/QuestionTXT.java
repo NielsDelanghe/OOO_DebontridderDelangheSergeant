@@ -10,11 +10,12 @@ import java.util.List;
 public class QuestionTXT extends TXTDBStrategy {
         File file;
         ObservableList<Savable> questionList = FXCollections.observableArrayList(new ArrayList<>());
-
+        String path;
         public QuestionTXT(String path, ObservableList<Savable> list)
         {
             this.file=new File(path);
             this.setCategoryList(list);
+            this.path=path;
         }
 
     public void setCategoryList(ObservableList<Savable> qList) {
@@ -46,5 +47,10 @@ public class QuestionTXT extends TXTDBStrategy {
 
             return object;
         }
+
+    @Override
+    public String getPath() {
+        return this.path;
+    }
 
 }

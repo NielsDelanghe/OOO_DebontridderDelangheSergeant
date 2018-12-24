@@ -12,7 +12,7 @@ public class CategoryTXT extends TXTDBStrategy {
 
     File file;
     ObservableList<Savable> categoryList = FXCollections.observableArrayList(new ArrayList<>());
-
+    String path;
     public void setCategoryList(ObservableList<Savable> categoryList) {
         this.categoryList = categoryList;
     }
@@ -20,6 +20,7 @@ public class CategoryTXT extends TXTDBStrategy {
     public CategoryTXT(String path, ObservableList<Savable> list)
     {
         this.file=new File(path);
+        this.path=path;
         this.setCategoryList(list);
     }
 
@@ -38,6 +39,11 @@ public class CategoryTXT extends TXTDBStrategy {
         Savable object = new Category(velden[0],velden[1],velden[2]);
         return object;
 
+    }
+
+    @Override
+    public String getPath() {
+        return this.path;
     }
 
 }

@@ -77,10 +77,10 @@ public class DBContext implements DBStrategy {
         q2 = new Question("What design principle has the least to do with Strategies?", c1.getName(), "feedback for design principles", 1,false, answers_q2);
         questions.add(q1);
         questions.add(q2);
-        context.setStrategy(new CategoryTXT("CategoryFile.txt",categories));
+        context.setStrategy(new CategoryTXT("resources/db/CategoryFile.txt",categories));
         context.write();
         context.read();
-        context.setStrategy(new QuestionTXT("QuestionFile.txt",questions));
+        context.setStrategy(new QuestionTXT("resources/db/QuestionFile.txt",questions));
         context.write();
         context.read();
     }

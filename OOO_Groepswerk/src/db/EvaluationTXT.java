@@ -12,7 +12,7 @@ public class EvaluationTXT extends TXTDBStrategy{
 
     File file;
     ObservableList<Savable> scoreList = FXCollections.observableArrayList(new ArrayList<>());
-
+    String path;
     public void setScoreList(ObservableList<Savable> scoreList) {
         this.scoreList = scoreList;
     }
@@ -20,6 +20,7 @@ public class EvaluationTXT extends TXTDBStrategy{
     public EvaluationTXT(String path, ObservableList<Savable> list)
     {
         this.file=new File(path);
+        this.path=path;
         this.setScoreList(list);
     }
 
@@ -47,6 +48,11 @@ public class EvaluationTXT extends TXTDBStrategy{
             return object;
         }
 
+    }
+
+    @Override
+    public String getPath() {
+        return path;
     }
 
 }
