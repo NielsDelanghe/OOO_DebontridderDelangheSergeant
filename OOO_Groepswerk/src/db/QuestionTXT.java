@@ -21,8 +21,8 @@ public class QuestionTXT extends TXTDBStrategy {
     }
 
         @Override
-        public File getFile() {
-            return this.file;
+        public String getFile() {
+            return "resources/db/QuestionFile.txt";
         }
 
         @Override

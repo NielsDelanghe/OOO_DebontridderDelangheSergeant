@@ -2,7 +2,6 @@ package db;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import model.Category;
 import model.Test;
 
 import java.io.File;
@@ -24,8 +23,8 @@ public class EvaluationTXT extends TXTDBStrategy{
     }
 
     @Override
-    public File getFile() {
-        return this.file;
+    public String getFile() {
+        return "resources/db/Evaluation.txt";
     }
 
     @Override

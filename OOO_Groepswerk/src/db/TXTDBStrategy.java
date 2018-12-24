@@ -18,7 +18,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
     @Override
     public void write() {
 
-        file = getFile();
+        file = new File(getFile());
         try {
              writer = new PrintWriter(file);
         } catch (FileNotFoundException e) {
@@ -37,26 +37,29 @@ public abstract class TXTDBStrategy implements DBStrategy {
     @Override
     public void read() {
 
-
-        file=getFile();
+        inputStream = getClass().getClassLoader().getResourceAsStream(getFile());
+        file = new File(getFile());
+        if(file.exists() && !file.isDirectory()){
+            try {
+                inputStream = new FileInputStream(file);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
 
         Scanner scannerFile;
-        try {
-            scannerFile = new Scanner(file);
-            while (scannerFile.hasNextLine()) {
-                String lijn = scannerFile.nextLine();
-                if(!lijn.isEmpty()) {
-                    String[] velden = lijn.split("\t");
-                    savables.add(convertStringToObject(velden));
-                }
-
+        scannerFile = new Scanner(inputStream);
+        while (scannerFile.hasNextLine()) {
+            String lijn = scannerFile.nextLine();
+            if(!lijn.isEmpty()) {
+                String[] velden = lijn.split("\t");
+                savables.add(convertStringToObject(velden));
             }
 
-            scannerFile.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
+
+        scannerFile.close();
+
     }
 
     @Override
@@ -65,7 +68,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
         return savables;
     }
 
-    public abstract File getFile();
+    public abstract String getFile();
 
     public abstract List<Savable> getObjectsToWrite();
 

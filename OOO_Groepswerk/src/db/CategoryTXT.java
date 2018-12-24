@@ -6,7 +6,6 @@ import model.Category;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 
 public class CategoryTXT extends TXTDBStrategy {
 
@@ -23,8 +22,8 @@ public class CategoryTXT extends TXTDBStrategy {
     }
 
     @Override
-    public File getFile() {
-        return this.file;
+    public String getFile() {
+        return "resources/db/CategoryFile.txt";
     }
 
     @Override
