@@ -182,12 +182,12 @@ public class ExcelPlugin {
         DBContext context;
         context = new DBContext();
 
-        context.setStrategy(new QuestionTXT("QuestionFile.txt",savables));
+        context.setStrategy(new QuestionTXT(savables));
         context.read();
 
         ObservableList<Savable> questionArrayList = context.getReadObjects();
 
-        context.setStrategy(new CategoryTXT("CategoryFile.txt",savables));
+        context.setStrategy(new CategoryTXT(savables));
         context.read();
 
         ObservableList<Savable> categoryArrayList = context.getReadObjects();

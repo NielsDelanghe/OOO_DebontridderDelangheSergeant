@@ -50,9 +50,5 @@ public class EvaluationTXT extends TXTDBStrategy{
 
     }
 
-    @Override
-    public String getPath() {
-        return path;
-    }
 
 }

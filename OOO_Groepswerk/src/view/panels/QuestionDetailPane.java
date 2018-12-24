@@ -108,7 +108,7 @@ public class QuestionDetailPane extends GridPane {
 			Question question = new Question(questionField.getText().trim(),String.valueOf(categoryField.getValue()).trim(), feedbackField.getText().trim(), 1,false,statementList);
 			questionList.add(question);
 			DBContext context = new DBContext();
-			context.setStrategy(new QuestionTXT("QuestionFile.txt", questionList));
+			context.setStrategy(new QuestionTXT(questionList));
 			context.write();
 			Stage stage = (Stage) btnAdd.getScene().getWindow();
 			stage.close();

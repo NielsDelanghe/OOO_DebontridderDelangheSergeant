@@ -34,7 +34,7 @@ public class TestPane extends GridPane {
 		scoreList = scores;
 		test = new Test();
 		context = new DBContext();
-		context.setStrategy(new QuestionTXT("QuestionFile.TXT", questionList));
+		context.setStrategy(new QuestionTXT(questionList));
 		context.read();
 		test.addAllQuestionsToQueue(context.getReadObjects());
 

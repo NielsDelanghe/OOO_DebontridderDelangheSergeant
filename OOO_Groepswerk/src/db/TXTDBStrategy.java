@@ -37,16 +37,9 @@ public abstract class TXTDBStrategy implements DBStrategy {
     @Override
     public void read() {
 
-        inputStream = this.getClass().getClassLoader().getResourceAsStream(getPath());
 
         file=getFile();
-        if(file.exists() && !file.isDirectory()){
-            try {
-                this.inputStream = new FileInputStream(file);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
+
         Scanner scannerFile;
         try {
             scannerFile = new Scanner(file);
@@ -77,8 +70,6 @@ public abstract class TXTDBStrategy implements DBStrategy {
     public abstract List<Savable> getObjectsToWrite();
 
     public abstract Savable convertStringToObject(String [] velden);
-
-    public abstract String getPath();
 
     @Override
     public ArrayList<String> getCategoryTitles()
