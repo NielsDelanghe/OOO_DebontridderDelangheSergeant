@@ -18,7 +18,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
     @Override
     public void write() {
 
-        file = new File(getFile());
+        file = new File(getWriteFile());
         try {
              writer = new PrintWriter(file);
         } catch (FileNotFoundException e) {
@@ -38,7 +38,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
     public void read() {
 
         inputStream = getClass().getClassLoader().getResourceAsStream(getFile());
-        file = new File(getFile());
+        file = new File(getWriteFile());
         if(file.exists() && !file.isDirectory()){
             try {
                 inputStream = new FileInputStream(file);
@@ -47,19 +47,23 @@ public abstract class TXTDBStrategy implements DBStrategy {
             }
         }
 
-        Scanner scannerFile;
-        scannerFile = new Scanner(inputStream);
-        while (scannerFile.hasNextLine()) {
-            String lijn = scannerFile.nextLine();
-            if(!lijn.isEmpty()) {
-                String[] velden = lijn.split("\t");
-                savables.add(convertStringToObject(velden));
+        try {
+            Scanner scannerFile;
+            scannerFile = new Scanner(file);
+            while (scannerFile.hasNextLine()) {
+                String lijn = scannerFile.nextLine();
+                if (!lijn.isEmpty()) {
+                    String[] velden = lijn.split("\t");
+                    savables.add(convertStringToObject(velden));
+                }
+
             }
-
+            scannerFile.close();
         }
-
-        scannerFile.close();
-
+        catch (FileNotFoundException e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -73,6 +77,8 @@ public abstract class TXTDBStrategy implements DBStrategy {
     public abstract List<Savable> getObjectsToWrite();
 
     public abstract Savable convertStringToObject(String [] velden);
+
+    public abstract String getWriteFile();
 
     @Override
     public ArrayList<String> getCategoryTitles()

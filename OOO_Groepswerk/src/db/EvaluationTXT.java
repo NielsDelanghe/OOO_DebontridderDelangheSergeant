@@ -48,5 +48,10 @@ public class EvaluationTXT extends TXTDBStrategy{
 
     }
 
+    @Override
+    public String getWriteFile() {
+        return "Evaluation.txt";
+    }
+
 
 }

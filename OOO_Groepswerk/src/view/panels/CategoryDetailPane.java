@@ -1,6 +1,7 @@
 package view.panels;
 
 import controller.DBContext;
+import db.CategoryTXT;
 import db.QuestionTXT;
 import db.Savable;
 import javafx.collections.FXCollections;
@@ -85,7 +86,7 @@ public class CategoryDetailPane extends GridPane {
 				categoryTitles.add(category.getName());
 				categoryList.add(category);
 				DBContext context = new DBContext();
-				context.setStrategy(new QuestionTXT(categoryList));
+				context.setStrategy(new CategoryTXT(categoryList));
 				context.write();
 				Stage stage = (Stage) btnOK.getScene().getWindow();
 				stage.close();

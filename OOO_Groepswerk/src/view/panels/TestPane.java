@@ -1,7 +1,6 @@
 package view.panels;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -9,6 +8,7 @@ import controller.DBContext;
 import db.EvaluationTXT;
 import db.QuestionTXT;
 import db.Savable;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -31,6 +31,7 @@ public class TestPane extends GridPane {
 	private ArrayList<RadioButton> radioButtons = new ArrayList<>();
 
 	public TestPane (ObservableList<Savable> scores){
+		questionList = FXCollections.observableArrayList(new ArrayList<>());
 		scoreList = scores;
 		test = new Test();
 		context = new DBContext();
@@ -45,6 +46,7 @@ public class TestPane extends GridPane {
 		this.setHgap(5);
 		//----------------------------------------------------------------------
 		questionField = new Label("Question: " + test.getFirstQuestion().getQuestion());
+		questionField = new Label("Question: ");
 		add(questionField, 0, 0, 1, 1);
 		//----------------------------------------------------------------------
 		statementGroup = new ToggleGroup();

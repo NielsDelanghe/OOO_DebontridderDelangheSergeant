@@ -26,6 +26,7 @@ public class MainClass extends Application{
 
     @Override
     public void start(Stage primaryStage) {
+
     try {
         this.questionDbContext = new DBContext();
         this.categoryDbContext = new DBContext();
@@ -35,6 +36,9 @@ public class MainClass extends Application{
         categoryDbContext.read();
         questions = questionDbContext.getReadObjects();
         categories = categoryDbContext.getReadObjects();
+
+        DBContext context = new DBContext();
+        if(questions == null || questions.size() == 0) {context.run();}
 
         QuestionOverviewPane questionOverviewPane = new QuestionOverviewPane(questions, categories);
         CategoryOverviewPane categoryOverviewPane = new CategoryOverviewPane(categories);

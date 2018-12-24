@@ -38,5 +38,10 @@ public class CategoryTXT extends TXTDBStrategy {
 
     }
 
+    @Override
+    public String getWriteFile() {
+        return "CategoryFile.txt";
+    }
+
 
 }

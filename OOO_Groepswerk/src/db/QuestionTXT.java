@@ -46,5 +46,10 @@ public class QuestionTXT extends TXTDBStrategy {
             return object;
         }
 
+    @Override
+    public String getWriteFile() {
+        return "QuestionFile.txt";
+    }
+
 
 }
