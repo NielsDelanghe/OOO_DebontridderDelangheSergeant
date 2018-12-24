@@ -1,8 +1,8 @@
 package controller;
 
 import db.EvaluationTXT;
+import db.QuestionTXT;
 import db.Savable;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Question;
 import model.Test;
@@ -12,18 +12,83 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class TestController {
 
     private ObservableList<Savable>questionList;
+    private Test test;
+    private DBContext context;
 
     public TestController(ObservableList<Savable> questions)
     {
-        questionList = FXCollections.observableArrayList(new ArrayList<>());
+        this.test = new Test();
         this.questionList = questions;
+        context = new DBContext();
+        context.setStrategy(new QuestionTXT(questionList));
+        context.read();
     }
 
+    public void prepareQuestions()
+    {
+        test.addAllQuestionsToQueue(context.getReadObjects());
+    }
+
+    public String getFirstQuestion()
+    {
+        return test.getFirstQuestion().getQuestion();
+    }
+
+    public void addCategoryToTestIfCategoryDoesntExist()
+    {
+        if(!test.getMap().containsKey(test.getFirstQuestion().getCategory()))
+        {
+            test.addKey(test.getFirstQuestion().getCategory());
+        }
+    }
+
+    public void isCorrect(String answer)
+    {
+        if(answer.equals( test.getFirstQuestion().getPossible_answers().get(0)))
+        {
+            test.getFirstQuestion().setCorrect(true);
+            test.addPointsToCategory(test.getFirstQuestion().getCategory());
+        }
+    }
+
+    public void addQuestion()
+    {
+        test.addQuestionToList(test.getFirstQuestion());
+    }
+
+    public List<String> getPossibleAnswers()
+    {
+        return test.getFirstQuestion().getPossible_answers();
+    }
+
+    public boolean testHasNext()
+    {
+        return test.hasNext();
+    }
+
+    public void saveScore(ObservableList<Savable> scoreList)
+    {
+        test.setScore(this.getScore());
+        test.setMaxPossibleScore(this.getMaxScore());
+        scoreList.add(test);
+        this.writeScore(scoreList);
+    }
+
+    public String getNextQuestion()
+    {
+        return test.ChangeQuestionAndGetNext().getQuestion();
+    }
+
+    public String showScoreResult()
+    {
+        return this.getScore() +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints();
+    }
 
     public String getProperty()
     {
@@ -65,7 +130,7 @@ public class TestController {
             }
 
         }
-        if(feedback.equals("") || getScore() == questionList.size())
+        if(feedback.equals("") || getScore() == test.getQuestions().size())
         {
             feedback = "Congratulations, all answers are correct!";
         }
@@ -75,14 +140,12 @@ public class TestController {
     public int getScore()
     {
         int score =0;
-        for(Savable question : questionList)
+        for(Question question : test.getQuestions())
         {
-
-            if(((Question)question).getCorrect() ==true)
+            if(question.getCorrect() == true)
             {
                score++;
             }
-
         }
         return score;
     }
