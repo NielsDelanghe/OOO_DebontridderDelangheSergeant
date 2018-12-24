@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="2.5" y="0.0">application.Launcher</node>
+    <node x="0.0" y="79.0">application.MainClass</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="application.MainClass" target="application.Launcher">
+      <point x="-25.5" y="-14.5" />
+      <point x="25.5" y="54.0" />
+      <point x="26.75" y="54.0" />
+      <point x="-24.25" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="2.0000000000000004" x="95.19912543596735" y="77.36560807613444" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

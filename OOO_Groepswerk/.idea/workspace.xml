@@ -6,25 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/application/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CategoryFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CategoryFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Evaluation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/CategoryAndQuestionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/TestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/evaluation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/evaluation.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$Close.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$Close.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$ProcessAnswerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$ProcessAnswerAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/db/evaluation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/evaluation.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CategoryAndQuestionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/TestPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/TestPane.java" afterDir="false" />
-    </list>
+    <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -54,6 +36,549 @@
                 <element signature="e#811#812#0" expanded="true" />
                 <element signature="e#856#857#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UMLs/AllClasses.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="319.8499999999999" y="507.0">db.QuestionTXT</node>
+                <node x="1041.2109967715899" y="239.0">model.Category</node>
+                <node x="635.8307923451872" y="0.0">db.Savable</node>
+                <node x="1179.6357142857141" y="507.0">db.CategoryTXT</node>
+                <node x="351.8499999999999" y="378.0">db.TXTDBStrategy</node>
+                <node x="938.0219537815126" y="944.0">view.panels.PropertyPane</node>
+                <node x="10.5" y="845.0">view.panels.MessagePane</node>
+                <node x="1077.6357142857141" y="378.0">model.Group</node>
+                <node x="610.1844537815126" y="1083.0">application.Launcher</node>
+                <node x="102.0" y="626.0">db.EvaluationTXT</node>
+                <node x="247.0" y="845.0">controller.TestController</node>
+                <node x="669.1844537815126" y="845.0">db.ExcelPlugin</node>
+                <node x="433.4999999999999" y="239.0">db.DBStrategy</node>
+                <node x="1736.6757592302465" y="239.0">view.panels.QuestionOverviewPane</node>
+                <node x="418.353853914447" y="944.0">view.panels.AssesMainPane</node>
+                <node x="981.5219537815126" y="845.0">view.panels.QuestionUpdatePane</node>
+                <node x="894.2357142857142" y="378.0">view.panels.CategoryDetailPane</node>
+                <node x="29.794117647058897" y="507.0">model.Test</node>
+                <node x="1545.6757592302465" y="239.0">view.panels.CategoryOverviewPane</node>
+                <node x="573.7504112662012" y="626.0">controller.DBContext</node>
+                <node x="598.2357142857142" y="378.0">model.Question</node>
+                <node x="714.2357142857142" y="378.0">view.panels.CategoryUpdatePane</node>
+                <node x="250.2519384307402" y="944.0">view.panels.TestPane</node>
+                <node x="607.6844537815126" y="1162.0">application.MainClass</node>
+                <node x="1361.6757592302465" y="378.0">view.panels.QuestionDetailPane</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="view.panels.CategoryDetailPane" target="db.Savable">
+                  <point x="-57.0" y="-14.5" />
+                  <point x="913.2357142857142" y="288.0" />
+                  <point x="894.9126527164544" y="288.0" />
+                  <point x="894.9126527164544" y="189.0" />
+                  <point x="686.3013805804814" y="189.0" />
+                  <point x="6.470588235294144" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="view.panels.CategoryOverviewPane">
+                  <point x="28.529411764705856" y="-14.5" />
+                  <point x="687.2138655462185" y="1033.0" />
+                  <point x="1641.0773020225038" y="1033.0" />
+                  <point x="1641.0773020225038" y="358.0" />
+                  <point x="1673.9257592302465" y="358.0" />
+                  <point x="42.75" y="14.5" />
+                </edge>
+                <edge source="application.MainClass" target="application.Launcher">
+                  <point x="-25.5" y="-14.5" />
+                  <point x="633.1844537815126" y="1137.0" />
+                  <point x="634.4344537815126" y="1137.0" />
+                  <point x="-24.25" y="14.5" />
+                </edge>
+                <edge source="controller.TestController" target="controller.DBContext">
+                  <point x="43.049999999999955" y="-14.5" />
+                  <point x="351.54999999999995" y="785.0" />
+                  <point x="599.7504112662012" y="785.0" />
+                  <point x="-26.0" y="14.5" />
+                </edge>
+                <edge source="view.panels.CategoryUpdatePane" target="db.Savable">
+                  <point x="-60.0" y="-14.5" />
+                  <point x="734.2357142857142" y="288.0" />
+                  <point x="717.9126527164544" y="288.0" />
+                  <point x="717.9126527164544" y="209.0" />
+                  <point x="681.124909992246" y="209.0" />
+                  <point x="1.2941176470587834" y="14.5" />
+                </edge>
+                <edge source="view.panels.MessagePane" target="model.Test">
+                  <point x="0.0" y="-14.5" />
+                  <point x="70.5" y="606.0" />
+                  <point x="54.7941176470589" y="606.0" />
+                  <point x="-10.0" y="14.5" />
+                </edge>
+                <edge source="db.ExcelPlugin" target="db.Savable">
+                  <point x="48.0" y="-14.5" />
+                  <point x="771.1844537815126" y="805.0" />
+                  <point x="1351.1757592302465" y="805.0" />
+                  <point x="1351.1757592302465" y="139.0" />
+                  <point x="699.2425570510696" y="139.0" />
+                  <point x="19.411764705882433" y="14.5" />
+                </edge>
+                <edge source="controller.TestController" target="model.Test">
+                  <point x="-43.049999999999955" y="-14.5" />
+                  <point x="265.45000000000005" y="725.0" />
+                  <point x="91.5" y="725.0" />
+                  <point x="91.5" y="586.0" />
+                  <point x="74.7941176470589" y="586.0" />
+                  <point x="10.0" y="14.5" />
+                </edge>
+                <edge source="db.TXTDBStrategy" target="db.Savable">
+                  <point x="-15.875" y="-14.5" />
+                  <point x="399.4749999999999" y="358.0" />
+                  <point x="391.35041126620126" y="358.0" />
+                  <point x="391.35041126620126" y="189.0" />
+                  <point x="670.7719688157755" y="189.0" />
+                  <point x="-9.058823529411711" y="14.5" />
+                </edge>
+                <edge source="controller.TestController" target="model.Question">
+                  <point x="18.450000000000045" y="-14.5" />
+                  <point x="326.95000000000005" y="745.0" />
+                  <point x="563.2504112662012" y="745.0" />
+                  <point x="563.2504112662012" y="477.0" />
+                  <point x="631.8357142857141" y="477.0" />
+                  <point x="-14.400000000000091" y="14.5" />
+                </edge>
+                <edge source="model.Test" target="model.Question">
+                  <point x="28.0" y="-14.5" />
+                  <point x="92.7941176470589" y="457.0" />
+                  <point x="612.6357142857141" y="457.0" />
+                  <point x="-33.60000000000002" y="14.5" />
+                </edge>
+                <edge source="view.panels.TestPane" target="db.Savable">
+                  <point x="-27.42857142857133" y="-14.5" />
+                  <point x="270.8233670021689" y="904.0" />
+                  <point x="236.5" y="904.0" />
+                  <point x="236.5" y="129.0" />
+                  <point x="655.2425570510696" y="129.0" />
+                  <point x="-24.588235294117567" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionDetailPane" target="db.Savable">
+                  <point x="0.0" y="-14.5" />
+                  <point x="1437.6757592302465" y="358.0" />
+                  <point x="1445.4992320657075" y="358.0" />
+                  <point x="1445.4992320657075" y="129.0" />
+                  <point x="701.8307923451872" y="129.0" />
+                  <point x="22.0" y="14.5" />
+                </edge>
+                <edge source="model.Question" target="db.Savable">
+                  <point x="0.0" y="-14.5" />
+                  <point x="646.2357142857142" y="219.0" />
+                  <point x="678.5366746981284" y="219.0" />
+                  <point x="-1.2941176470587834" y="14.5" />
+                </edge>
+                <edge source="view.panels.TestPane" target="db.QuestionTXT">
+                  <point x="13.71428571428578" y="-14.5" />
+                  <point x="311.966224145026" y="904.0" />
+                  <point x="383.625" y="904.0" />
+                  <point x="383.625" y="606.0" />
+                  <point x="354.9499999999998" y="606.0" />
+                  <point x="-23.40000000000009" y="14.5" />
+                </edge>
+                <edge source="controller.DBContext" target="db.QuestionTXT">
+                  <point x="-46.80000000000007" y="-14.5" />
+                  <point x="578.9504112662012" y="596.0" />
+                  <point x="425.14999999999986" y="596.0" />
+                  <point x="46.799999999999955" y="14.5" />
+                </edge>
+                <edge source="controller.TestController" target="db.QuestionTXT">
+                  <point x="6.150000000000091" y="-14.5" />
+                  <point x="314.65041126620133" y="606.0" />
+                  <point x="331.54999999999995" y="606.0" />
+                  <point x="-46.799999999999955" y="14.5" />
+                </edge>
+                <edge source="db.TXTDBStrategy" target="db.DBStrategy">
+                  <point x="15.875" y="-14.5" />
+                  <point x="431.2249999999999" y="358.0" />
+                  <point x="446.7499999999999" y="358.0" />
+                  <point x="-39.75" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="db.QuestionTXT">
+                  <point x="-22.82352941176464" y="-14.5" />
+                  <point x="635.860924369748" y="1023.0" />
+                  <point x="395.9254112662013" y="1023.0" />
+                  <point x="395.9254112662013" y="596.0" />
+                  <point x="378.3499999999999" y="596.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionUpdatePane" target="model.Category">
+                  <point x="30.0" y="-14.5" />
+                  <point x="1091.5219537815126" y="795.0" />
+                  <point x="1326.5875239361287" y="795.0" />
+                  <point x="1326.5875239361287" y="308.0" />
+                  <point x="1126.9252824858756" y="308.0" />
+                  <point x="37.714285714285666" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="view.panels.PropertyPane">
+                  <point x="11.411764705882433" y="-14.5" />
+                  <point x="670.096218487395" y="1003.0" />
+                  <point x="1027.2719537815126" y="1003.0" />
+                  <point x="29.75" y="14.5" />
+                </edge>
+                <edge source="db.EvaluationTXT" target="model.Test">
+                  <point x="-49.59999999999991" y="-14.5" />
+                  <point x="114.40000000000009" y="576.0" />
+                  <point x="84.7941176470589" y="576.0" />
+                  <point x="20.0" y="14.5" />
+                </edge>
+                <edge source="controller.TestController" target="db.EvaluationTXT">
+                  <point x="-30.75" y="-14.5" />
+                  <point x="277.75" y="715.0" />
+                  <point x="195.0" y="715.0" />
+                  <point x="31.0" y="14.5" />
+                </edge>
+                <edge source="db.ExcelPlugin" target="model.Question">
+                  <point x="0.0" y="-14.5" />
+                  <point x="723.1844537815126" y="745.0" />
+                  <point x="764.0525934102453" y="745.0" />
+                  <point x="764.0525934102453" y="467.0" />
+                  <point x="670.2357142857142" y="467.0" />
+                  <point x="24.0" y="14.5" />
+                </edge>
+                <edge source="db.TXTDBStrategy" target="model.Category">
+                  <point x="47.625" y="-14.5" />
+                  <point x="462.9749999999999" y="298.0" />
+                  <point x="1044.6395682001614" y="298.0" />
+                  <point x="-44.571428571428555" y="14.5" />
+                </edge>
+                <edge source="view.panels.TestPane" target="controller.DBContext">
+                  <point x="41.14285714285711" y="-14.5" />
+                  <point x="339.3947955735973" y="924.0" />
+                  <point x="563.2853417920846" y="924.0" />
+                  <point x="563.2853417920846" y="815.0" />
+                  <point x="622.0361255519155" y="815.0" />
+                  <point x="-3.7142857142857792" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionDetailPane" target="model.Category">
+                  <point x="-50.66666666666666" y="-14.5" />
+                  <point x="1387.00909256358" y="298.0" />
+                  <point x="1133.7824253430185" y="298.0" />
+                  <point x="44.571428571428555" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="view.panels.QuestionOverviewPane">
+                  <point x="39.94117647058829" y="-14.5" />
+                  <point x="698.6256302521009" y="1053.0" />
+                  <point x="1832.0773020225038" y="1053.0" />
+                  <point x="1832.0773020225038" y="358.0" />
+                  <point x="1864.9257592302465" y="358.0" />
+                  <point x="42.75" y="14.5" />
+                </edge>
+                <edge source="db.QuestionTXT" target="db.Savable">
+                  <point x="-43.875" y="-14.5" />
+                  <point x="334.4749999999999" y="427.0" />
+                  <point x="309.9566176470588" y="427.0" />
+                  <point x="309.9566176470588" y="159.0" />
+                  <point x="663.0072629334226" y="159.0" />
+                  <point x="-16.82352941176464" y="14.5" />
+                </edge>
+                <edge source="view.panels.MessagePane" target="db.EvaluationTXT">
+                  <point x="17.14285714285711" y="-14.5" />
+                  <point x="87.64285714285711" y="745.0" />
+                  <point x="133.0" y="745.0" />
+                  <point x="-31.0" y="14.5" />
+                </edge>
+                <edge source="db.QuestionTXT" target="db.TXTDBStrategy">
+                  <point x="14.625" y="-14.5" />
+                  <point x="392.9749999999999" y="437.0" />
+                  <point x="415.3499999999999" y="437.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionOverviewPane" target="db.Savable">
+                  <point x="42.75" y="-14.5" />
+                  <point x="1864.9257592302465" y="59.0" />
+                  <point x="719.9484394040109" y="59.0" />
+                  <point x="40.11764705882365" y="14.5" />
+                </edge>
+                <edge source="db.ExcelPlugin" target="db.QuestionTXT">
+                  <point x="-48.0" y="-14.5" />
+                  <point x="675.1844537815126" y="735.0" />
+                  <point x="448.8178810789859" y="735.0" />
+                  <point x="448.8178810789859" y="606.0" />
+                  <point x="401.75" y="606.0" />
+                  <point x="23.40000000000009" y="14.5" />
+                </edge>
+                <edge source="db.DBStrategy" target="db.Savable">
+                  <point x="0.0" y="-14.5" />
+                  <point x="486.4999999999999" y="199.0" />
+                  <point x="673.3602041098931" y="199.0" />
+                  <point x="-6.470588235294144" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="view.panels.AssesMainPane">
+                  <point x="-17.117647058823422" y="-14.5" />
+                  <point x="641.5668067226892" y="1013.0" />
+                  <point x="483.353853914447" y="1013.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionUpdatePane" target="model.Question">
+                  <point x="-10.0" y="-14.5" />
+                  <point x="1051.5219537815126" y="675.0" />
+                  <point x="847.5709757631865" y="675.0" />
+                  <point x="847.5709757631865" y="447.0" />
+                  <point x="689.4357142857142" y="447.0" />
+                  <point x="43.200000000000045" y="14.5" />
+                </edge>
+                <edge source="view.panels.CategoryDetailPane" target="model.Category">
+                  <point x="19.0" y="-14.5" />
+                  <point x="989.2357142857142" y="328.0" />
+                  <point x="1065.2109967715899" y="328.0" />
+                  <point x="-24.0" y="14.5" />
+                </edge>
+                <edge source="db.ExcelPlugin" target="db.CategoryTXT">
+                  <point x="24.0" y="-14.5" />
+                  <point x="747.1844537815126" y="765.0" />
+                  <point x="1207.0107142857141" y="765.0" />
+                  <point x="1207.0107142857141" y="606.0" />
+                  <point x="1223.5107142857141" y="606.0" />
+                  <point x="-14.625" y="14.5" />
+                </edge>
+                <edge source="view.panels.CategoryUpdatePane" target="model.Category">
+                  <point x="60.0" y="-14.5" />
+                  <point x="854.2357142857142" y="318.0" />
+                  <point x="1058.353853914447" y="318.0" />
+                  <point x="-30.85714285714289" y="14.5" />
+                </edge>
+                <edge source="db.EvaluationTXT" target="db.TXTDBStrategy">
+                  <point x="49.59999999999991" y="-14.5" />
+                  <point x="213.5999999999999" y="606.0" />
+                  <point x="199.22885391444697" y="606.0" />
+                  <point x="199.22885391444697" y="437.0" />
+                  <point x="373.01666666666665" y="437.0" />
+                  <point x="-42.33333333333326" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionUpdatePane" target="controller.DBContext">
+                  <point x="-50.0" y="-14.5" />
+                  <point x="1011.5219537815126" y="695.0" />
+                  <point x="674.0361255519155" y="695.0" />
+                  <point x="48.28571428571422" y="14.5" />
+                </edge>
+                <edge source="db.ExcelPlugin" target="model.Category">
+                  <point x="36.0" y="-14.5" />
+                  <point x="759.1844537815126" y="785.0" />
+                  <point x="1319.7303810789858" y="785.0" />
+                  <point x="1319.7303810789858" y="318.0" />
+                  <point x="1120.0681396287328" y="318.0" />
+                  <point x="30.85714285714289" y="14.5" />
+                </edge>
+                <edge source="controller.DBContext" target="model.Question">
+                  <point x="5.2000000000000455" y="-14.5" />
+                  <point x="630.9504112662013" y="487.0" />
+                  <point x="641.4357142857142" y="487.0" />
+                  <point x="-4.7999999999999545" y="14.5" />
+                </edge>
+                <edge source="model.Category" target="db.Savable">
+                  <point x="0.0" y="-14.5" />
+                  <point x="1089.2109967715899" y="169.0" />
+                  <point x="691.4778511687167" y="169.0" />
+                  <point x="11.647058823529505" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionUpdatePane" target="db.CategoryTXT">
+                  <point x="10.0" y="-14.5" />
+                  <point x="1071.5219537815126" y="775.0" />
+                  <point x="1237.6678810789858" y="775.0" />
+                  <point x="1237.6678810789858" y="606.0" />
+                  <point x="1252.7607142857141" y="606.0" />
+                  <point x="14.625" y="14.5" />
+                </edge>
+                <edge source="model.Test" target="db.Savable">
+                  <point x="-14.0" y="-14.5" />
+                  <point x="50.7941176470589" y="487.0" />
+                  <point x="43.33823529411768" y="487.0" />
+                  <point x="43.33823529411768" y="89.0" />
+                  <point x="644.8896158745989" y="89.0" />
+                  <point x="-34.94117647058829" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="view.panels.TestPane">
+                  <point x="-28.529411764705856" y="-14.5" />
+                  <point x="630.1550420168068" y="1033.0" />
+                  <point x="322.2519384307402" y="1033.0" />
+                  <point x="24.0" y="14.5" />
+                </edge>
+                <edge source="model.Group" target="model.Category">
+                  <point x="-20.25" y="-14.5" />
+                  <point x="1097.8857142857141" y="358.0" />
+                  <point x="1092.6395682001614" y="358.0" />
+                  <point x="3.428571428571445" y="14.5" />
+                </edge>
+                <edge source="db.CategoryTXT" target="model.Category">
+                  <point x="-14.625" y="-14.5" />
+                  <point x="1223.5107142857141" y="328.0" />
+                  <point x="1113.2109967715899" y="328.0" />
+                  <point x="24.0" y="14.5" />
+                </edge>
+                <edge source="db.ExcelPlugin" target="controller.DBContext">
+                  <point x="-24.0" y="-14.5" />
+                  <point x="699.1844537815126" y="715.0" />
+                  <point x="659.1789826947726" y="715.0" />
+                  <point x="33.42857142857133" y="14.5" />
+                </edge>
+                <edge source="controller.TestController" target="db.Savable">
+                  <point x="-6.150000000000091" y="-14.5" />
+                  <point x="303.0" y="149.0" />
+                  <point x="660.4190276393048" y="149.0" />
+                  <point x="-19.411764705882433" y="14.5" />
+                </edge>
+                <edge source="db.QuestionTXT" target="model.Question">
+                  <point x="43.875" y="-14.5" />
+                  <point x="422.2249999999999" y="467.0" />
+                  <point x="622.2357142857142" y="467.0" />
+                  <point x="-24.0" y="14.5" />
+                </edge>
+                <edge source="controller.DBContext" target="model.Category">
+                  <point x="36.40000000000009" y="-14.5" />
+                  <point x="662.1504112662013" y="596.0" />
+                  <point x="1067.1357142857141" y="596.0" />
+                  <point x="1067.1357142857141" y="358.0" />
+                  <point x="1085.7824253430185" y="358.0" />
+                  <point x="-3.428571428571445" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="db.Savable">
+                  <point x="45.647058823529505" y="-14.5" />
+                  <point x="704.3315126050421" y="1063.0" />
+                  <point x="1918.1757592302465" y="1063.0" />
+                  <point x="1918.1757592302465" y="49.0" />
+                  <point x="722.5366746981284" y="49.0" />
+                  <point x="42.70588235294122" y="14.5" />
+                </edge>
+                <edge source="view.panels.MessagePane" target="db.Savable">
+                  <point x="-51.42857142857133" y="-14.5" />
+                  <point x="19.294117647058897" y="69.0" />
+                  <point x="639.7131452863638" y="69.0" />
+                  <point x="-40.11764705882342" y="14.5" />
+                </edge>
+                <edge source="view.panels.TestPane" target="controller.TestController">
+                  <point x="0.0" y="-14.5" />
+                  <point x="298.2519384307402" y="894.0" />
+                  <point x="339.25" y="894.0" />
+                  <point x="30.75" y="14.5" />
+                </edge>
+                <edge source="view.panels.QuestionUpdatePane" target="db.Savable">
+                  <point x="50.0" y="-14.5" />
+                  <point x="1111.5219537815126" y="815.0" />
+                  <point x="1524.1757592302465" y="815.0" />
+                  <point x="1524.1757592302465" y="109.0" />
+                  <point x="707.0072629334226" y="109.0" />
+                  <point x="27.17647058823536" y="14.5" />
+                </edge>
+                <edge source="controller.DBContext" target="db.CategoryTXT">
+                  <point x="46.799999999999955" y="-14.5" />
+                  <point x="672.5504112662012" y="606.0" />
+                  <point x="1194.2607142857141" y="606.0" />
+                  <point x="-43.875" y="14.5" />
+                </edge>
+                <edge source="view.panels.CategoryOverviewPane" target="db.Savable">
+                  <point x="42.75" y="-14.5" />
+                  <point x="1673.9257592302465" y="79.0" />
+                  <point x="714.7719688157755" y="79.0" />
+                  <point x="34.94117647058829" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="db.CategoryTXT">
+                  <point x="17.117647058823422" y="-14.5" />
+                  <point x="675.802100840336" y="1013.0" />
+                  <point x="1278.5111255519155" y="1013.0" />
+                  <point x="1278.5111255519155" y="606.0" />
+                  <point x="1282.0107142857141" y="606.0" />
+                  <point x="43.875" y="14.5" />
+                </edge>
+                <edge source="controller.DBContext" target="db.DBStrategy">
+                  <point x="-15.600000000000136" y="-14.5" />
+                  <point x="610.1504112662011" y="566.0" />
+                  <point x="510.14999999999986" y="566.0" />
+                  <point x="510.14999999999986" y="288.0" />
+                  <point x="526.2499999999999" y="288.0" />
+                  <point x="39.75" y="14.5" />
+                </edge>
+                <edge source="db.EvaluationTXT" target="db.Savable">
+                  <point x="0.0" y="-14.5" />
+                  <point x="164.0" y="109.0" />
+                  <point x="650.0660864628343" y="109.0" />
+                  <point x="-29.764705882352928" y="14.5" />
+                </edge>
+                <edge source="db.CategoryTXT" target="db.TXTDBStrategy">
+                  <point x="-43.875" y="-14.5" />
+                  <point x="1194.2607142857141" y="437.0" />
+                  <point x="457.68333333333317" y="437.0" />
+                  <point x="42.33333333333326" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="view.panels.MessagePane">
+                  <point x="-45.64705882352928" y="-14.5" />
+                  <point x="613.0373949579833" y="1063.0" />
+                  <point x="47.488154188229714" y="1063.0" />
+                  <point x="47.488154188229714" y="924.0" />
+                  <point x="40.5" y="924.0" />
+                  <point x="-30.0" y="14.5" />
+                </edge>
+                <edge source="application.Launcher" target="controller.DBContext">
+                  <point x="0.0" y="-14.5" />
+                  <point x="658.6844537815126" y="815.0" />
+                  <point x="644.3218398376299" y="815.0" />
+                  <point x="18.57142857142867" y="14.5" />
+                </edge>
+                <edge source="db.CategoryTXT" target="db.Savable">
+                  <point x="43.875" y="-14.5" />
+                  <point x="1282.0107142857141" y="487.0" />
+                  <point x="1348.5875239361287" y="487.0" />
+                  <point x="1348.5875239361287" y="149.0" />
+                  <point x="696.6543217569518" y="149.0" />
+                  <point x="16.82352941176464" y="14.5" />
+                </edge>
+                <edge source="view.panels.MessagePane" target="controller.DBContext">
+                  <point x="51.42857142857133" y="-14.5" />
+                  <point x="121.92857142857133" y="765.0" />
+                  <point x="584.8932684090584" y="765.0" />
+                  <point x="-40.85714285714289" y="14.5" />
+                </edge>
+                <edge source="controller.DBContext" target="db.Savable">
+                  <point x="-5.2000000000000455" y="-14.5" />
+                  <point x="620.5504112662012" y="556.0" />
+                  <point x="549.9999999999999" y="556.0" />
+                  <point x="549.9999999999999" y="209.0" />
+                  <point x="675.9484394040106" y="209.0" />
+                  <point x="-3.8823529411765776" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.1" x="1375.4545454545455" y="823.4545454545455" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UMLs/Facade.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="2.5" y="0.0">application.Launcher</node>
+                <node x="0.0" y="79.0">application.MainClass</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="application.MainClass" target="application.Launcher">
+                  <point x="-25.5" y="-14.5" />
+                  <point x="25.5" y="54.0" />
+                  <point x="26.75" y="54.0" />
+                  <point x="-24.25" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="2.0000000000000004" x="-92.66929561666419" y="-8.108076134391837" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -221,6 +746,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panels" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OOO_Groepswerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOO_Groepswerk" type="462c0819:PsiDirectoryNode" />
+              <item name="UMLs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -230,7 +760,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545684867498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545685798820" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/UMLs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -371,13 +901,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96704000" />
+    <option name="totallyTimeSpent" value="98232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29424307" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.336887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -386,7 +916,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3033586" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.037919827" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -413,14 +943,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/QuestionExcel.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/CategoryController.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/QuestionList.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/CategoryList.java" />
@@ -887,6 +1409,545 @@
             <element signature="e#811#812#0" expanded="true" />
             <element signature="e#856#857#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UMLs/Facade.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="2.5" y="0.0">application.Launcher</node>
+            <node x="0.0" y="79.0">application.MainClass</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="application.MainClass" target="application.Launcher">
+              <point x="-25.5" y="-14.5" />
+              <point x="25.5" y="54.0" />
+              <point x="26.75" y="54.0" />
+              <point x="-24.25" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="2.0000000000000004" x="-92.66929561666419" y="-8.108076134391837" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UMLs/AllClasses.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="319.8499999999999" y="507.0">db.QuestionTXT</node>
+            <node x="1041.2109967715899" y="239.0">model.Category</node>
+            <node x="635.8307923451872" y="0.0">db.Savable</node>
+            <node x="1179.6357142857141" y="507.0">db.CategoryTXT</node>
+            <node x="351.8499999999999" y="378.0">db.TXTDBStrategy</node>
+            <node x="938.0219537815126" y="944.0">view.panels.PropertyPane</node>
+            <node x="10.5" y="845.0">view.panels.MessagePane</node>
+            <node x="1077.6357142857141" y="378.0">model.Group</node>
+            <node x="610.1844537815126" y="1083.0">application.Launcher</node>
+            <node x="102.0" y="626.0">db.EvaluationTXT</node>
+            <node x="247.0" y="845.0">controller.TestController</node>
+            <node x="669.1844537815126" y="845.0">db.ExcelPlugin</node>
+            <node x="433.4999999999999" y="239.0">db.DBStrategy</node>
+            <node x="1736.6757592302465" y="239.0">view.panels.QuestionOverviewPane</node>
+            <node x="418.353853914447" y="944.0">view.panels.AssesMainPane</node>
+            <node x="981.5219537815126" y="845.0">view.panels.QuestionUpdatePane</node>
+            <node x="894.2357142857142" y="378.0">view.panels.CategoryDetailPane</node>
+            <node x="29.794117647058897" y="507.0">model.Test</node>
+            <node x="1545.6757592302465" y="239.0">view.panels.CategoryOverviewPane</node>
+            <node x="573.7504112662012" y="626.0">controller.DBContext</node>
+            <node x="598.2357142857142" y="378.0">model.Question</node>
+            <node x="714.2357142857142" y="378.0">view.panels.CategoryUpdatePane</node>
+            <node x="250.2519384307402" y="944.0">view.panels.TestPane</node>
+            <node x="607.6844537815126" y="1162.0">application.MainClass</node>
+            <node x="1361.6757592302465" y="378.0">view.panels.QuestionDetailPane</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="view.panels.CategoryDetailPane" target="db.Savable">
+              <point x="-57.0" y="-14.5" />
+              <point x="913.2357142857142" y="288.0" />
+              <point x="894.9126527164544" y="288.0" />
+              <point x="894.9126527164544" y="189.0" />
+              <point x="686.3013805804814" y="189.0" />
+              <point x="6.470588235294144" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="view.panels.CategoryOverviewPane">
+              <point x="28.529411764705856" y="-14.5" />
+              <point x="687.2138655462185" y="1033.0" />
+              <point x="1641.0773020225038" y="1033.0" />
+              <point x="1641.0773020225038" y="358.0" />
+              <point x="1673.9257592302465" y="358.0" />
+              <point x="42.75" y="14.5" />
+            </edge>
+            <edge source="application.MainClass" target="application.Launcher">
+              <point x="-25.5" y="-14.5" />
+              <point x="633.1844537815126" y="1137.0" />
+              <point x="634.4344537815126" y="1137.0" />
+              <point x="-24.25" y="14.5" />
+            </edge>
+            <edge source="controller.TestController" target="controller.DBContext">
+              <point x="43.049999999999955" y="-14.5" />
+              <point x="351.54999999999995" y="785.0" />
+              <point x="599.7504112662012" y="785.0" />
+              <point x="-26.0" y="14.5" />
+            </edge>
+            <edge source="view.panels.CategoryUpdatePane" target="db.Savable">
+              <point x="-60.0" y="-14.5" />
+              <point x="734.2357142857142" y="288.0" />
+              <point x="717.9126527164544" y="288.0" />
+              <point x="717.9126527164544" y="209.0" />
+              <point x="681.124909992246" y="209.0" />
+              <point x="1.2941176470587834" y="14.5" />
+            </edge>
+            <edge source="view.panels.MessagePane" target="model.Test">
+              <point x="0.0" y="-14.5" />
+              <point x="70.5" y="606.0" />
+              <point x="54.7941176470589" y="606.0" />
+              <point x="-10.0" y="14.5" />
+            </edge>
+            <edge source="db.ExcelPlugin" target="db.Savable">
+              <point x="48.0" y="-14.5" />
+              <point x="771.1844537815126" y="805.0" />
+              <point x="1351.1757592302465" y="805.0" />
+              <point x="1351.1757592302465" y="139.0" />
+              <point x="699.2425570510696" y="139.0" />
+              <point x="19.411764705882433" y="14.5" />
+            </edge>
+            <edge source="controller.TestController" target="model.Test">
+              <point x="-43.049999999999955" y="-14.5" />
+              <point x="265.45000000000005" y="725.0" />
+              <point x="91.5" y="725.0" />
+              <point x="91.5" y="586.0" />
+              <point x="74.7941176470589" y="586.0" />
+              <point x="10.0" y="14.5" />
+            </edge>
+            <edge source="db.TXTDBStrategy" target="db.Savable">
+              <point x="-15.875" y="-14.5" />
+              <point x="399.4749999999999" y="358.0" />
+              <point x="391.35041126620126" y="358.0" />
+              <point x="391.35041126620126" y="189.0" />
+              <point x="670.7719688157755" y="189.0" />
+              <point x="-9.058823529411711" y="14.5" />
+            </edge>
+            <edge source="controller.TestController" target="model.Question">
+              <point x="18.450000000000045" y="-14.5" />
+              <point x="326.95000000000005" y="745.0" />
+              <point x="563.2504112662012" y="745.0" />
+              <point x="563.2504112662012" y="477.0" />
+              <point x="631.8357142857141" y="477.0" />
+              <point x="-14.400000000000091" y="14.5" />
+            </edge>
+            <edge source="model.Test" target="model.Question">
+              <point x="28.0" y="-14.5" />
+              <point x="92.7941176470589" y="457.0" />
+              <point x="612.6357142857141" y="457.0" />
+              <point x="-33.60000000000002" y="14.5" />
+            </edge>
+            <edge source="view.panels.TestPane" target="db.Savable">
+              <point x="-27.42857142857133" y="-14.5" />
+              <point x="270.8233670021689" y="904.0" />
+              <point x="236.5" y="904.0" />
+              <point x="236.5" y="129.0" />
+              <point x="655.2425570510696" y="129.0" />
+              <point x="-24.588235294117567" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionDetailPane" target="db.Savable">
+              <point x="0.0" y="-14.5" />
+              <point x="1437.6757592302465" y="358.0" />
+              <point x="1445.4992320657075" y="358.0" />
+              <point x="1445.4992320657075" y="129.0" />
+              <point x="701.8307923451872" y="129.0" />
+              <point x="22.0" y="14.5" />
+            </edge>
+            <edge source="model.Question" target="db.Savable">
+              <point x="0.0" y="-14.5" />
+              <point x="646.2357142857142" y="219.0" />
+              <point x="678.5366746981284" y="219.0" />
+              <point x="-1.2941176470587834" y="14.5" />
+            </edge>
+            <edge source="view.panels.TestPane" target="db.QuestionTXT">
+              <point x="13.71428571428578" y="-14.5" />
+              <point x="311.966224145026" y="904.0" />
+              <point x="383.625" y="904.0" />
+              <point x="383.625" y="606.0" />
+              <point x="354.9499999999998" y="606.0" />
+              <point x="-23.40000000000009" y="14.5" />
+            </edge>
+            <edge source="controller.DBContext" target="db.QuestionTXT">
+              <point x="-46.80000000000007" y="-14.5" />
+              <point x="578.9504112662012" y="596.0" />
+              <point x="425.14999999999986" y="596.0" />
+              <point x="46.799999999999955" y="14.5" />
+            </edge>
+            <edge source="controller.TestController" target="db.QuestionTXT">
+              <point x="6.150000000000091" y="-14.5" />
+              <point x="314.65041126620133" y="606.0" />
+              <point x="331.54999999999995" y="606.0" />
+              <point x="-46.799999999999955" y="14.5" />
+            </edge>
+            <edge source="db.TXTDBStrategy" target="db.DBStrategy">
+              <point x="15.875" y="-14.5" />
+              <point x="431.2249999999999" y="358.0" />
+              <point x="446.7499999999999" y="358.0" />
+              <point x="-39.75" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="db.QuestionTXT">
+              <point x="-22.82352941176464" y="-14.5" />
+              <point x="635.860924369748" y="1023.0" />
+              <point x="395.9254112662013" y="1023.0" />
+              <point x="395.9254112662013" y="596.0" />
+              <point x="378.3499999999999" y="596.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionUpdatePane" target="model.Category">
+              <point x="30.0" y="-14.5" />
+              <point x="1091.5219537815126" y="795.0" />
+              <point x="1326.5875239361287" y="795.0" />
+              <point x="1326.5875239361287" y="308.0" />
+              <point x="1126.9252824858756" y="308.0" />
+              <point x="37.714285714285666" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="view.panels.PropertyPane">
+              <point x="11.411764705882433" y="-14.5" />
+              <point x="670.096218487395" y="1003.0" />
+              <point x="1027.2719537815126" y="1003.0" />
+              <point x="29.75" y="14.5" />
+            </edge>
+            <edge source="db.EvaluationTXT" target="model.Test">
+              <point x="-49.59999999999991" y="-14.5" />
+              <point x="114.40000000000009" y="576.0" />
+              <point x="84.7941176470589" y="576.0" />
+              <point x="20.0" y="14.5" />
+            </edge>
+            <edge source="controller.TestController" target="db.EvaluationTXT">
+              <point x="-30.75" y="-14.5" />
+              <point x="277.75" y="715.0" />
+              <point x="195.0" y="715.0" />
+              <point x="31.0" y="14.5" />
+            </edge>
+            <edge source="db.ExcelPlugin" target="model.Question">
+              <point x="0.0" y="-14.5" />
+              <point x="723.1844537815126" y="745.0" />
+              <point x="764.0525934102453" y="745.0" />
+              <point x="764.0525934102453" y="467.0" />
+              <point x="670.2357142857142" y="467.0" />
+              <point x="24.0" y="14.5" />
+            </edge>
+            <edge source="db.TXTDBStrategy" target="model.Category">
+              <point x="47.625" y="-14.5" />
+              <point x="462.9749999999999" y="298.0" />
+              <point x="1044.6395682001614" y="298.0" />
+              <point x="-44.571428571428555" y="14.5" />
+            </edge>
+            <edge source="view.panels.TestPane" target="controller.DBContext">
+              <point x="41.14285714285711" y="-14.5" />
+              <point x="339.3947955735973" y="924.0" />
+              <point x="563.2853417920846" y="924.0" />
+              <point x="563.2853417920846" y="815.0" />
+              <point x="622.0361255519155" y="815.0" />
+              <point x="-3.7142857142857792" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionDetailPane" target="model.Category">
+              <point x="-50.66666666666666" y="-14.5" />
+              <point x="1387.00909256358" y="298.0" />
+              <point x="1133.7824253430185" y="298.0" />
+              <point x="44.571428571428555" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="view.panels.QuestionOverviewPane">
+              <point x="39.94117647058829" y="-14.5" />
+              <point x="698.6256302521009" y="1053.0" />
+              <point x="1832.0773020225038" y="1053.0" />
+              <point x="1832.0773020225038" y="358.0" />
+              <point x="1864.9257592302465" y="358.0" />
+              <point x="42.75" y="14.5" />
+            </edge>
+            <edge source="db.QuestionTXT" target="db.Savable">
+              <point x="-43.875" y="-14.5" />
+              <point x="334.4749999999999" y="427.0" />
+              <point x="309.9566176470588" y="427.0" />
+              <point x="309.9566176470588" y="159.0" />
+              <point x="663.0072629334226" y="159.0" />
+              <point x="-16.82352941176464" y="14.5" />
+            </edge>
+            <edge source="view.panels.MessagePane" target="db.EvaluationTXT">
+              <point x="17.14285714285711" y="-14.5" />
+              <point x="87.64285714285711" y="745.0" />
+              <point x="133.0" y="745.0" />
+              <point x="-31.0" y="14.5" />
+            </edge>
+            <edge source="db.QuestionTXT" target="db.TXTDBStrategy">
+              <point x="14.625" y="-14.5" />
+              <point x="392.9749999999999" y="437.0" />
+              <point x="415.3499999999999" y="437.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionOverviewPane" target="db.Savable">
+              <point x="42.75" y="-14.5" />
+              <point x="1864.9257592302465" y="59.0" />
+              <point x="719.9484394040109" y="59.0" />
+              <point x="40.11764705882365" y="14.5" />
+            </edge>
+            <edge source="db.ExcelPlugin" target="db.QuestionTXT">
+              <point x="-48.0" y="-14.5" />
+              <point x="675.1844537815126" y="735.0" />
+              <point x="448.8178810789859" y="735.0" />
+              <point x="448.8178810789859" y="606.0" />
+              <point x="401.75" y="606.0" />
+              <point x="23.40000000000009" y="14.5" />
+            </edge>
+            <edge source="db.DBStrategy" target="db.Savable">
+              <point x="0.0" y="-14.5" />
+              <point x="486.4999999999999" y="199.0" />
+              <point x="673.3602041098931" y="199.0" />
+              <point x="-6.470588235294144" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="view.panels.AssesMainPane">
+              <point x="-17.117647058823422" y="-14.5" />
+              <point x="641.5668067226892" y="1013.0" />
+              <point x="483.353853914447" y="1013.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionUpdatePane" target="model.Question">
+              <point x="-10.0" y="-14.5" />
+              <point x="1051.5219537815126" y="675.0" />
+              <point x="847.5709757631865" y="675.0" />
+              <point x="847.5709757631865" y="447.0" />
+              <point x="689.4357142857142" y="447.0" />
+              <point x="43.200000000000045" y="14.5" />
+            </edge>
+            <edge source="view.panels.CategoryDetailPane" target="model.Category">
+              <point x="19.0" y="-14.5" />
+              <point x="989.2357142857142" y="328.0" />
+              <point x="1065.2109967715899" y="328.0" />
+              <point x="-24.0" y="14.5" />
+            </edge>
+            <edge source="db.ExcelPlugin" target="db.CategoryTXT">
+              <point x="24.0" y="-14.5" />
+              <point x="747.1844537815126" y="765.0" />
+              <point x="1207.0107142857141" y="765.0" />
+              <point x="1207.0107142857141" y="606.0" />
+              <point x="1223.5107142857141" y="606.0" />
+              <point x="-14.625" y="14.5" />
+            </edge>
+            <edge source="view.panels.CategoryUpdatePane" target="model.Category">
+              <point x="60.0" y="-14.5" />
+              <point x="854.2357142857142" y="318.0" />
+              <point x="1058.353853914447" y="318.0" />
+              <point x="-30.85714285714289" y="14.5" />
+            </edge>
+            <edge source="db.EvaluationTXT" target="db.TXTDBStrategy">
+              <point x="49.59999999999991" y="-14.5" />
+              <point x="213.5999999999999" y="606.0" />
+              <point x="199.22885391444697" y="606.0" />
+              <point x="199.22885391444697" y="437.0" />
+              <point x="373.01666666666665" y="437.0" />
+              <point x="-42.33333333333326" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionUpdatePane" target="controller.DBContext">
+              <point x="-50.0" y="-14.5" />
+              <point x="1011.5219537815126" y="695.0" />
+              <point x="674.0361255519155" y="695.0" />
+              <point x="48.28571428571422" y="14.5" />
+            </edge>
+            <edge source="db.ExcelPlugin" target="model.Category">
+              <point x="36.0" y="-14.5" />
+              <point x="759.1844537815126" y="785.0" />
+              <point x="1319.7303810789858" y="785.0" />
+              <point x="1319.7303810789858" y="318.0" />
+              <point x="1120.0681396287328" y="318.0" />
+              <point x="30.85714285714289" y="14.5" />
+            </edge>
+            <edge source="controller.DBContext" target="model.Question">
+              <point x="5.2000000000000455" y="-14.5" />
+              <point x="630.9504112662013" y="487.0" />
+              <point x="641.4357142857142" y="487.0" />
+              <point x="-4.7999999999999545" y="14.5" />
+            </edge>
+            <edge source="model.Category" target="db.Savable">
+              <point x="0.0" y="-14.5" />
+              <point x="1089.2109967715899" y="169.0" />
+              <point x="691.4778511687167" y="169.0" />
+              <point x="11.647058823529505" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionUpdatePane" target="db.CategoryTXT">
+              <point x="10.0" y="-14.5" />
+              <point x="1071.5219537815126" y="775.0" />
+              <point x="1237.6678810789858" y="775.0" />
+              <point x="1237.6678810789858" y="606.0" />
+              <point x="1252.7607142857141" y="606.0" />
+              <point x="14.625" y="14.5" />
+            </edge>
+            <edge source="model.Test" target="db.Savable">
+              <point x="-14.0" y="-14.5" />
+              <point x="50.7941176470589" y="487.0" />
+              <point x="43.33823529411768" y="487.0" />
+              <point x="43.33823529411768" y="89.0" />
+              <point x="644.8896158745989" y="89.0" />
+              <point x="-34.94117647058829" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="view.panels.TestPane">
+              <point x="-28.529411764705856" y="-14.5" />
+              <point x="630.1550420168068" y="1033.0" />
+              <point x="322.2519384307402" y="1033.0" />
+              <point x="24.0" y="14.5" />
+            </edge>
+            <edge source="model.Group" target="model.Category">
+              <point x="-20.25" y="-14.5" />
+              <point x="1097.8857142857141" y="358.0" />
+              <point x="1092.6395682001614" y="358.0" />
+              <point x="3.428571428571445" y="14.5" />
+            </edge>
+            <edge source="db.CategoryTXT" target="model.Category">
+              <point x="-14.625" y="-14.5" />
+              <point x="1223.5107142857141" y="328.0" />
+              <point x="1113.2109967715899" y="328.0" />
+              <point x="24.0" y="14.5" />
+            </edge>
+            <edge source="db.ExcelPlugin" target="controller.DBContext">
+              <point x="-24.0" y="-14.5" />
+              <point x="699.1844537815126" y="715.0" />
+              <point x="659.1789826947726" y="715.0" />
+              <point x="33.42857142857133" y="14.5" />
+            </edge>
+            <edge source="controller.TestController" target="db.Savable">
+              <point x="-6.150000000000091" y="-14.5" />
+              <point x="303.0" y="149.0" />
+              <point x="660.4190276393048" y="149.0" />
+              <point x="-19.411764705882433" y="14.5" />
+            </edge>
+            <edge source="db.QuestionTXT" target="model.Question">
+              <point x="43.875" y="-14.5" />
+              <point x="422.2249999999999" y="467.0" />
+              <point x="622.2357142857142" y="467.0" />
+              <point x="-24.0" y="14.5" />
+            </edge>
+            <edge source="controller.DBContext" target="model.Category">
+              <point x="36.40000000000009" y="-14.5" />
+              <point x="662.1504112662013" y="596.0" />
+              <point x="1067.1357142857141" y="596.0" />
+              <point x="1067.1357142857141" y="358.0" />
+              <point x="1085.7824253430185" y="358.0" />
+              <point x="-3.428571428571445" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="db.Savable">
+              <point x="45.647058823529505" y="-14.5" />
+              <point x="704.3315126050421" y="1063.0" />
+              <point x="1918.1757592302465" y="1063.0" />
+              <point x="1918.1757592302465" y="49.0" />
+              <point x="722.5366746981284" y="49.0" />
+              <point x="42.70588235294122" y="14.5" />
+            </edge>
+            <edge source="view.panels.MessagePane" target="db.Savable">
+              <point x="-51.42857142857133" y="-14.5" />
+              <point x="19.294117647058897" y="69.0" />
+              <point x="639.7131452863638" y="69.0" />
+              <point x="-40.11764705882342" y="14.5" />
+            </edge>
+            <edge source="view.panels.TestPane" target="controller.TestController">
+              <point x="0.0" y="-14.5" />
+              <point x="298.2519384307402" y="894.0" />
+              <point x="339.25" y="894.0" />
+              <point x="30.75" y="14.5" />
+            </edge>
+            <edge source="view.panels.QuestionUpdatePane" target="db.Savable">
+              <point x="50.0" y="-14.5" />
+              <point x="1111.5219537815126" y="815.0" />
+              <point x="1524.1757592302465" y="815.0" />
+              <point x="1524.1757592302465" y="109.0" />
+              <point x="707.0072629334226" y="109.0" />
+              <point x="27.17647058823536" y="14.5" />
+            </edge>
+            <edge source="controller.DBContext" target="db.CategoryTXT">
+              <point x="46.799999999999955" y="-14.5" />
+              <point x="672.5504112662012" y="606.0" />
+              <point x="1194.2607142857141" y="606.0" />
+              <point x="-43.875" y="14.5" />
+            </edge>
+            <edge source="view.panels.CategoryOverviewPane" target="db.Savable">
+              <point x="42.75" y="-14.5" />
+              <point x="1673.9257592302465" y="79.0" />
+              <point x="714.7719688157755" y="79.0" />
+              <point x="34.94117647058829" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="db.CategoryTXT">
+              <point x="17.117647058823422" y="-14.5" />
+              <point x="675.802100840336" y="1013.0" />
+              <point x="1278.5111255519155" y="1013.0" />
+              <point x="1278.5111255519155" y="606.0" />
+              <point x="1282.0107142857141" y="606.0" />
+              <point x="43.875" y="14.5" />
+            </edge>
+            <edge source="controller.DBContext" target="db.DBStrategy">
+              <point x="-15.600000000000136" y="-14.5" />
+              <point x="610.1504112662011" y="566.0" />
+              <point x="510.14999999999986" y="566.0" />
+              <point x="510.14999999999986" y="288.0" />
+              <point x="526.2499999999999" y="288.0" />
+              <point x="39.75" y="14.5" />
+            </edge>
+            <edge source="db.EvaluationTXT" target="db.Savable">
+              <point x="0.0" y="-14.5" />
+              <point x="164.0" y="109.0" />
+              <point x="650.0660864628343" y="109.0" />
+              <point x="-29.764705882352928" y="14.5" />
+            </edge>
+            <edge source="db.CategoryTXT" target="db.TXTDBStrategy">
+              <point x="-43.875" y="-14.5" />
+              <point x="1194.2607142857141" y="437.0" />
+              <point x="457.68333333333317" y="437.0" />
+              <point x="42.33333333333326" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="view.panels.MessagePane">
+              <point x="-45.64705882352928" y="-14.5" />
+              <point x="613.0373949579833" y="1063.0" />
+              <point x="47.488154188229714" y="1063.0" />
+              <point x="47.488154188229714" y="924.0" />
+              <point x="40.5" y="924.0" />
+              <point x="-30.0" y="14.5" />
+            </edge>
+            <edge source="application.Launcher" target="controller.DBContext">
+              <point x="0.0" y="-14.5" />
+              <point x="658.6844537815126" y="815.0" />
+              <point x="644.3218398376299" y="815.0" />
+              <point x="18.57142857142867" y="14.5" />
+            </edge>
+            <edge source="db.CategoryTXT" target="db.Savable">
+              <point x="43.875" y="-14.5" />
+              <point x="1282.0107142857141" y="487.0" />
+              <point x="1348.5875239361287" y="487.0" />
+              <point x="1348.5875239361287" y="149.0" />
+              <point x="696.6543217569518" y="149.0" />
+              <point x="16.82352941176464" y="14.5" />
+            </edge>
+            <edge source="view.panels.MessagePane" target="controller.DBContext">
+              <point x="51.42857142857133" y="-14.5" />
+              <point x="121.92857142857133" y="765.0" />
+              <point x="584.8932684090584" y="765.0" />
+              <point x="-40.85714285714289" y="14.5" />
+            </edge>
+            <edge source="controller.DBContext" target="db.Savable">
+              <point x="-5.2000000000000455" y="-14.5" />
+              <point x="620.5504112662012" y="556.0" />
+              <point x="549.9999999999999" y="556.0" />
+              <point x="549.9999999999999" y="209.0" />
+              <point x="675.9484394040106" y="209.0" />
+              <point x="-3.8823529411765776" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1" x="1375.4545454545455" y="823.4545454545455" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
