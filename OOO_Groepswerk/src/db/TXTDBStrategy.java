@@ -14,7 +14,7 @@ public abstract class TXTDBStrategy implements DBStrategy {
     private File file;
     private PrintWriter writer;
     private ObservableList<Savable>savables = FXCollections.observableArrayList(new ArrayList<>());
-
+    private InputStream inputStream;
     @Override
     public void write() {
 
@@ -36,7 +36,17 @@ public abstract class TXTDBStrategy implements DBStrategy {
 
     @Override
     public void read() {
+
+        inputStream = this.getClass().getClassLoader().getResourceAsStream(getPath());
+
         file=getFile();
+        if(file.exists() && !file.isDirectory()){
+            try {
+                this.inputStream = new FileInputStream(file);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
         Scanner scannerFile;
         try {
             scannerFile = new Scanner(file);

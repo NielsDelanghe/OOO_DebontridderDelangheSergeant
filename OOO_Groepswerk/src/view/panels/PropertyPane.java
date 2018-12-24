@@ -15,6 +15,7 @@ public class PropertyPane extends GridPane {
     private ToggleGroup statementGroup;
     private RadioButton answer;
     private Label questionField;
+    private InputStream inputStream;
 
     public PropertyPane() throws IOException {
         list = new ArrayList<>();
@@ -70,12 +71,14 @@ public class PropertyPane extends GridPane {
                 if(selection.equals("score") || selection.equals("feedback"))
                 {
                     properties.setProperty("evaluation.mode", selection);
-                    file = new File("resources/db/evaluation.properties");
+                    file = new File("evaluation.properties");
                 }
                 else
                 {
+
                     properties.setProperty("save.mode", selection);
-                    file = new File("resources/db/save.properties");
+                    file = new File("save.properties");
+
                 }
                 OutputStream out = new FileOutputStream(file);
                 properties.store(out,"Properties");

@@ -7,48 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/OOO_Groepswerk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OOO_Groepswerk.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/GroepswerkOOO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/GroepswerkOOO.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CategoryFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/CategoryFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Evaluation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/Evaluation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/QuestionFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/evaluation.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/GroepswerkOOO/GroepswerkOOO.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/GroepswerkOOO/GroepswerkOOO.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/application/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/DBContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/DBContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/CategoryTXT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/CategoryTXT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/EvaluationTXT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/EvaluationTXT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/ExcelPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/ExcelPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/QuestionTXT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/QuestionTXT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/TXTDBStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/db/TXTDBStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane$AddCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryDetailPane$AddCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryUpdatePane$UpdateCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/CategoryUpdatePane$UpdateCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/MessagePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/MessagePane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/PropertyPane$saveEvaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/PropertyPane$saveEvaluation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/PropertyPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/PropertyPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionDetailPane$AddQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionUpdatePane$AddQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionUpdatePane$AddQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionUpdatePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/QuestionUpdatePane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$Close.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$Close.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$ProcessAnswerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$ProcessAnswerAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/save.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/DBContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DBContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/CategoryTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/CategoryTXT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/EvaluationTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/EvaluationTXT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/ExcelPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/ExcelPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/QuestionTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/QuestionTXT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/TXTDBStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/TXTDBStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/CategoryDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/CategoryDetailPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/CategoryUpdatePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/CategoryUpdatePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/MessagePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/MessagePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/PropertyPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PropertyPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/QuestionDetailPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/QuestionDetailPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/QuestionUpdatePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/QuestionUpdatePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/TestPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/TestPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/db/test.xls" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,36 +26,36 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxbuild" value="1" />
-          <entry key="java" value="37" />
+          <entry key="java" value="38" />
           <entry key="properties" value="3" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="37" />
+          <entry key="JAVA" value="38" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="594" />
+          <entry key="java" value="845" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="594" />
+          <entry key="JAVA" value="845" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/panels/QuestionOverviewPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="415">
               <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -104,18 +69,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/panels/CategoryUpdatePane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="110" column="63" selection-start-line="110" selection-start-column="63" selection-end-line="110" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/panels/PropertyPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
+            <state relative-caret-position="369">
+              <caret line="77" column="19" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/TXTDBStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="194">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -245,17 +198,17 @@
         <option value="$PROJECT_DIR$/src/db/QuestionTXT.java" />
         <option value="$PROJECT_DIR$/src/db/CategoryTXT.java" />
         <option value="$PROJECT_DIR$/src/db/EvaluationTXT.java" />
-        <option value="$PROJECT_DIR$/src/db/TXTDBStrategy.java" />
         <option value="$PROJECT_DIR$/src/application/MainClass.java" />
         <option value="$PROJECT_DIR$/src/view/panels/TestPane.java" />
         <option value="$PROJECT_DIR$/src/view/panels/MessagePane.java" />
-        <option value="$PROJECT_DIR$/src/view/panels/PropertyPane.java" />
         <option value="$PROJECT_DIR$/src/controller/DBContext.java" />
         <option value="$PROJECT_DIR$/src/db/ExcelPlugin.java" />
         <option value="$PROJECT_DIR$/src/view/panels/CategoryDetailPane.java" />
         <option value="$PROJECT_DIR$/src/view/panels/CategoryUpdatePane.java" />
         <option value="$PROJECT_DIR$/src/view/panels/QuestionDetailPane.java" />
         <option value="$PROJECT_DIR$/src/view/panels/QuestionUpdatePane.java" />
+        <option value="$PROJECT_DIR$/src/db/TXTDBStrategy.java" />
+        <option value="$PROJECT_DIR$/src/view/panels/PropertyPane.java" />
       </list>
     </option>
   </component>
@@ -265,7 +218,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -367,7 +320,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545651766308" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545653051597" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -518,12 +471,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73290000" />
+    <option name="totallyTimeSpent" value="74491000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13859275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28446388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -532,7 +486,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30802602" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3044907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -559,7 +513,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/db/CategoryDB.java" />
     <entry file="file://$PROJECT_DIR$/src/view/observers/QuestionList.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/layout/GridPane.java" />
     <entry file="file://$PROJECT_DIR$/src/model/Test.java">
@@ -752,16 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/PropertyPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/panels/QuestionDetailPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-396">
@@ -792,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/TXTDBStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DBContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -822,8 +758,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/panels/QuestionOverviewPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="415">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/TXTDBStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="340" selection-start-line="340" selection-end-line="340" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/panels/PropertyPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="77" column="19" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
