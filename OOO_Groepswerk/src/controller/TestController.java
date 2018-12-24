@@ -1,5 +1,6 @@
 package controller;
 
+import db.EvaluationTXT;
 import db.Savable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -78,6 +79,14 @@ public class TestController {
     public int getMaxScore()
     {
         return questionList.size();
+    }
+
+    public void writeScore(ObservableList<Savable> scoreList)
+    {
+        DBContext context;
+        context = new DBContext();
+        context.setStrategy(new EvaluationTXT(scoreList));
+        context.write();
     }
 
 

@@ -122,16 +122,14 @@ public class TestPane extends GridPane {
 			test.setScore(testController.getScore());
 			test.setMaxPossibleScore(testController.getMaxScore());
 			scoreList.add(test);
-			context = new DBContext();
-			context.setStrategy(new EvaluationTXT(scoreList));
-			context.write();
+			testController.writeScore(scoreList);
 
 		}
-		private void showScore(int score)
+		private void showScore()
 		{
-			questionField.setText("Your score is: " + score +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
-			test.setScore(score);
-			test.setMaxPossibleScore(test.getQuestions().size());
+			questionField.setText("Your score is: " + testController.getScore() +"/"+ test.getQuestions().size() + "\n" + test.getCategorieAndPoints());
+			test.setScore(testController.getScore());
+			test.setMaxPossibleScore(testController.getMaxScore());
 			scoreList.add(test);
 			context = new DBContext();
 			context.setStrategy(new EvaluationTXT(scoreList));
@@ -163,9 +161,9 @@ public class TestPane extends GridPane {
 		{
 			switch (testController.getProperty())
 			{
-				case "score": showScore(testController.getScore()); break;
+				case "score": showScore(); break;
 				case "feedback": showFeedback(); break;
-				default: showScore(testController.getScore()); break;
+				default: showScore(); break;
 			}
 			add(questionField,0,0);
 			submitButton = new Button("Close");
