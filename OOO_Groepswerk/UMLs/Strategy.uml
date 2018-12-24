@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="158.0">db.QuestionTXT</node>
+    <node x="282.5" y="79.0">controller.DBContext</node>
+    <node x="281.0" y="158.0">db.CategoryTXT</node>
+    <node x="135.5" y="79.0">db.TXTDBStrategy</node>
+    <node x="137.0" y="158.0">db.EvaluationTXT</node>
+    <node x="213.75" y="0.0">db.DBStrategy</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="controller.DBContext" target="db.DBStrategy">
+      <point x="0.0" y="-14.5" />
+      <point x="334.5" y="54.0" />
+      <point x="293.25" y="54.0" />
+      <point x="26.5" y="14.5" />
+    </edge>
+    <edge source="db.EvaluationTXT" target="db.TXTDBStrategy">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="db.TXTDBStrategy" target="db.DBStrategy">
+      <point x="0.0" y="-14.5" />
+      <point x="199.0" y="54.0" />
+      <point x="240.25" y="54.0" />
+      <point x="-26.5" y="14.5" />
+    </edge>
+    <edge source="db.CategoryTXT" target="db.TXTDBStrategy">
+      <point x="0.0" y="-14.5" />
+      <point x="339.5" y="133.0" />
+      <point x="241.33333333333334" y="133.0" />
+      <point x="42.33333333333334" y="14.5" />
+    </edge>
+    <edge source="db.QuestionTXT" target="db.TXTDBStrategy">
+      <point x="0.0" y="-14.5" />
+      <point x="58.5" y="133.0" />
+      <point x="156.66666666666666" y="133.0" />
+      <point x="-42.33333333333334" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.299999999999999" x="120.92857142857105" y="60.2250233426702" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

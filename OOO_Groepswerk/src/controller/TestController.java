@@ -5,8 +5,11 @@ import db.Savable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Question;
+import model.Test;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -21,13 +24,20 @@ public class TestController {
         this.questionList = questions;
     }
 
+
     public String getProperty()
     {
         Properties properties = new Properties();
         InputStream is;
+        File file;
         try {
-            File file = new File("resources/db/evaluation.properties");
-            is = this.getClass().getClassLoader().getResourceAsStream("resource/db/evaluation.properties");
+            file = new File("resources/db/evaluation.properties");
+            is = this.getClass().getClassLoader().getResourceAsStream("resources/db/evaluation.properties");
+            try {
+                is = new FileInputStream(file);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         }
         catch ( Exception e ) { is = null; }
         try {
@@ -41,6 +51,7 @@ public class TestController {
         String evaluationMode = properties.getProperty("evaluation.mode", "score");
         return evaluationMode;
     }
+
 
     public String getFeedback()
     {

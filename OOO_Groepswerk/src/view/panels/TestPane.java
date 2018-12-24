@@ -1,10 +1,7 @@
 package view.panels;
 
-import java.io.File;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Properties;
 import controller.DBContext;
 import controller.TestController;
 import db.EvaluationTXT;
@@ -18,7 +15,6 @@ import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import model.Question;
 import model.Test;
 
 public class TestPane extends GridPane {

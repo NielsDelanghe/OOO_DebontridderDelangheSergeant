@@ -7,6 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3690b8c6-3381-4cfc-b2e9-8e8819773356" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Evaluation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$Close.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$Close.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$ProcessAnswerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane$ProcessAnswerAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOO_Groepswerk/view/panels/TestPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/DBContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DBContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/TestPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/TestPane.java" afterDir="false" />
     </list>
@@ -20,37 +26,142 @@
     <session id="712113984">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="677" />
+          <entry key="java" value="925" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="677" />
+          <entry key="JAVA" value="925" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="java" value="6" />
           <entry key="properties" value="2" />
-          <entry key="txt" value="2" />
+          <entry key="txt" value="3" />
+          <entry key="uml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JAVA" value="6" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="2" />
+          <entry key="UML" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UMLs/State.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="122.97083333333333" y="198.0">model.Test</node>
+                <node x="127.0" y="79.0">evaluationStates.NeverCompleted</node>
+                <node x="158.04166666666669" y="0.0">evaluationStates.EvaluationState</node>
+                <node x="0.0" y="79.0">evaluationStates.Completed</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="model.Test" target="evaluationStates.EvaluationState">
+                  <point x="26.25" y="-14.5" />
+                  <point x="184.22083333333333" y="168.0" />
+                  <point x="275.5" y="168.0" />
+                  <point x="275.5" y="59.0" />
+                  <point x="238.66666666666669" y="59.0" />
+                  <point x="16.124999999999986" y="14.5" />
+                </edge>
+                <edge source="model.Test" target="evaluationStates.Completed">
+                  <point x="-20.416666666666643" y="-14.5" />
+                  <point x="137.55416666666667" y="158.0" />
+                  <point x="53.5" y="158.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="evaluationStates.NeverCompleted" target="evaluationStates.EvaluationState">
+                  <point x="0.0" y="-14.5" />
+                  <point x="196.0" y="59.0" />
+                  <point x="206.41666666666669" y="59.0" />
+                  <point x="-16.125" y="14.5" />
+                </edge>
+                <edge source="evaluationStates.Completed" target="model.Test">
+                  <point x="21.400000000000006" y="14.5" />
+                  <point x="74.9" y="148.0" />
+                  <point x="143.38750000000002" y="148.0" />
+                  <point x="-14.583333333333314" y="-14.5" />
+                </edge>
+                <edge source="evaluationStates.Completed" target="evaluationStates.EvaluationState">
+                  <point x="0.0" y="-14.5" />
+                  <point x="53.5" y="59.0" />
+                  <point x="174.16666666666669" y="59.0" />
+                  <point x="-48.375" y="14.5" />
+                </edge>
+                <edge source="evaluationStates.NeverCompleted" target="model.Test">
+                  <point x="55.19999999999999" y="14.5" />
+                  <point x="251.2" y="158.0" />
+                  <point x="178.3875" y="158.0" />
+                  <point x="20.416666666666657" y="-14.5" />
+                </edge>
+                <edge source="model.Test" target="evaluationStates.NeverCompleted">
+                  <point x="2.9166666666666714" y="-14.5" />
+                  <point x="160.8875" y="128.0" />
+                  <point x="168.4" y="128.0" />
+                  <point x="-27.6" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.5000000000000004" x="-281.16666666666646" y="71.99999999999994" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UMLs/Template.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="143.0" y="0.0">model.Test</node>
+                <node x="78.375" y="79.0">view.panels.TestPane</node>
+                <node x="0.0" y="0.0">controller.TestController</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="view.panels.TestPane" target="controller.TestController">
+                  <point x="-36.0" y="-14.5" />
+                  <point x="90.375" y="59.0" />
+                  <point x="30.75" y="59.0" />
+                  <point x="-30.75" y="14.5" />
+                </edge>
+                <edge source="view.panels.TestPane" target="model.Test">
+                  <point x="12.0" y="-14.5" />
+                  <point x="138.375" y="49.0" />
+                  <point x="160.5" y="49.0" />
+                  <point x="-17.5" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-353.0" y="100.0" />
+              <SelectedNodes />
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/panels/TestPane.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+            <state relative-caret-position="118">
+              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,14 +170,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/TestController.java">
+        <entry file="file://$PROJECT_DIR$/src/model/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+            <state relative-caret-position="782">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2135#2136#0" expanded="true" />
-                <element signature="e#2176#2177#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,10 +230,10 @@
         <option value="$PROJECT_DIR$/src/db/TXTDBStrategy.java" />
         <option value="$PROJECT_DIR$/src/view/panels/CategoryDetailPane.java" />
         <option value="$PROJECT_DIR$/src/model/Test.java" />
-        <option value="$PROJECT_DIR$/src/controller/DBContext.java" />
         <option value="$PROJECT_DIR$/src/application/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/view/panels/TestPane.java" />
+        <option value="$PROJECT_DIR$/src/controller/DBContext.java" />
+        <option value="$PROJECT_DIR$/src/controller/TestController.java" />
       </list>
     </option>
   </component>
@@ -219,7 +329,24 @@
               <item name="OOO_Groepswerk" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOO_Groepswerk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="evaluationStates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOO_Groepswerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOO_Groepswerk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOO_Groepswerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOO_Groepswerk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="panels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OOO_Groepswerk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OOO_Groepswerk" type="462c0819:PsiDirectoryNode" />
+              <item name="UMLs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,8 +357,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545676871578" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545680302543" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/UMLs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -371,13 +498,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88824000" />
+    <option name="totallyTimeSpent" value="92379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -386,7 +513,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30368763" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30368763" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -413,10 +540,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Node.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/Button.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/collections/ObservableListWrapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/db/ExcelStrategy.java" />
     <entry file="file://$PROJECT_DIR$/src/db/CategoryExcel.java" />
     <entry file="file://$PROJECT_DIR$/src/model/Question.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -628,27 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-211">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/DBContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -685,22 +787,210 @@
     <entry file="file://$PROJECT_DIR$/Evaluation.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2135#2136#0" expanded="true" />
-            <element signature="e#2176#2177#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/UMLs/Propertie diagram.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-30.0" y="0.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/panels/TestPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+        <state relative-caret-position="458">
+          <caret line="125" column="150" lean-forward="true" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="150" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/DBContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UMLs/Strategy.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="158.0">db.QuestionTXT</node>
+            <node x="282.5" y="79.0">controller.DBContext</node>
+            <node x="281.0" y="158.0">db.CategoryTXT</node>
+            <node x="135.5" y="79.0">db.TXTDBStrategy</node>
+            <node x="137.0" y="158.0">db.EvaluationTXT</node>
+            <node x="213.75" y="0.0">db.DBStrategy</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="controller.DBContext" target="db.DBStrategy">
+              <point x="0.0" y="-14.5" />
+              <point x="334.5" y="54.0" />
+              <point x="293.25" y="54.0" />
+              <point x="26.5" y="14.5" />
+            </edge>
+            <edge source="db.EvaluationTXT" target="db.TXTDBStrategy">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="db.TXTDBStrategy" target="db.DBStrategy">
+              <point x="0.0" y="-14.5" />
+              <point x="199.0" y="54.0" />
+              <point x="240.25" y="54.0" />
+              <point x="-26.5" y="14.5" />
+            </edge>
+            <edge source="db.CategoryTXT" target="db.TXTDBStrategy">
+              <point x="0.0" y="-14.5" />
+              <point x="339.5" y="133.0" />
+              <point x="241.33333333333334" y="133.0" />
+              <point x="42.33333333333334" y="14.5" />
+            </edge>
+            <edge source="db.QuestionTXT" target="db.TXTDBStrategy">
+              <point x="0.0" y="-14.5" />
+              <point x="58.5" y="133.0" />
+              <point x="156.66666666666666" y="133.0" />
+              <point x="-42.33333333333334" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.299999999999999" x="-337.5604395604405" y="4.92282554047236" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UMLs/State.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="122.97083333333333" y="198.0">model.Test</node>
+            <node x="127.0" y="79.0">evaluationStates.NeverCompleted</node>
+            <node x="158.04166666666669" y="0.0">evaluationStates.EvaluationState</node>
+            <node x="0.0" y="79.0">evaluationStates.Completed</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="model.Test" target="evaluationStates.EvaluationState">
+              <point x="26.25" y="-14.5" />
+              <point x="184.22083333333333" y="168.0" />
+              <point x="275.5" y="168.0" />
+              <point x="275.5" y="59.0" />
+              <point x="238.66666666666669" y="59.0" />
+              <point x="16.124999999999986" y="14.5" />
+            </edge>
+            <edge source="model.Test" target="evaluationStates.Completed">
+              <point x="-20.416666666666643" y="-14.5" />
+              <point x="137.55416666666667" y="158.0" />
+              <point x="53.5" y="158.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="evaluationStates.NeverCompleted" target="evaluationStates.EvaluationState">
+              <point x="0.0" y="-14.5" />
+              <point x="196.0" y="59.0" />
+              <point x="206.41666666666669" y="59.0" />
+              <point x="-16.125" y="14.5" />
+            </edge>
+            <edge source="evaluationStates.Completed" target="model.Test">
+              <point x="21.400000000000006" y="14.5" />
+              <point x="74.9" y="148.0" />
+              <point x="143.38750000000002" y="148.0" />
+              <point x="-14.583333333333314" y="-14.5" />
+            </edge>
+            <edge source="evaluationStates.Completed" target="evaluationStates.EvaluationState">
+              <point x="0.0" y="-14.5" />
+              <point x="53.5" y="59.0" />
+              <point x="174.16666666666669" y="59.0" />
+              <point x="-48.375" y="14.5" />
+            </edge>
+            <edge source="evaluationStates.NeverCompleted" target="model.Test">
+              <point x="55.19999999999999" y="14.5" />
+              <point x="251.2" y="158.0" />
+              <point x="178.3875" y="158.0" />
+              <point x="20.416666666666657" y="-14.5" />
+            </edge>
+            <edge source="model.Test" target="evaluationStates.NeverCompleted">
+              <point x="2.9166666666666714" y="-14.5" />
+              <point x="160.8875" y="128.0" />
+              <point x="168.4" y="128.0" />
+              <point x="-27.6" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.5000000000000004" x="-281.16666666666646" y="71.99999999999994" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UMLs/Template.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="143.0" y="0.0">model.Test</node>
+            <node x="78.375" y="79.0">view.panels.TestPane</node>
+            <node x="0.0" y="0.0">controller.TestController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="view.panels.TestPane" target="controller.TestController">
+              <point x="-36.0" y="-14.5" />
+              <point x="90.375" y="59.0" />
+              <point x="30.75" y="59.0" />
+              <point x="-30.75" y="14.5" />
+            </edge>
+            <edge source="view.panels.TestPane" target="model.Test">
+              <point x="12.0" y="-14.5" />
+              <point x="138.375" y="49.0" />
+              <point x="160.5" y="49.0" />
+              <point x="-17.5" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-353.0" y="100.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
