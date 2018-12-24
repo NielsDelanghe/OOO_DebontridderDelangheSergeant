@@ -29,8 +29,8 @@ public class MainClass extends Application{
     try {
         this.questionDbContext = new DBContext();
         this.categoryDbContext = new DBContext();
-        this.questionDbContext.setStrategy(new QuestionTXT("resources/db/QuestionFile.txt", questions));
-        this.categoryDbContext.setStrategy(new CategoryTXT("resources/db/CategoryFile.txt", categories));
+        this.questionDbContext.setStrategy(new QuestionTXT("QuestionFile.txt", questions));
+        this.categoryDbContext.setStrategy(new CategoryTXT("CategoryFile.txt", categories));
         questionDbContext.read();
         categoryDbContext.read();
         questions = questionDbContext.getReadObjects();

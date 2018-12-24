@@ -37,7 +37,7 @@ public class MessagePane extends GridPane {
 		this.evaluation = new Test();
 		state = new NeverCompleted(evaluation);
 		context = new DBContext();
-		context.setStrategy(new EvaluationTXT("resources/db/Evaluation.txt",scoreList));
+		context.setStrategy(new EvaluationTXT("Evaluation.txt",scoreList));
 		context.read();
 		scoreList = context.getReadObjects();
 		setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));

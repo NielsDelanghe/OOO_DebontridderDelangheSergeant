@@ -108,7 +108,7 @@ public class CategoryUpdatePane extends GridPane {
                 categoryTitles.set(index,newCategory.getName());
                 categoryList.set(index,newCategory);
                 DBContext context = new DBContext();
-                context.setStrategy(new QuestionTXT("resources/db/CategoryFile.txt", categoryList));
+                context.setStrategy(new QuestionTXT("CategoryFile.txt", categoryList));
                 context.write();
                 Stage stage = (Stage) btnOK.getScene().getWindow();
                 stage.close();
