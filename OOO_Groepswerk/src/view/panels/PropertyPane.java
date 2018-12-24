@@ -71,13 +71,13 @@ public class PropertyPane extends GridPane {
                 if(selection.equals("score") || selection.equals("feedback"))
                 {
                     properties.setProperty("evaluation.mode", selection);
-                    file = new File("evaluation.properties");
+                    file = new File("resources/db/evaluation.properties");
                 }
                 else
                 {
 
                     properties.setProperty("save.mode", selection);
-                    file = new File("save.properties");
+                    file = new File("resources/db/save.properties");
 
                 }
                 OutputStream out = new FileOutputStream(file);

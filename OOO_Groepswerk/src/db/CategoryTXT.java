@@ -18,7 +18,7 @@ public class CategoryTXT extends TXTDBStrategy {
 
     public CategoryTXT(ObservableList<Savable> list)
     {
-        this.file = new File("CategoryFile.txt");
+        this.file = new File("resources/db/CategoryFile.txt");
         this.setCategoryList(list);
     }
 

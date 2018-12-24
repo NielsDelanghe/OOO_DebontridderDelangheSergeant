@@ -131,7 +131,7 @@ public class TestPane extends GridPane {
 			test.setMaxPossibleScore(test.getQuestions().size());
 			scoreList.add(test);
 			context = new DBContext();
-			context.setStrategy(new EvaluationTXT("Evaluation.txt",scoreList));
+			context.setStrategy(new EvaluationTXT(scoreList));
 			context.write();
 
 		}
@@ -142,7 +142,7 @@ public class TestPane extends GridPane {
 			test.setMaxPossibleScore(test.getQuestions().size());
 			scoreList.add(test);
 			context = new DBContext();
-			context.setStrategy(new EvaluationTXT("Evaluation.txt",scoreList));
+			context.setStrategy(new EvaluationTXT(scoreList));
 			context.write();
 
 		}
@@ -181,13 +181,13 @@ public class TestPane extends GridPane {
 			Properties properties = new Properties();
 			InputStream is;
 			try {
-				File file = new File("evaluation.properties");
-				is = new FileInputStream(file);
+				File file = new File("resources/db/evaluation.properties");
+				is = this.getClass().getClassLoader().getResourceAsStream("resource/db/evaluation.properties");
 			}
 			catch ( Exception e ) { is = null; }
 			try {
 				if ( is == null ) {
-					is = getClass().getResourceAsStream("evaluation.properties");
+					is = getClass().getClassLoader().getResourceAsStream("resources/db/evaluation.properties");
 				}
 				properties.load( is );
 			}

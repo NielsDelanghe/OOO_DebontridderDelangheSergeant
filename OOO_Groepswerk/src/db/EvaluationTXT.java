@@ -12,15 +12,14 @@ public class EvaluationTXT extends TXTDBStrategy{
 
     File file;
     ObservableList<Savable> scoreList = FXCollections.observableArrayList(new ArrayList<>());
-    String path;
+
     public void setScoreList(ObservableList<Savable> scoreList) {
         this.scoreList = scoreList;
     }
 
-    public EvaluationTXT(String path, ObservableList<Savable> list)
+    public EvaluationTXT( ObservableList<Savable> list)
     {
-        this.file=new File(path);
-        this.path=path;
+        this.file=new File("resources/db/Evaluation.txt");
         this.setScoreList(list);
     }
 

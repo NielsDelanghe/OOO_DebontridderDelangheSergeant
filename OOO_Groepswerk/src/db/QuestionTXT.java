@@ -12,7 +12,7 @@ public class QuestionTXT extends TXTDBStrategy {
         ObservableList<Savable> questionList = FXCollections.observableArrayList(new ArrayList<>());
         public QuestionTXT(ObservableList<Savable> list)
         {
-            this.file=new File("QuestionFile.txt");
+            this.file=new File("resources/db/QuestionFile.txt");
             this.setCategoryList(list);
         }
 
